@@ -1,2 +1,29 @@
+/* CAC Custom styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Aug. 10, 2014
+*/
+
+/* =Import Files for Mixin Usage
+----------------------------------------------------------------------------------*/
+//the variable file is the one that will be modified by the themer - chris bovard
+@import "custom_cac_variables"; 
+//boostrap mixins
+@import "bootstrap/mixins";
+
 /* =Tablet Layout and Styles
 ----------------------------------------------------------------------------------*/
+.div {border:1px blue solid;}
+
+/*header*/
+#header {
+	h1 {
+		background:transparent url(../img/logo.png) no-repeat center center;
+	}
+	h1,
+	h1 a {
+		width:264px;
+		height:47px;
+		display:block;
+	}	
+}
+/*header ends*/

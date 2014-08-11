@@ -1,24 +1,28 @@
-/* =Styles for modern browsers
+/* CAC Custom styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Aug. 10, 2014
+*/
+
+/* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
+//the variable file is the one that will be modified by the themer - chris bovard
+@import "custom_cac_variables"; 
+//boostrap mixins
+@import "bootstrap/mixins";
 
-//custom font mixin. I left this here because the other file might get wipped out.
-@mixin font-size($size:1.6, $line: $size * 1.5){
-  font-size:   ($size * 10) + px;
-  line-height: ($line * 10) + px;
-  font-size:   $size + rem;
-  line-height: $line + rem;
-}
-//--------------
 
+/* =Styles for 320 to Desktop
+----------------------------------------------------------------------------------*/
 
 //320 mobile styles and up
 @import "_base_mobile.scss";
 
-
-@media screen and (min-width: 768px) {
+//Tablet Styles ***Add notes here 
+@media screen and (min-width: $screen-tablet) {
   @import "_breakpoint_tablet.scss";
 }
 
-@media screen and (min-width: 1000px) {
+//Desktop Styles ***add notes here
+@media screen and (min-width: $screen-desktop) {
   @import "_breakpoint_desktop.scss";
 }

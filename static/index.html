@@ -18,14 +18,14 @@
     <meta property="og:description" content="">
 
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <!-- compiled CSS -->
     <link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="vendor/multilevelpushmenu/multilevelpushmenu.css" />
 
-    <!--google font include-->
+    <!--google font include http://www.google.com/fonts#UsePlace:use/Collection:Montserrat -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap core CSS -->
@@ -35,23 +35,26 @@
 
     <link href="assets/css/styles.css" rel="stylesheet">
 
+    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <!-- Modernizr required by multilevelpushmenu -->
     <!--why is this needed - chris bovard-->
     <script type="text/javascript" src="//oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
     
     <!-- compiled JavaScript -->
-    <script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
+    <!--<script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="vendor/multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>
+    <script type="text/javascript" src="vendor/multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>-->
 
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
-    </script>
+    </script>-->
 
     <!-- initialise fullpage.js and multilevel push menu. /todo when angular is included simply do this from controller -->
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       $(document).ready(function() {
         $('#fullpage').fullpage();
         console.log( "fullpage initialised" );
@@ -59,7 +62,7 @@
         $('#menu').multilevelpushmenu();
         console.log( "multilevelpushmenu initialised" );
       });
-    </script>
+    </script>-->
 
 
     <!-- HTML5 shim - IE8 support of HTML5 elements -->
@@ -70,93 +73,90 @@
   </head>
 
   <body>
-    <div class="container">
 
-      <div class="page-header">
-        <h1>Bootstrap grid examples</h1>
-        <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-      </div>
-
-      <h3>Three equal columns</h3>
-      <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+    <header id="header" role="banner" class="container div">
       <div class="row">
-        <div class="col-md-4">.col-md-4</div>
-        <div class="col-md-4">.col-md-4</div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
-
-      <h3>Three unequal columns</h3>
-      <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
-      <div class="row">
-        <div class="col-md-3">.col-md-3</div>
-        <div class="col-md-6">.col-md-6</div>
-        <div class="col-md-3">.col-md-3</div>
-      </div>
-
-      <h3>Two columns</h3>
-      <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
-      <div class="row">
-        <div class="col-md-8">.col-md-8</div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
-
-      <h3>Full width, single column</h3>
-      <p class="text-warning">No grid classes are necessary for full-width elements.</p>
-
-      <hr>
-
-      <h3>Two columns with two nested columns</h3>
-      <p>Per the documentation, nesting is easy—just put a row of columns within an existing row. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-      <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
-      <div class="row">
-        <div class="col-md-8">
-          .col-md-8
-          <div class="row">
-            <div class="col-md-6">.col-md-6</div>
-            <div class="col-md-6">.col-md-6</div>
-          </div>
+        <div class="col-xs-12">
+          <h1>
+            <a href="/" title="TITLE HERE" rel="home">
+              CAC title here
+            </a>
+          </h1>
         </div>
-        <div class="col-md-4">.col-md-4</div>
       </div>
+    </header><!--/#header-->
 
-      <hr>
+    <!--<nav id="nav" class="navbar navbar-default" role="navigation">
+      nav
+    </nav>--><!-- /nav -->  
 
-      <h3>Mixed: mobile and desktop</h3>
-      <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-      <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+    <div id="map" class="container-fluid div">
       <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        map
       </div>
-      <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-md-6">.col-xs-6 .col-md-6</div>
-        <div class="col-xs-6 col-md-6">.col-xs-6 .col-md-6</div>
-      </div>
+    </div><!--/#map-->
 
-      <hr>
+    <div id="sponsor-bar" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          sponsor bar
+        </div>
+      </div>
+    </div><!--/#sponsor-bar-->
 
-      <h3>Mixed: mobile, tablet, and desktop</h3>
-      <p></p>
+    <div id="know-more" class="container-fluid div">
       <div class="row">
-        <div class="col-xs-12 col-sm-8 col-lg-8">.col-xs-12 .col-lg-8</div>
-        <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-lg-4</div>
+        know more
       </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
-        <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
-        <div class="col-xs-6 col-sm-4 col-lg-4">.col-xs-6 .col-sm-4 .col-lg-4</div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-lg-6">.col-xs-6 .col-sm-6 .col-lg-6</div>
-        <div class="col-xs-6 col-sm-6 col-lg-6">.col-xs-6 .col-sm-6 .col-lg-6</div>
-      </div>
+    </div><!--/#know-more-->
 
-    </div> <!-- /container -->
+    <div id="news" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          news
+        </div>
+      </div>
+    </div><!--/#news-->
+
+    <div id="videos" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          videos
+        </div>
+      </div>
+    </div><!--/#videos-->
+
+    <div id="blog" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          blog
+        </div>
+      </div>
+    </div><!--/#blog-->
+
+    <div id="communities" class="container-fluid div">
+      <div class="row">
+        communities
+      </div>
+    </div><!--/#communities-->
+
+    <div id="auction" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          auction
+        </div>
+      </div>
+    </div><!--/#auction-->
+
+    <footer id="footer" role="contentinfo" class="container div">
+      <div class="row">
+        <div class="col-xs-12">
+          footer
+        </div>
+      </div>
+    </footer><!--/#footer-->
+
+
 
 
   </body>

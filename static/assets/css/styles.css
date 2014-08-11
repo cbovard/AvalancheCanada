@@ -1,12 +1,132 @@
-/* =Styles for modern browsers
+/* CAC Custom styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Aug. 10, 2014
+*/
+/* =Import Files for Mixin Usage
+----------------------------------------------------------------------------------*/
+/* =Styles for 320 to Desktop
+----------------------------------------------------------------------------------*/
+/* CAC Custom styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Aug. 10, 2014
+*/
+/* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
-@media screen and (min-width: 768px) {
+.div {
+  border: 1px red solid;
+}
+
+/*header*/
+#header {
+  height: 75px;
+}
+#header h1 {
+  margin: 0;
+  text-decoration: none;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background: transparent url(../img/logo-mobile.png) no-repeat center center;
+}
+#header h1,
+#header h1 a {
+  width: 147px;
+  height: 47px;
+  display: block;
+}
+
+/*header ends*/
+/*map*/
+#map {
+  min-height: 416px;
+}
+
+/*map ends*/
+/*sponsor-bar*/
+#sponsor-bar {
+  height: 148px;
+}
+
+/*sponsor-bar ends*/
+/*know-more*/
+#know-more {
+  height: 290px;
+}
+
+/*know-more ends*/
+/*news*/
+#news {
+  min-height: 400px;
+}
+
+/*news ends*/
+/*videos*/
+#videos {
+  height: 390px;
+}
+
+/*videos ends*/
+/*blog*/
+#blog {
+  min-height: 600px;
+}
+
+/*blog ends*/
+/*communities*/
+#communities {
+  min-height: 600px;
+}
+
+/*communities ends*/
+/*auction*/
+#auction {
+  min-height: 600px;
+}
+
+/*auction ends*/
+/*footer*/
+#footer {
+  height: 214px;
+}
+
+/*footer ends*/
+@media screen and (min-width: 600px) {
+  /* CAC Custom styles
+   * Author: Chris Bovard - www.chrisbovard.com
+   * Aug. 10, 2014
+  */
+  /* =Import Files for Mixin Usage
+  ----------------------------------------------------------------------------------*/
   /* =Tablet Layout and Styles
   ----------------------------------------------------------------------------------*/
+  .div {
+    border: 1px blue solid;
+  }
+
+  /*header*/
+  #header h1 {
+    background: transparent url(../img/logo.png) no-repeat center center;
+  }
+  #header h1,
+  #header h1 a {
+    width: 264px;
+    height: 47px;
+    display: block;
+  }
+
+  /*header ends*/
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
+  /* CAC Custom styles
+   * Author: Chris Bovard - www.chrisbovard.com
+   * Aug. 10, 2014
+  */
+  /* =Import Files for Mixin Usage
+  ----------------------------------------------------------------------------------*/
   /* =Desktop Layout and Styles
   ----------------------------------------------------------------------------------*/
 }
