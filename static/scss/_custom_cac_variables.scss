@@ -1,6 +1,6 @@
 // CAC - Bootstrap Variables
 // Author: Chris Bovard -- www.chrisbovard.com
-// Aug. 10, 2014
+// Aug. 13, 2014
 
 //custom font mixin. I left this here because the other file might get wiped out.
 @mixin font-size($size:1.6, $line: $size * 1.5){
@@ -337,12 +337,12 @@ $container-tablet:             ((768px + $grid-gutter-width)) !default;
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            ((1000px + $grid-gutter-width)) !default;
+$container-desktop:            ((1026px + $grid-gutter-width)) !default;
 //## For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((1000px + $grid-gutter-width)) !default;
+$container-large-desktop:      ((1026px + $grid-gutter-width)) !default;
 //## For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 

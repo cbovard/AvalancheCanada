@@ -22,31 +22,41 @@
 
 
     <!-- compiled CSS -->
-    <link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/multilevelpushmenu/multilevelpushmenu.css" />
+    <!--<link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/multilevelpushmenu/multilevelpushmenu.css" />-->
 
     <!--google font include http://www.google.com/fonts#UsePlace:use/Collection:Montserrat -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+    <!-- font awesome from BootstrapCDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!-- font awesome from BootstrapCDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+    <!--CAC styles-->
     <link href="assets/css/styles.css" rel="stylesheet">
 
-    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--multilevel menu css-->
+    <link rel="stylesheet" href="multilevelpushmenu/jquery.multilevelpushmenu.css">
 
     <!-- Modernizr required by multilevelpushmenu -->
-    <!--why is this needed - chris bovard-->
-    <script type="text/javascript" src="//oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
     
     <!-- compiled JavaScript -->
     <!--<script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="vendor/multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>-->
+    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>-->
+
+    <!-- Bootstrap core JS -->
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>
 
     <!-- it's stupid to have to load it here, but this is for the +1 button -->
     <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
@@ -64,6 +74,42 @@
       });
     </script>-->
 
+    <script>
+      $(document).ready(function () {
+          $('#menu').multilevelpushmenu({
+              containersToPush: [$('#page-wrap')],
+              menuWidth: '320px',
+              menuHeight: '100%',
+              collapsed: true,
+              fullCollapse: true
+          });
+
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+
+          // Full collapse button
+          $( '#fullcollapse' ).click(function(){
+            $( '#menu' ).multilevelpushmenu( 'collapse' );
+          });
+
+          // Base expand button
+          $( '#baseexpand' ).click(function(){
+            $( '#menu' ).multilevelpushmenu( 'expand' );
+          });
+
+
+          //alert($( window ).height());
+          //alert($( document ).height())
+      });
+
+      $(window).resize(function () {
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+      });
+
+
+    </script>
+
 
     <!-- HTML5 shim - IE8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -74,87 +120,281 @@
 
   <body>
 
-    <header id="header" role="banner" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>
-            <a href="/" title="TITLE HERE" rel="home">
-              CAC title here
-            </a>
-          </h1>
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-reorder"></i>All Categories</h2>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa fa-laptop"></i>Devices</a>
+                    <h2><i class="fa fa-laptop"></i>Devices</h2>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-phone"></i>Mobile Phones</a>
+                            <h2><i class="fa fa-phone"></i>Mobile Phones</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Super Smart Phone</a>
+                                </li>
+                                <li>
+                                    <a href="#">Thin Magic Mobile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Performance Crusher</a>
+                                </li>
+                                <li>
+                                    <a href="#">Futuristic Experience</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-desktop"></i>Televisions</a>
+                            <h2><i class="fa fa-desktop"></i>Televisions</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Flat Super Screen</a>
+                                </li>
+                                <li>
+                                    <a href="#">Gigantic LED</a>
+                                </li>
+                                <li>
+                                    <a href="#">Power Eater</a>
+                                </li>
+                                <li>
+                                    <a href="#">3D Experience</a>
+                                </li>
+                                <li>
+                                    <a href="#">Classic Comfort</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-camera-retro"></i>Cameras</a>
+                            <h2><i class="fa fa-camera-retro"></i>Cameras</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Smart Shot</a>
+                                </li>
+                                <li>
+                                    <a href="#">Power Shooter</a>
+                                </li>
+                                <li>
+                                    <a href="#">Easy Photo Maker</a>
+                                </li>
+                                <li>
+                                    <a href="#">Super Pixel</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-book"></i>Magazines</a>
+                    <h2><i class="fa fa-book"></i>Magazines</h2>
+                    <ul>
+                        <li>
+                            <a href="#">National Geographics</a>
+                        </li>
+                        <li>
+                            <a href="#">The Spectator</a>
+                        </li>
+                        <li>
+                            <a href="#">Rambler</a>
+                        </li>
+                        <li>
+                            <a href="#">Physics World</a>
+                        </li>
+                        <li>
+                            <a href="#">The New Scientist</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i>Store</a>
+                    <h2><i class="fa fa-shopping-cart"></i>Store</h2>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-tags"></i>Clothes</a>
+                            <h2><i class="fa fa-tags"></i>Clothes</h2>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fa fa-female"></i>Women's Clothing</a>
+                                    <h2><i class="fa fa-female"></i>Women's Clothing</h2>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Tops</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Dresses</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Trousers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shoes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-male"></i>Men's Clothing</a>
+                                    <h2><i class="fa fa-male"></i>Men's Clothing</h2>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Shirts</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Trousers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shoes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sale</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="#">Music</a>
+                        </li>
+                        <li>
+                            <a href="#">Grocery</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Collections</a>
+                </li>
+                <li>
+                    <a href="#">Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="page-wrap">
+      <header id="header" role="banner" class="container div">
+        <div class="row">
+          <div class="col-xs-4 div">
+            <h1 style="border:1px solid red;">
+              <a href="/" title="TITLE HERE" rel="home">
+                CAC title here
+              </a>
+            </h1>
+          </div>
+          <div class="col-xs-8">
+            <!--<nav id="navigation" class="navbar navbar-default" role="navigation">
+            
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a id="nav-donate" href="#">Donate</a>
+                  <a id="nav-search" href="#"><i class="fa fa-search"></i></a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="#">Avalanche Information</a></li>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">News &amp; Events</a></li>
+                    <li><a href="#">Store</a></li>
+                  </ul>
+                </div>-->
+
+                <a role="button" href="#" class="btn btn-lg btn-primary" id="fullcollapse">Collapse menu</a>
+
+                <a role="button" href="#" class="btn btn-lg btn-primary" id="baseexpand">Expand Menu</a>
+   
+            </nav>
+
+          </div>
         </div>
-      </div>
-    </header><!--/#header-->
+      </header><!--/#header-->
 
-    <!--<nav id="nav" class="navbar navbar-default" role="navigation">
-      nav
-    </nav>--><!-- /nav -->  
+      <!--<nav id="nav" class="navbar navbar-default" role="navigation">
+        nav
+      </nav>--><!-- /nav -->  
 
-    <div id="map" class="container-fluid div">
-      <div class="row">
-        map
-      </div>
-    </div><!--/#map-->
-
-    <div id="sponsor-bar" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          sponsor bar
+      <div id="map" class="container-fluid div">
+        <div class="row">
+          map
         </div>
-      </div>
-    </div><!--/#sponsor-bar-->
+      </div><!--/#map-->
 
-    <div id="know-more" class="container-fluid div">
-      <div class="row">
-        know more
-      </div>
-    </div><!--/#know-more-->
-
-    <div id="news" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          news
+      <div id="sponsor-bar" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            sponsor bar
+          </div>
         </div>
-      </div>
-    </div><!--/#news-->
+      </div><!--/#sponsor-bar-->
 
-    <div id="videos" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          videos
+      <div id="know-more" class="container-fluid div">
+        <div class="row">
+          know more
         </div>
-      </div>
-    </div><!--/#videos-->
+      </div><!--/#know-more-->
 
-    <div id="blog" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          blog
+      <div id="news" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            news
+          </div>
         </div>
-      </div>
-    </div><!--/#blog-->
+      </div><!--/#news-->
 
-    <div id="communities" class="container-fluid div">
-      <div class="row">
-        communities
-      </div>
-    </div><!--/#communities-->
-
-    <div id="auction" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          auction
+      <div id="videos" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            videos
+          </div>
         </div>
-      </div>
-    </div><!--/#auction-->
+      </div><!--/#videos-->
 
-    <footer id="footer" role="contentinfo" class="container div">
-      <div class="row">
-        <div class="col-xs-12">
-          footer
+      <div id="blog" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            blog
+          </div>
         </div>
-      </div>
-    </footer><!--/#footer-->
+      </div><!--/#blog-->
+
+      <div id="communities" class="container-fluid div">
+        <div class="row">
+          communities
+        </div>
+      </div><!--/#communities-->
+
+      <div id="auction" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            auction
+          </div>
+        </div>
+      </div><!--/#auction-->
+
+      <footer id="footer" role="contentinfo" class="container div">
+        <div class="row">
+          <div class="col-xs-12">
+            footer
+          </div>
+        </div>
+      </footer><!--/#footer-->
+
+    </div><!--/#page-wrap-->
 
 
 

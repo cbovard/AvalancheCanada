@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 10, 2014
+ * Aug. 13, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -13,6 +13,26 @@
   border: 1px red solid;
 }
 
+#page-wrap {
+  width: 100%;
+  min-height: 1px;
+}
+#page-wrap:before, #page-wrap:after {
+  content: " ";
+  display: table;
+}
+#page-wrap:after {
+  clear: both;
+}
+
+/*multilevel - mobile menu*/
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*multilevel - mobile menu ends*/
 /*header*/
 #header {
   height: 75px;
@@ -91,7 +111,7 @@
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 10, 2014
+ * Aug. 13, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -99,6 +119,10 @@
 ----------------------------------------------------------------------------------*/
 .div {
   border: 1px blue solid;
+}
+
+.reddiv {
+  border: 1px red solid;
 }
 
 /*header*/
@@ -115,9 +139,17 @@
 /*header ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 10, 2014
+ * Aug. 13, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
 /* =Desktop Layout and Styles
 ----------------------------------------------------------------------------------*/
+/*navigation*/
+#navigation {
+  background-color: transparent;
+  border-color: none;
+  margin: 0;
+}
+
+/*navigation ends*/
