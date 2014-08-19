@@ -30,15 +30,146 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1000;
+}
+#menu #menu_multilevelpushmenu h2 {
+  font-size: 24px;
+  line-height: 24px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #b1b1b1;
+  font-weight: normal;
+  margin: 0;
+  padding: 24px 20px 26px 30px;
+}
+#menu #menu_multilevelpushmenu h2 #multinav-home {
+  font-size: 24px;
+  line-height: 24px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #b1b1b1;
+  display: block;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  position: relative;
+  z-index: 1000;
+}
+#menu #menu_multilevelpushmenu h2 #multinav-home:hover {
+  color: #b1b1b1;
+}
+#menu #menu_multilevelpushmenu .ltr {
+  background: #efefef url(../img/multi-nav-layer-1-bg.png) left 75px repeat-x;
+  box-shadow: none;
+}
+#menu #menu_multilevelpushmenu .ltr ul li {
+  border: none;
+  padding: 26px 98px 0 30px;
+}
+#menu #menu_multilevelpushmenu .ltr ul li:hover {
+  background-color: transparent;
+}
+#menu #menu_multilevelpushmenu .ltr ul li a {
+  color: #121212;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  padding: 0;
+}
+#menu #menu_multilevelpushmenu .ltr ul li a .fa-angle-left {
+  display: none;
+}
+#menu #menu_multilevelpushmenu .ltr ul li a:focus, #menu #menu_multilevelpushmenu .ltr ul li a:hover {
+  color: #0056b7;
+}
+#menu #menu_multilevelpushmenu .ltr ul #multilevel-donate {
+  padding-left: 11px;
+}
+#menu #menu_multilevelpushmenu .ltr ul #multilevel-donate a {
+  color: #fff;
+  background-color: #d82631;
+  display: block;
+  width: 180px;
+  height: 53px;
+  padding: 18px 0 18px 11px;
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr {
+  background: #e0e0e0 url(../img/multi-nav-layer-2-bg.png) left 75px repeat-x;
+  box-shadow: none;
+  padding-top: 84px;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr h2 {
+  display: none;
+  color: #121212;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  padding: 20px 98px 0 30px;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr h2:focus, #menu #menu_multilevelpushmenu .ltr .ltr h2:hover {
+  color: #0056b7;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr ul li a {
+  color: #0056b7;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr ul li a:focus, #menu #menu_multilevelpushmenu .ltr .ltr ul li a:hover {
+  color: #121212;
+}
+#menu #menu_multilevelpushmenu .ltr .ltr .ltr {
+  background-color: #d2d2d2;
+  background: #d2d2d2 url(../img/multi-nav-layer-3-bg.png) left 75px repeat-x;
+  box-shadow: none;
+}
+#menu #menu_multilevelpushmenu .backItemClass {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  visibility: visible !important;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+#menu #menu_multilevelpushmenu .backItemClass a {
+  font-size: 24px;
+  line-height: 24px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #b1b1b1;
+  font-weight: normal;
+  padding: 0;
+}
+#menu #menu_multilevelpushmenu .backItemClass a i {
+  font-size: 26px;
+  line-height: 26px;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  color: #b1b1b1;
+  font-weight: bold;
+}
+#menu #menu_multilevelpushmenu .backItemClass a i:focus, #menu #menu_multilevelpushmenu .backItemClass a i:hover {
+  color: #b1b1b1;
+}
+#menu #menu_multilevelpushmenu .backItemClass a:focus, #menu #menu_multilevelpushmenu .backItemClass a:hover {
+  color: #b1b1b1;
 }
 
 /*multilevel - mobile menu ends*/
 /*header*/
 #header {
   height: 75px;
+  /*navigation*/
+  /*navigation ends*/
 }
 #header h1 {
-  margin: 0;
+  margin: 14px 0 0 0;
   text-decoration: none;
   font: 0/0 a;
   color: transparent;
@@ -52,6 +183,62 @@
   width: 147px;
   height: 47px;
   display: block;
+}
+#header #navigation {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+#header #navigation .navbar-header {
+  height: 75px;
+}
+#header #navigation .navbar-header:before, #header #navigation .navbar-header:after {
+  content: " ";
+  display: table;
+}
+#header #navigation .navbar-header:after {
+  clear: both;
+}
+#header #navigation .navbar-header #multi-expand {
+  margin: 22px 28px 0 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  font-size: 30px;
+  line-height: 30px;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: #b1b1b1;
+}
+#header #navigation .navbar-header #multi-expand:focus, #header #navigation .navbar-header #multi-expand:hover {
+  color: #b1b1b1;
+}
+#header #navigation .navbar-header #nav-search {
+  float: right;
+  margin: 26px 0 0 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #b1b1b1;
+}
+#header #navigation .navbar-header #nav-search:focus, #header #navigation .navbar-header #nav-search:hover {
+  color: #b1b1b1;
+}
+#header #navigation .navbar-header #nav-donate {
+  float: right;
+  margin: 0 28px 0 0;
+  background-color: #d82631;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  display: block;
+  height: 75px;
+  width: 94px;
+  padding: 24px 22px 30px 20px;
 }
 
 /*header ends*/

@@ -714,7 +714,7 @@ dd {
 .dl-horizontal dd:after {
   clear: both;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -2871,7 +2871,7 @@ tbody.collapse.in {
   margin-bottom: 1px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -3042,7 +3042,7 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 75px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3053,7 +3053,7 @@ tbody.collapse.in {
 .navbar:after {
   clear: both;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar {
     border-radius: 4px;
   }
@@ -3066,7 +3066,7 @@ tbody.collapse.in {
 .navbar-header:after {
   clear: both;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-header {
     float: left;
   }
@@ -3090,7 +3090,7 @@ tbody.collapse.in {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -3129,7 +3129,7 @@ tbody.collapse.in {
   margin-right: -20px;
   margin-left: -20px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -3143,7 +3143,7 @@ tbody.collapse.in {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -3158,7 +3158,7 @@ tbody.collapse.in {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -3178,15 +3178,15 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 15px 20px;
+  padding: 27.5px 20px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
+  height: 75px;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: -20px;
   }
@@ -3197,8 +3197,8 @@ tbody.collapse.in {
   float: right;
   margin-right: 20px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3216,21 +3216,21 @@ tbody.collapse.in {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-toggle {
     display: none;
   }
 }
 
 .navbar-nav {
-  margin: 7.5px -20px;
+  margin: 13.75px -20px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 599px) {
+@media (max-width: 1024px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -3251,7 +3251,7 @@ tbody.collapse.in {
     background-image: none;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -3260,15 +3260,15 @@ tbody.collapse.in {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -20px;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-left {
     float: left !important;
   }
@@ -3285,15 +3285,15 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
 }
-@media (max-width: 599px) {
+@media (max-width: 1024px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -3321,23 +3321,23 @@ tbody.collapse.in {
 }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 26.5px;
+  margin-bottom: 26.5px;
 }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 27.5px;
+  margin-bottom: 27.5px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .navbar-text {
     float: left;
     margin-left: 20px;
@@ -3378,10 +3378,10 @@ tbody.collapse.in {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  border-color: none;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #dddddd;
+  background-color: none;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #888888;
@@ -3394,7 +3394,7 @@ tbody.collapse.in {
   background-color: #e7e7e7;
   color: #555555;
 }
-@media (max-width: 599px) {
+@media (max-width: 1024px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777777;
   }
@@ -3473,7 +3473,7 @@ tbody.collapse.in {
   background-color: #090909;
   color: white;
 }
-@media (max-width: 599px) {
+@media (max-width: 1024px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #090909;
   }
