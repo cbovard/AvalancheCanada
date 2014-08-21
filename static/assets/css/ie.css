@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 13, 2014
+ * Aug. 20, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -40,7 +40,12 @@
   color: #b1b1b1;
   font-weight: normal;
   margin: 0;
-  padding: 24px 20px 26px 30px;
+  padding: 18px 14px 26px 24px;
+}
+#menu #menu_multilevelpushmenu h2 i.fa-times {
+  padding: 6px 6px 0 10px;
+  width: 40px;
+  height: 40px;
 }
 #menu #menu_multilevelpushmenu h2 #multinav-home {
   font-size: 24px;
@@ -49,9 +54,9 @@
   line-height: 2.4rem;
   color: #b1b1b1;
   display: block;
-  width: 26px;
-  height: 26px;
-  padding: 0;
+  width: 40px;
+  height: 40px;
+  padding: 6px 0 0 6px;
   position: relative;
   z-index: 1000;
 }
@@ -313,6 +318,10 @@
 }
 
 /*header*/
+#header {
+  /*navigation*/
+  /*navigation ends*/
+}
 #header h1 {
   background: transparent url(../img/logo.png) no-repeat center center;
 }
@@ -322,21 +331,38 @@
   height: 47px;
   display: block;
 }
+#header #navigation .navbar-header #nav-donate {
+  float: right;
+  margin: 0 28px 0 0;
+  background-color: #d82631;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  display: block;
+  height: 75px;
+  width: 94px;
+  padding: 24px 22px 30px 20px;
+}
 
 /*header ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 13, 2014
+ * Aug. 20, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
 /* =Desktop Layout and Styles
 ----------------------------------------------------------------------------------*/
-/*navigation*/
-#navigation {
-  background-color: transparent;
-  border-color: none;
-  margin: 0;
+/*header*/
+#header {
+  /*navigation*/
+  /*navigation ends*/
+}
+#header #navigation .navbar-collapse {
+  padding: 0;
 }
 
-/*navigation ends*/
+/*header ends*/

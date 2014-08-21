@@ -26,5 +26,24 @@
 		height:47px;
 		display:block;
 	}	
+
+	/*navigation*/
+	#navigation {
+    .navbar-header {
+    	#nav-donate {
+    		float:right;
+    		margin:0 28px 0 0;
+    		background-color:#d82631;
+    		color:#fff;
+    		@include font-size(1.5, 2.4);
+    		font-weight:bold;
+    		display:block;
+    		height:75px;
+    		width:94px;
+    		padding:24px 22px 30px 20px;
+    	}
+    }
+	}
+	/*navigation ends*/
 }
 /*header ends*/

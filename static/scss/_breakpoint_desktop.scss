@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 13, 2014
+ * Aug. 20, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -15,13 +15,15 @@
 
 
 
-/*navigation*/
+/*header*/
+#header {
 
-
-#navigation {
-	background-color:transparent;
-	border-color:none;
-	margin:0;
+	/*navigation*/
+	#navigation {
+		.navbar-collapse {
+			padding:0;
+		}
+	}
+	/*navigation ends*/
 }
-
-/*navigation ends*/
+/*header ends*/

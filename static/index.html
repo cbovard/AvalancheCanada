@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <title ng-bind="pageTitle"></title>
-
     <!-- /todo social media tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="">
@@ -17,30 +15,87 @@
     <meta property="og:image" content="" />
     <meta property="og:description" content="">
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
     <!-- compiled CSS -->
-    <!--<link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="vendor/multilevelpushmenu/multilevelpushmenu.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />-->
 
     <!--google font include http://www.google.com/fonts#UsePlace:use/Collection:Montserrat -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- font awesome from BootstrapCDN -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
-
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
     <!--CAC styles-->
     <link href="assets/css/styles.css" rel="stylesheet">
-
     <!--multilevel menu css-->
     <link rel="stylesheet" href="multilevelpushmenu/jquery.multilevelpushmenu.css">
 
 
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the begining because of a FOUC - -->
+    <!-- Modernizr required by multilevelpushmenu -->
+    <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- compiled JavaScript -->
+    <!--<script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>-->
+
+    <!-- Bootstrap core JS -->
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      { "parsetags": "explicit" }
+    </script>-->
+
+    <!-- initialise fullpage.js and multilevel push menu. /todo when angular is included simply do this from controller -->
+    <!--<script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+        console.log( "fullpage initialised" );
+
+        $('#menu').multilevelpushmenu();
+        console.log( "multilevelpushmenu initialised" );
+      });
+    </script>-->
+
+    <script>
+      $(document).ready(function () {
+          $('#menu').multilevelpushmenu({
+              containersToPush: [$('#page-wrap')],
+              menuWidth: '320px',
+              menuHeight: '100%',
+              collapsed: true,
+              fullCollapse: true,
+              backText: '',
+              overlapWidth:60
+              //backItemIcon: 'fa fa-angle-left', 
+              //groupIcon: 'fa fa-angle-right fa'
+          });
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+          //Multi Menu Expand
+          $('#multi-expand').click(function(){
+            $('#menu').multilevelpushmenu('expand');
+          });
+      });
+
+      $(window).resize(function () {
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+      });
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -128,11 +183,10 @@
             <nav id="navigation" class="navbar navbar-default" role="navigation">
                 <div class="navbar-header visible-xs visible-sm">
                   <a id="nav-search" href="#"><i class="fa fa-search"></i></a>
-                   <a id="nav-donate" class="visible-sm" href="#">Donate</a>
+                  <a id="nav-donate" class="visible-sm" href="#">Donate</a>
                   <a href="#" role="button" class="navbar-toggle" id="multi-expand">
                     <i class="fa fa-reorder"></i>
                   </a>
-                 
                 </div>
 
                 
@@ -144,6 +198,8 @@
                     <li><a href="#">News &amp; Events</a></li>
                     <li><a href="#">Store</a></li>
                   </ul>
+                  <a id="nav-search-desktop" href="#"><i class="fa fa-search"></i></a>
+                  <a id="nav-donate-desktop" href="#">Donate</a>
                 </div>
 
  
@@ -226,67 +282,5 @@
       </footer><!--/#footer-->
 
     </div><!--/#page-wrap-->
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Modernizr required by multilevelpushmenu -->
-    <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-    <!-- compiled JavaScript -->
-    <!--<script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>-->
-
-    <!-- Bootstrap core JS -->
-    <script src="assets/js/bootstrap.js"></script>
-
-    <script type="text/javascript" src="multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>
-
-    <!-- it's stupid to have to load it here, but this is for the +1 button -->
-    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-      { "parsetags": "explicit" }
-    </script>-->
-
-    <!-- initialise fullpage.js and multilevel push menu. /todo when angular is included simply do this from controller -->
-    <!--<script type="text/javascript">
-      $(document).ready(function() {
-        $('#fullpage').fullpage();
-        console.log( "fullpage initialised" );
-
-        $('#menu').multilevelpushmenu();
-        console.log( "multilevelpushmenu initialised" );
-      });
-    </script>-->
-
-    <script>
-      $(document).ready(function () {
-          $('#menu').multilevelpushmenu({
-              containersToPush: [$('#page-wrap')],
-              menuWidth: '320px',
-              menuHeight: '100%',
-              collapsed: true,
-              fullCollapse: true,
-              backText: '',
-              overlapWidth:60
-              //backItemIcon: 'fa fa-angle-left', 
-              //groupIcon: 'fa fa-angle-right fa'
-          });
-          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
-          $('#menu').multilevelpushmenu('redraw');
-          //Multi Menu Expand
-          $('#multi-expand').click(function(){
-            $('#menu').multilevelpushmenu('expand');
-          });
-      });
-
-      $(window).resize(function () {
-          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
-          $('#menu').multilevelpushmenu('redraw');
-      });
-    </script>
   </body>
 </html>
