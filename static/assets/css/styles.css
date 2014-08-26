@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 20, 2014
+ * Aug. 25, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 20, 2014
+ * Aug. 25, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -309,7 +309,7 @@
 @media screen and (min-width: 600px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Aug. 13, 2014
+   * Aug. 25, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -358,7 +358,7 @@
 @media screen and (min-width: 1025px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Aug. 20, 2014
+   * Aug. 25, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -369,8 +369,103 @@
     /*navigation*/
     /*navigation ends*/
   }
+  #header #navigation {
+    /* http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click */
+  }
   #header #navigation .navbar-collapse {
     padding: 0;
+    /*main nav and mega yamm menu*/
+  }
+  #header #navigation .navbar-collapse ul.nav > li {
+    position: relative;
+  }
+  #header #navigation .navbar-collapse ul.nav > li > a {
+    display: block;
+    height: 75px;
+    color: #000;
+    position: relative;
+    font-size: 15px;
+    line-height: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  #header #navigation .navbar-collapse ul.nav > li > a .arrow-down {
+    position: absolute;
+    z-index: 1060;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #000;
+    display: none;
+  }
+  #header #navigation .navbar-collapse ul.nav > li > a:focus, #header #navigation .navbar-collapse ul.nav > li > a:hover, #header #navigation .navbar-collapse ul.nav > li > a.active {
+    color: #fff;
+    background-color: #000;
+  }
+  #header #navigation .navbar-collapse ul.nav > li > a:focus .arrow-down, #header #navigation .navbar-collapse ul.nav > li > a:hover .arrow-down, #header #navigation .navbar-collapse ul.nav > li > a.active .arrow-down {
+    display: block;
+  }
+  #header #navigation .navbar-collapse ul.nav > li.open > a {
+    color: #fff;
+    background-color: #000;
+  }
+  #header #navigation .navbar-collapse ul.nav > li.open > a .arrow-down {
+    display: block;
+  }
+  #header #navigation .navbar-collapse ul.nav #nav-avalanche-info .arrow-down {
+    left: 76px;
+  }
+  #header #navigation .navbar-collapse ul.nav #nav-learn .arrow-down {
+    left: 23px;
+  }
+  #header #navigation .navbar-collapse ul.nav #nav-community .arrow-down {
+    left: 43px;
+  }
+  #header #navigation .navbar-collapse ul.nav #nav-news-events .arrow-down {
+    left: 51px;
+  }
+  #header #navigation .navbar-collapse ul.nav #nav-store .arrow-down {
+    left: 22px;
+  }
+  #header #navigation .navbar-collapse ul.nav .dropdown-menu {
+    background-color: #efefef;
+    left: 0;
+    border: none;
+    box-shadow: none;
+    padding: 30px 0 46px 0;
+    border-top: 9px solid #e3e3e3;
+  }
+  #header #navigation .navbar-collapse #nav-donate-desktop {
+    float: right;
+    margin: 0 0 0 0;
+    background-color: #d82631;
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    font-weight: bold;
+    display: block;
+    height: 75px;
+    width: 94px;
+    padding: 24px 22px 30px 20px;
+  }
+  #header #navigation .navbar-collapse #nav-search-desktop {
+    float: right;
+    margin: 26px 0 0 0;
+    font-size: 20px;
+    line-height: 20px;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #b1b1b1;
+  }
+  #header #navigation .navbar-collapse #nav-search-desktop:focus, #header #navigation .navbar-collapse #nav-search-desktop:hover {
+    color: #b1b1b1;
+  }
+  #header #navigation ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
   }
 
   /*header ends*/

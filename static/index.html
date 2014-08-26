@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- YAMM Mega Menu - http://geedmo.github.io/yamm/ -->
+    <link href="assets/yamm/yamm.css" rel="stylesheet">
+    
 
     <!--CAC styles-->
     <link href="assets/css/styles.css" rel="stylesheet">
@@ -80,8 +83,6 @@
               fullCollapse: true,
               backText: '',
               overlapWidth:60
-              //backItemIcon: 'fa fa-angle-left', 
-              //groupIcon: 'fa fa-angle-right fa'
           });
           $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
           $('#menu').multilevelpushmenu('redraw');
@@ -89,6 +90,31 @@
           $('#multi-expand').click(function(){
             $('#menu').multilevelpushmenu('expand');
           });
+
+
+          //custom js for the left of the mega menu fun
+          $("ul.nav > li").each(function(){
+              //assign li id and rebuild for jquery
+              li_id = "#" + this.id;
+              //get left position of li parent
+              yamm_offset = $(li_id).offset();
+              yamm_left = "-=" + yamm_offset.left;
+              //rebuild jquery element id
+              li_id_drop_down = li_id + " .dropdown-menu";
+              //assign the left position to the mega menu
+              $(li_id_drop_down).css("left", yamm_left);
+          });
+          //Returns width of browser viewport
+          var browser_viewport = $(window).width();
+          //set the yamm - mega menu width
+          $(".dropdown-menu").width(browser_viewport);
+          //weird hover off bug. Need to apply open class and remove - http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
+          $('ul.nav li.dropdown').hover(function() {
+            $(this).addClass('open');
+          }, function() {
+            $(this).removeClass('open');
+          });
+          /**/
       });
 
       $(window).resize(function () {
@@ -180,7 +206,7 @@
             </h1>
           </div>
           <div class="col-xs-5 col-md-8">
-            <nav id="navigation" class="navbar navbar-default" role="navigation">
+            <nav id="navigation" class="yamm navbar navbar-default" role="navigation">
                 <div class="navbar-header visible-xs visible-sm">
                   <a id="nav-search" href="#"><i class="fa fa-search"></i></a>
                   <a id="nav-donate" class="visible-sm" href="#">Donate</a>
@@ -190,17 +216,354 @@
                 </div>
 
                 
-                <div class="collapse navbar-collapse">
+               <div class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
-                    <li><a href="#">Avalanche Information</a></li>
-                    <li><a href="#">Learn</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">News &amp; Events</a></li>
-                    <li><a href="#">Store</a></li>
+                    <li class="dropdown yamm-fw" id="nav-avalanche-info"><a href="#">Avalanche Information<span class="arrow-down"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h2><a href="#">Forecasts</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Banff Yoho &amp; Kootenay National Park</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cariboos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Chic-Chocs, CAHG</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Glacier National Park</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Jasper National Park</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Kananaskis Country, Alberta Parks</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown yamm-fw" id="nav-learn"><a href="#">Learn<span class="arrow-down"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown yamm-fw" id="nav-community"><a href="#">Community<span class="arrow-down"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown yamm-fw" id="nav-news-events"><a href="#">News &amp; Events<span class="arrow-down"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown yamm-fw" id="nav-store"><a href="#">Store<span class="arrow-down"></span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                              <div class="col-md-3">
+                                <h2><a href="#">Nav Header Link</a></h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sub Link</a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
                   <a id="nav-search-desktop" href="#"><i class="fa fa-search"></i></a>
                   <a id="nav-donate-desktop" href="#">Donate</a>
                 </div>
+
+
+
 
  
                 <!--<a role="button" href="#" class="btn btn-lg btn-primary" id="multi-expand">Expand Menu</a>-->
@@ -217,7 +580,9 @@
 
       <div id="map" class="container-fluid div">
         <div class="row">
-          map
+
+map
+
         </div>
       </div><!--/#map-->
 
