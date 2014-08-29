@@ -17,16 +17,13 @@
 
 /*header*/
 #header {
-
 	/*navigation*/
 	#navigation {
+		border:none;
+		border-radius:0;
 		.navbar-collapse {
 			padding:0;
-
-
-
-
-
+			border:none;
 			/*main nav and mega yamm menu*/
 			ul.nav {
 				> li {
@@ -69,41 +66,136 @@
 				#nav-community .arrow-down {left:43px;}
 				#nav-news-events .arrow-down {left:51px;}
 				#nav-store .arrow-down {left:22px;}
-
 				.dropdown-menu {
 					background-color:#efefef;
-					//min-width:100%;
-					//width:1066px;;
-					//display:block;
 					left:0;
 					border:none;
 					box-shadow:none;
 					padding:30px 0 46px 0;
 					border-top:9px solid #e3e3e3;
+					.mega-content-inner {
+						border-right:5px solid #dcdcdc;
+						min-height:286px;
+						@include clearfix();
+						&.last {border:none;}
+					}
+
+					h2 {
+						@include font-size(2.0, 2.2);
+						margin:0 0 14px 0;
+						a {
+							font-weight:bold;
+							@include font-size(2.0, 2.2);
+							color:#121212;
+			    		&:visited,
+			    		&:hover,
+			    		&:active,
+							&:focus {
+								text-decoration:none;
+								color:#121212;
+							}
+							.fa-angle-right {
+								@include font-size(2.4, 2.4);
+								color:#0056b7;
+								font-weight:bold;
+							}
+						}
+					}
+					.mega-secondary-menu {
+						list-style:none;
+						margin:0;
+						padding:0;
+						li {
+							margin:0;
+							padding:28px 0;
+							border-bottom:2px solid #dcdcdc;
+							&.first {padding-top:0;}
+							&.last {
+								padding-bottom:0;
+								border:none;
+							}
+							h2 {
+								@include font-size(2.0, 2.0);
+								margin:0;
+								a {
+									font-weight:bold;
+									@include font-size(2.0, 2.0);
+									color:#121212;
+					    		&:visited,
+					    		&:hover,
+					    		&:active,
+									&:focus {
+										text-decoration:none;
+										color:#121212;
+									}
+									.fa-angle-right {
+										@include font-size(2.4, 2.4);
+										color:#0056b7;
+										font-weight:bold;
+									}
+								}
+							}
+						}						
+					}
+          //this needs to be renamed tertiray
+					.mega-sub-menu {
+						list-style:none;
+						margin:0;
+						padding:0;
+						li {
+							margin:0 0 16px 0;
+							@include font-size(1.5, 1.5);
+							padding-right:20px;
+							a {
+								font-weight:bold;
+								@include font-size(1.5, 1.8);
+								color:#0056b7;
+				    		&:visited,
+				    		&:hover,
+				    		&:active,
+								&:focus {
+									text-decoration:none;
+									color:#0056b7;
+								}
+							}
+						}
+					}
+					p {
+						color:#5b5b5b;
+						@include font-size(1.5, 2.0);
+						margin:0;
+					}
 				}
 			}
-
-
     	#nav-donate-desktop {
     		float:right;
-    		margin:0 0 0 0;
+    		margin:0 0 0 -1px;
     		background-color:#d82631;
     		color:#fff;
     		@include font-size(1.5, 2.4);
     		font-weight:bold;
     		display:block;
     		height:75px;
-    		width:94px;
+    		//width:95px;
     		padding:24px 22px 30px 20px;
+    		&:visited,
+    		&:hover,
+    		&:active,
+				&:focus {
+					text-decoration:none;
+					color:#fff;
+				} 
     	}
-
 			#nav-search-desktop {
     		float:right;
-    		margin:26px 0 0 0;
+    		padding:26px 10px 26px 16px;
+    		margin-right:-20px;
     		@include font-size(2.0, 2.0);
     		color:#b1b1b1;
-				&:focus,
-				&:hover {
+    		&:visited,
+    		&:hover,
+    		&:active,
+				&:focus {
 					color:#b1b1b1;
 				}    		
 			}
