@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 25, 2014
+ * Sept. 2, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -12,6 +12,35 @@
 
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
+
+
+//black button
+.black-button {
+	font-family:$font-family-google;
+	background-color:#121212;
+	color:#fff;
+	@include font-size(1.6, 1.6);
+	font-weight:bold;
+	text-transform:uppercase;
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration:none;
+		color:#fff;
+	} 
+	&:hover {
+		background-color:#474747;
+	}
+	&:focus {
+		background-color:#737373;
+	}
+	.fa-angle-right {
+		@include font-size(2.0, 2.0);
+		font-weight:bold;
+	}
+
+}
 
 .div {border:1px red solid;}
 //@include clearfix();
@@ -87,6 +116,16 @@
 						height:53px;
 						padding:18px 0 18px 11px;
 						@include font-size(2.0, 2.0);
+		    		&:visited,
+		    		&:hover,
+		    		&:active,
+						&:focus {
+							text-decoration:none;
+							color:#fff;
+						} 
+						&:hover {
+							background-color:#b2212a;
+						}
 					}
 				}
 			}
@@ -235,12 +274,62 @@
 /*sponsor-bar*/
 #sponsor-bar {
 	height:148px;
+	#sponsor-ad-container {
+		background-color:#eeeff1;
+		min-height:90px;
+		@include clearfix();
+		margin:28px 0;
+		padding-top:23px;
+		#sponsor-link {
+			img {
+				@include center-block();
+			}			
+		}
+
+	}
 }
 /*sponsor-bar ends*/
 
 /*know-more*/
 #know-more {
+	width:100%;
 	height:290px;
+	background:transparent url(../img/know-more-desktop-bg.jpg) center bottom no-repeat;
+	article {
+		padding-top:36px;
+		@include clearfix();
+		min-height:220px;
+		header {
+			min-height:100px;
+			margin-bottom:18;
+			clear:both;
+			h2 {
+        font-family:$font-family-google;
+        font-weight:bold;
+        color:#fff;
+        @include font-size(3.6, 3.8);
+				margin:0;
+				span {
+					  color:#121212;
+            @include font-size(3.6, 3.8);
+				}
+			}
+		}
+		footer {
+			min-height:135px;
+			clear:both;
+			a {
+				display:block;
+				width:230px;
+				@extend .black-button;
+				padding:22px 22px 20px 26px;
+				clear:both;
+				margin-bottom:12px;
+			}
+
+		}
+
+	}
 }
 /*know-more ends*/
 

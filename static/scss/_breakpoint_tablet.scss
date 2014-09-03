@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Aug. 25, 2014
+ * Sept. 2, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -17,16 +17,13 @@
 
 /*header*/
 #header {
-	h1 {
-		background:transparent url(../img/logo.png) no-repeat center center;
-	}
+	h1 {background:transparent url(../img/logo.png) no-repeat center center;}
 	h1,
 	h1 a {
 		width:264px;
 		height:47px;
 		display:block;
 	}	
-
 	/*navigation*/
 	#navigation {
     .navbar-header {
@@ -41,9 +38,66 @@
     		height:75px;
     		width:94px;
     		padding:24px 22px 30px 20px;
+            &:visited,
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration:none;
+                color:#fff;
+            } 
+            &:hover {
+                background-color:#b2212a;
+            }
     	}
     }
 	}
 	/*navigation ends*/
 }
 /*header ends*/
+
+
+/*sponsor-bar*/
+#sponsor-bar {
+    #sponsor-ad-container {
+        padding:23px 16px 0 16px;
+        #sponsor-text {
+            float:left;
+            font-family:$font-family-google;
+            font-weight:bold;
+            color:#121212;
+            @include font-size(1.6, 1.6);
+            text-transform:uppercase;
+            padding:16px 0 0 0;
+            margin:0;
+        }
+        #sponsor-link {
+            float:right;         
+        }
+
+    }
+}
+/*sponsor-bar ends*/
+
+/*know-more*/
+#know-more {
+    height:243px;
+    article {
+        padding-top:50px;
+        header {
+            width:318px;
+            float:left;
+            clear:none;
+            padding-top:16px;
+            h2 {
+                @include font-size(5.0, 5.2);
+                span {@include font-size(5.0, 5.2);}
+            }
+        }
+        footer {
+            width:230px;
+            float:right;
+            clear:none;
+        }
+    }
+}
+/*know-more ends*/
