@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 2, 2014
+ * Sept. 7, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 2, 2014
+ * Sept. 7, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -41,6 +41,15 @@
   font-size: 2rem;
   line-height: 2rem;
   font-weight: bold;
+}
+
+.blue-border {
+  height: 8px;
+  width: 50px;
+  background-color: #0056b7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .div {
@@ -375,11 +384,266 @@
 #news {
   min-height: 400px;
 }
+#news #news-articles {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+}
+#news #news-articles > header {
+  padding: 34px 0 36px 0;
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+}
+#news #news-articles > header h1 {
+  color: #0056b7;
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#news #news-articles > header h1 span {
+  color: #121212;
+}
+#news #news-articles > article {
+  min-height: 1px;
+}
+#news #news-articles > article:before, #news #news-articles > article:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 {
+  margin: 36px 0 22px 0;
+}
+#news #news-articles > article.list-row-1 .news-image {
+  min-height: 1px;
+}
+#news #news-articles > article.list-row-1 .news-image:before, #news #news-articles > article.list-row-1 .news-image:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-row-1 .news-image:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 .news-image img {
+  border: 4px solid #eeeff1;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social {
+  margin: 0;
+  padding: 10px 0 0 0;
+  list-style: none;
+  display: inline;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social:before, #news #news-articles > article.list-row-1 .news-image .news-social:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social li {
+  margin: 0 8px 0 0;
+  list-style: none;
+  display: inline;
+  float: left;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social li a {
+  font-size: 12px;
+  line-height: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: #b5b5b5;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social li a:visited, #news #news-articles > article.list-row-1 .news-image .news-social li a:hover, #news #news-articles > article.list-row-1 .news-image .news-social li a:active, #news #news-articles > article.list-row-1 .news-image .news-social li a:focus {
+  text-decoration: none;
+  color: #b5b5b5;
+}
+#news #news-articles > article.list-row-1 .news-image .news-social li a .fa {
+  font-size: 14px;
+  line-height: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+#news #news-articles > article.list-row-1 header {
+  padding-top: 32px;
+  padding-bottom: 20px;
+  min-height: 1px;
+}
+#news #news-articles > article.list-row-1 header:before, #news #news-articles > article.list-row-1 header:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-row-1 header:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 header span {
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #ee3d3d;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#news #news-articles > article.list-row-1 header h2 {
+  font-size: 26px;
+  line-height: 26px;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  margin: 0;
+}
+#news #news-articles > article.list-row-1 header h2 a {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  color: #121212;
+}
+#news #news-articles > article.list-row-1 header h2 a:visited, #news #news-articles > article.list-row-1 header h2 a:hover, #news #news-articles > article.list-row-1 header h2 a:active, #news #news-articles > article.list-row-1 header h2 a:focus {
+  text-decoration: none;
+}
+#news #news-articles > article.list-row-1 .news-body p {
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#news #news-articles > article.list-row-1 .news-body p a {
+  color: #0056b7;
+  font-weight: bold;
+}
+#news #news-articles > article.list-row-1 footer {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  min-height: 1px;
+}
+#news #news-articles > article.list-row-1 footer:before, #news #news-articles > article.list-row-1 footer:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-row-1 footer:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 footer p {
+  color: #b5b5b5;
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+}
+#news #news-articles > article.list-row-1 footer p .fa {
+  font-size: 6px;
+  line-height: 6px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  padding: 0 2px 0 3px;
+}
+#news #news-articles > article.list-row-1 footer p a {
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: #b5b5b5;
+}
+#news #news-articles > article.list-row-1 footer p a:visited, #news #news-articles > article.list-row-1 footer p a:hover, #news #news-articles > article.list-row-1 footer p a:active, #news #news-articles > article.list-row-1 footer p a:focus {
+  text-decoration: none;
+}
+#news #news-articles > article.list-rows {
+  margin: 18px 0;
+  padding-top: 18px;
+  border-top: 3px solid #eeeff1;
+}
+#news #news-articles > article.list-rows header {
+  min-height: 1px;
+}
+#news #news-articles > article.list-rows header:before, #news #news-articles > article.list-rows header:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-rows header:after {
+  clear: both;
+}
+#news #news-articles > article.list-rows header h2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 0;
+}
+#news #news-articles > article.list-rows header h2 a {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #121212;
+}
+#news #news-articles > article.list-rows header h2 a:visited, #news #news-articles > article.list-rows header h2 a:hover, #news #news-articles > article.list-rows header h2 a:active, #news #news-articles > article.list-rows header h2 a:focus {
+  text-decoration: none;
+}
+#news #news-articles > article.list-rows header h2 a .fa-angle-right {
+  color: #0056b7;
+  font-size: 28px;
+  line-height: 24px;
+  font-size: 2.8rem;
+  line-height: 2.4rem;
+}
+#news #news-articles > article.list-rows footer {
+  margin-top: 12px;
+  min-height: 1px;
+}
+#news #news-articles > article.list-rows footer:before, #news #news-articles > article.list-rows footer:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-rows footer:after {
+  clear: both;
+}
+#news #news-articles > article.list-rows footer p {
+  color: #b5b5b5;
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+}
+#news #news-articles > article.list-rows footer p .fa {
+  font-size: 6px;
+  line-height: 6px;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  padding: 0 2px 0 3px;
+}
+#news #news-articles > article.list-rows footer p a {
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: #b5b5b5;
+}
+#news #news-articles > article.list-rows footer p a:visited, #news #news-articles > article.list-rows footer p a:hover, #news #news-articles > article.list-rows footer p a:active, #news #news-articles > article.list-rows footer p a:focus {
+  text-decoration: none;
+}
 
 /*news ends*/
 /*videos*/
 #videos {
   height: 390px;
+  margin-top: 32px;
 }
 
 /*videos ends*/
@@ -404,13 +668,65 @@
 /*footer*/
 #footer {
   height: 214px;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 20px;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: transparent url(../img/footer-menu-mobile-bg.png) 30% top no-repeat;
+  display: block;
+  min-height: 1px;
+  /*#footer-contact {float:left;}
+  #footer-privacy {float:left;}
+  #footer-disclaimer {float:right;}
+  #footer-terms {float:right;}*/
+}
+#footer ul:before, #footer ul:after {
+  content: " ";
+  display: table;
+}
+#footer ul:after {
+  clear: both;
+}
+#footer ul li {
+  list-style: none;
+  display: block;
+  width: 40%;
+  float: left;
+  margin-bottom: 30px;
+}
+#footer ul li a {
+  font-size: 15px;
+  line-height: 18px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #121212;
+}
+#footer ul li a:visited, #footer ul li a:hover, #footer ul li a:active, #footer ul li a:focus {
+  text-decoration: none;
+}
+#footer ul li a:hover {
+  color: #0056B7;
+}
+#footer h6 {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  color: #b7b7b7;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: normal;
 }
 
 /*footer ends*/
 @media screen and (min-width: 600px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 2, 2014
+   * Sept. 8, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -516,11 +832,82 @@
   }
 
   /*know-more ends*/
+  /*news*/
+  #news #news-articles {
+    margin-bottom: 30px;
+  }
+  #news #news-articles > header h1 {
+    font-size: 50px;
+    line-height: 52px;
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+  #news #news-articles > header h1 br {
+    display: none;
+  }
+  #news #news-articles > article.list-row-1 {
+    margin: 45px 0 22px 0;
+  }
+  #news #news-articles > article.list-row-1 .news-image {
+    min-height: 1px;
+    width: 236px;
+    float: left;
+  }
+  #news #news-articles > article.list-row-1 .news-image:before, #news #news-articles > article.list-row-1 .news-image:after {
+    content: " ";
+    display: table;
+  }
+  #news #news-articles > article.list-row-1 .news-image:after {
+    clear: both;
+  }
+  #news #news-articles > article.list-row-1 .news-image img {
+    margin-bottom: 8px;
+  }
+  #news #news-articles > article.list-row-1 header {
+    width: 334px;
+    float: right;
+    padding-top: 0;
+  }
+  #news #news-articles > article.list-row-1 .news-body {
+    width: 334px;
+    float: right;
+  }
+  #news #news-articles > article.list-row-1 footer {
+    width: 334px;
+    float: right;
+  }
+
+  /*news ends*/
+  /*footer*/
+  #footer ul {
+    background: none;
+    display: inline;
+  }
+  #footer ul li {
+    list-style: none;
+    display: inline;
+    float: left;
+    margin: 0;
+    width: auto;
+    padding: 3px 26px 3px 0;
+    margin: 0 26px 0 0;
+  }
+  #footer ul #footer-contact {
+    border-right: 3px solid #eeeff1;
+  }
+  #footer h6 {
+    margin-top: 30px;
+  }
+  #footer h6 br {
+    display: none;
+  }
+
+  /*footer ends*/
 }
 @media screen and (min-width: 1025px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 2, 2014
+   * Sept. 8, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -775,4 +1162,95 @@
   }
 
   /*know-more ends*/
+  /*news*/
+  #news #news-articles {
+    min-height: 1px;
+  }
+  #news #news-articles:before, #news #news-articles:after {
+    content: " ";
+    display: table;
+  }
+  #news #news-articles:after {
+    clear: both;
+  }
+  #news #news-articles > header {
+    margin: 0 0 44px 0;
+  }
+  #news #news-articles > header h1 {
+    font-size: 50px;
+    line-height: 52px;
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+  #news #news-articles > header h1 br {
+    display: none;
+  }
+  #news #news-articles > article.list-row-1 {
+    margin: 0;
+    clear: none;
+    width: 510px;
+    float: left;
+    border-right: 3px solid #eeeff1;
+    min-height: 278px;
+  }
+  #news #news-articles > article.list-row-1 .news-image {
+    min-height: 1px;
+    width: 236px;
+    float: left;
+  }
+  #news #news-articles > article.list-row-1 .news-image:before, #news #news-articles > article.list-row-1 .news-image:after {
+    content: " ";
+    display: table;
+  }
+  #news #news-articles > article.list-row-1 .news-image:after {
+    clear: both;
+  }
+  #news #news-articles > article.list-row-1 .news-image img {
+    margin-bottom: 8px;
+  }
+  #news #news-articles > article.list-row-1 header {
+    width: 244px;
+    float: right;
+    padding-top: 0;
+    padding-right: 10px;
+  }
+  #news #news-articles > article.list-row-1 .news-body {
+    width: 244px;
+    float: right;
+    padding-right: 10px;
+  }
+  #news #news-articles > article.list-row-1 footer {
+    width: 244px;
+    float: right;
+    padding-right: 10px;
+  }
+  #news #news-articles > article.list-rows {
+    width: 500px;
+    float: right;
+    clear: none;
+    border-top: none;
+    border-bottom: 3px solid #eeeff1;
+    margin: 0 0 10px 16px;
+    padding: 0 0 16px 0;
+  }
+  #news #news-articles > article.list-row-last {
+    border-bottom: none;
+  }
+
+  /*news ends*/
+  /*footer*/
+  #footer ul {
+    float: left;
+    clear: none;
+  }
+  #footer h6 {
+    float: right;
+    clear: none;
+    margin-top: 4px;
+  }
+  #footer h6 br {
+    display: none;
+  }
+
+  /*footer ends*/
 }

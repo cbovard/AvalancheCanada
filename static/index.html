@@ -595,58 +595,75 @@
       <div id="news" class="container ">
         <div class="row">
           <div class="col-xs-12">
-            <article>
+            <!--news articles container-->
+            <article id="news-articles">
               <header>
-                <h1>News &amp; Events</h1>
+                <h1>News <br /><span>and Events</span></h1>
+                <div class="blue-border"></div>
               </header>
-              <section id="news-featured">
-                <article>
+              <!--news list rows-->
+              <article class="list-row-1">
+                <section class="news-image">
+                  <img src="assets/img/news-article-test-pic.jpg" class="im" alt="">
+                  <ul class="news-social">
+                    <li>
+                      <a href="#"><i class="fa fa-facebook"></i>&nbsp;25</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter"></i>&nbsp;12</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-eye"></i>&nbsp;63</a>
+                    </li>
+                  </ul>
+                </section>
+                <header>
                   <span>Featured</span>
-                  <header>
-                    <h2>Featured News Article</h2>
-                  </header>
+                  <h2><a href="#">Featured News Article</a></h2>
+                </header>
+                <section class="news-body">
                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
-                  <footer>
-                    <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+                </section>
+                <footer>
+                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
 &nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                  </footer>
-                </article>
-              </section>
-              <section id="news-items">
-                <article>
-                  <header>
-                    <h2>Sub News Article&nbsp;<i class="fa fa-angle-right"></i></h2>
-                  </header>
-                  <footer>
-                    <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+                </footer>
+              </article>
+              <article class="list-rows list-row-2">
+                <header>
+                  <h2><a href="#">Sub News Article Sub News Article Sub News Article Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
+                </header>
+                <footer>
+                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
 &nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                  </footer>
-                </article>
-                <article>
-                  <header>
-                    <h2>Sub News Article&nbsp;<i class="fa fa-angle-right"></i></h2>
-                  </header>
-                  <footer>
-                    <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+                </footer>
+              </article>
+              <article class="list-rows list-row-3">
+                <header>
+                  <h2><a href="#">Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
+                </header>
+                <footer>
+                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
 &nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                  </footer>
-                </article>
-                <article>
-                  <header>
-                    <h2>Sub News Article&nbsp;<i class="fa fa-angle-right"></i></h2>
-                  </header>
-                  <footer>
-                    <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+                </footer>
+              </article>
+              <article class="list-rows list-row-4 list-row-last">
+                <header>
+                  <h2><a href="#">Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
+                </header>
+                <footer>
+                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
 &nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                  </footer>
-                </article>
-              </section>
+                </footer>
+              </article>
+              <!--news list rows ends-->
             </article>
+            <!--news articles container ends-->
           </div>
         </div>
       </div><!--/#news-->
 
-      <div id="videos" class="container div">
+      <div id="videos" class="container div hide">
         <div class="row">
           <div class="col-xs-12">
             videos
@@ -654,7 +671,7 @@
         </div>
       </div><!--/#videos-->
 
-      <div id="blog" class="container div">
+      <div id="blog" class="container div hide">
         <div class="row">
           <div class="col-xs-12">
             blog
@@ -662,13 +679,13 @@
         </div>
       </div><!--/#blog-->
 
-      <div id="communities" class="container-fluid div">
+      <div id="communities" class="container-fluid div hide">
         <div class="row">
           communities
         </div>
       </div><!--/#communities-->
 
-      <div id="auction" class="container div">
+      <div id="auction" class="container div hide">
         <div class="row">
           <div class="col-xs-12">
             auction
@@ -676,10 +693,24 @@
         </div>
       </div><!--/#auction-->
 
-      <footer id="footer" role="contentinfo" class="container div">
+      <footer id="footer" role="contentinfo" class="container">
         <div class="row">
           <div class="col-xs-12">
-            footer
+            <!--<ul id="mobile-footer-menu" class="visible-xs-block">
+              <li id="footer-contact" class="first"><a href="#">Contact</a></li>
+              <li><a href="#">Privact Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Terms of Use</a></li>
+            </ul>
+            <ul id="tablet-desktop-footer-menu" class="hidden-xs">-->
+            <ul>
+              <li id="footer-contact" class="first"><a href="#">Contact</a></li>
+              <li id="footer-privacy"><a href="#">Privacy Policy</a></li>
+              <li id="footer-disclaimer"><a href="#">Disclaimer</a></li>
+              <li id="footer-terms"><a href="#">Terms of Use</a></li>
+            </ul>
+            <h6>&copy;2014 Avalanche Canada, <br />All Rights Reserved</h6>
+            <!-- Front End Development by Chris Bovard - www.chrisbovard.com -->
           </div>
         </div>
       </footer><!--/#footer-->

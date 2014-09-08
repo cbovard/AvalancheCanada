@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 2, 2014
+ * Sept. 7, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -41,9 +41,22 @@
 	}
 
 }
+.blue-border {
+	height:8px;
+	width:50px;
+	background-color:#0056b7;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
 
 .div {border:1px red solid;}
 //@include clearfix();
+
+//end of custom classes
+
+
+
 
 #page-wrap {
 	width:100%;
@@ -337,6 +350,187 @@
 /*news*/
 #news {
 	min-height:400px;
+	#news-articles {
+		padding-bottom:30px;
+		margin-bottom:30px;
+		background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+		> header {
+			padding:34px 0 36px 0;
+			background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+			position:relative;
+			h1 {
+				color:#0056b7;
+				@include font-size(3.6, 3.8);
+				font-family:$font-family-google;
+				margin:0;
+				font-weight:bold;
+				span {
+					color:#121212;
+				}
+			}
+		}
+		> article {
+			min-height:1px;
+			@include clearfix();
+			//first featured 
+			&.list-row-1 {
+				margin:36px 0 22px 0;
+				.news-image {
+					min-height:1px;
+					@include clearfix();
+					img {
+						border:4px solid #eeeff1;
+					}
+					.news-social {
+						margin:0;
+						padding:10px 0 0 0;
+						list-style:none;
+						display:inline;
+						@include clearfix();
+						li {
+							margin:0 8px 0 0;
+							list-style:none;
+							display:inline;
+							float:left;
+							a {
+								@include font-size(1.2, 1.2);
+								color:#b5b5b5;
+								&:visited,
+								&:hover,
+								&:active,
+								&:focus {
+									text-decoration:none;
+									color:#b5b5b5;
+								} 
+								.fa {
+									@include font-size(1.4, 1.4);
+								}
+							}
+						}
+					}
+				}
+				header {
+					padding-top:32px;
+					padding-bottom:20px;
+					min-height:1px;
+					@include clearfix();
+					//featured span
+					span {
+						@include font-size(1.6, 1.6);
+						color:#ee3d3d;
+						font-family:$font-family-google;
+						font-weight:bold;
+						text-transform:uppercase;
+					}
+					h2 {
+						@include font-size(2.6, 2.6);
+						margin:0;
+						a {
+							font-weight:bold;
+						  @include font-size(2.6, 3.0);
+						  color:#121212;
+							&:visited,
+							&:hover,
+							&:active,
+							&:focus {
+								text-decoration:none;
+							} 
+						}
+					}
+				}
+				.news-body {
+					p {
+						@include font-size(1.5, 2.0);
+						margin:0;
+						color:#5b5b5b;
+						a {
+							color:#0056b7;
+							font-weight:bold;
+						}
+					}						
+				}
+				footer {
+					margin-top:10px;
+					margin-bottom:18px;
+					min-height:1px;
+					@include clearfix();
+					p {
+						color:#b5b5b5;
+						margin:0;
+						font-family:$font-family-google;
+						@include font-size(1.1, 1.1);
+						text-transform:uppercase;
+						.fa {
+							@include font-size(0.6, 0.6);
+							padding:0 2px 0 3px;						}
+						a {
+						  @include font-size(1.1, 1.1);
+						  color:#b5b5b5;
+							&:visited,
+							&:hover,
+							&:active,
+							&:focus {
+								text-decoration:none;
+							} 
+						}
+					}
+				}
+			}
+			&.list-rows {
+				margin:18px 0;
+				padding-top:18px;
+				border-top:3px solid #eeeff1;
+				header {
+					min-height:1px;
+					@include clearfix();
+					h2 {
+						@include font-size(2.0, 2.4);
+						margin:0;
+						a {
+							font-weight:bold;
+						  @include font-size(2.0, 2.4);
+						  color:#121212;
+							&:visited,
+							&:hover,
+							&:active,
+							&:focus {
+								text-decoration:none;
+							} 
+							.fa-angle-right {
+								color:#0056b7;
+								@include font-size(2.8, 2.4);
+							}
+						}
+					}
+				}
+				footer {
+					margin-top:12px;
+					min-height:1px;
+					@include clearfix();
+					p {
+						color:#b5b5b5;
+						margin:0;
+						font-family:$font-family-google;
+						@include font-size(1.1, 1.1);
+						text-transform:uppercase;
+						.fa {
+							@include font-size(0.6, 0.6);
+							padding:0 2px 0 3px;						}
+						a {
+						  @include font-size(1.1, 1.1);
+						  color:#b5b5b5;
+							&:visited,
+							&:hover,
+							&:active,
+							&:focus {
+								text-decoration:none;
+							} 
+						}
+					}
+				}
+			}
+		}
+	}
 }
 /*news ends*/
 
@@ -344,6 +538,7 @@
 /*videos*/
 #videos {
 	height:390px;
+	margin-top:32px;
 }
 /*videos ends*/
 
@@ -370,6 +565,49 @@
 /*footer*/
 #footer {
 	height:214px;
+	border-top:1px solid #e2e2e2;
+	padding-top:20px;
+	ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+		background:transparent url(../img/footer-menu-mobile-bg.png) 30% top no-repeat;
+		display:block;
+		min-height:1px;
+		@include clearfix();
+		li {
+			list-style:none;
+			display:block;
+			width:40%;
+			float:left;
+			margin-bottom:30px;
+			a {
+			  @include font-size(1.5, 1.8);
+			  color:#121212;
+				&:visited,
+				&:hover,
+				&:active,
+				&:focus {
+					text-decoration:none;
+				} 
+				&:hover {
+					color:#0056B7;
+				}
+			}
+		}
+		/*#footer-contact {float:left;}
+		#footer-privacy {float:left;}
+		#footer-disclaimer {float:right;}
+		#footer-terms {float:right;}*/
+	}
+	h6 {
+		margin:0;
+		padding:0;
+		clear:both;
+		color:#b7b7b7;
+		@include font-size(1.5, 2.2);
+		font-weight:normal;
+	}
 }
 /*footer ends*/
 
