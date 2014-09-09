@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 7, 2014
+ * Sept. 8, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -31,6 +31,35 @@
   background-color: #737373;
 }
 .black-button .fa-angle-right, #know-more article footer a .fa-angle-right {
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.blue-button {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #0056b7;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.blue-button:visited, .blue-button:hover, .blue-button:active, .blue-button:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.blue-button:hover {
+  background-color: #1e7be5;
+}
+.blue-button:focus {
+  background-color: #4299fc;
+}
+.blue-button .fa-angle-right {
   font-size: 20px;
   line-height: 20px;
   font-size: 2rem;
@@ -637,8 +666,64 @@
 /*news ends*/
 /*videos*/
 #videos {
-  height: 390px;
-  margin-top: 32px;
+  min-height: 390px;
+  margin-bottom: 36px;
+}
+#videos:before, #videos:after {
+  content: " ";
+  display: table;
+}
+#videos:after {
+  clear: both;
+}
+#videos #video-featured header {
+  height: 41px;
+  position: relative;
+  z-index: 910;
+  background-color: #121212;
+  padding-left: 182px;
+}
+#videos #video-featured header #header-bg {
+  position: absolute;
+  left: -15px;
+  top: 0;
+  height: 52px;
+  width: 182px;
+  background: transparent url(../img/video-header-bg.png) left center no-repeat;
+}
+#videos #video-featured #video-container {
+  min-height: 1px;
+  position: relative;
+  z-index: 900;
+  background-color: #eeeff1;
+  padding: 4px;
+  margin-top: -4px;
+}
+#videos #video-featured #video-container:before, #videos #video-featured #video-container:after {
+  content: " ";
+  display: table;
+}
+#videos #video-featured #video-container:after {
+  clear: both;
+}
+#videos #video-featured #video-container #video-body {
+  min-height: 1px;
+  padding: 10px 10px 16px 6px;
+}
+#videos #video-featured #video-container #video-body:before, #videos #video-featured #video-container #video-body:after {
+  content: " ";
+  display: table;
+}
+#videos #video-featured #video-container #video-body:after {
+  clear: both;
+}
+#videos #video-featured #video-container #video-body p {
+  margin: 0;
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
 }
 
 /*videos ends*/
@@ -665,12 +750,13 @@
   height: 214px;
   border-top: 1px solid #e2e2e2;
   padding-top: 20px;
+  width: 100%;
 }
 #footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: transparent url(../img/footer-menu-mobile-bg.png) 30% top no-repeat;
+  background: transparent url(../img/footer-menu-mobile-bg.png) 33% top no-repeat;
   display: block;
   min-height: 1px;
   /*#footer-contact {float:left;}
@@ -726,14 +812,6 @@
 ----------------------------------------------------------------------------------*/
 /* =Tablet Layout and Styles
 ----------------------------------------------------------------------------------*/
-.div {
-  border: 1px blue solid;
-}
-
-.reddiv {
-  border: 1px red solid;
-}
-
 /*header*/
 #header {
   /*navigation*/
@@ -872,6 +950,31 @@
 }
 
 /*news ends*/
+/*videos*/
+#videos #video-featured #video-container #video-body {
+  width: 332px;
+  padding: 0;
+  float: left;
+  padding: 18px 18px 18px 14px;
+}
+#videos #video-featured #video-container #video-sponsor {
+  width: 260px;
+  height: 166px;
+  float: right;
+  position: relative;
+  z-index: 910;
+  top: -36px;
+  right: 0;
+  background: transparent url(../img/video-sponsor-bg.png) center center no-repeat;
+  padding-top: 86px;
+}
+#videos #video-featured #video-container #video-sponsor #video-sponsor-link img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*videos ends*/
 /*footer*/
 #footer ul {
   background: none;
@@ -1230,6 +1333,40 @@
 }
 
 /*news ends*/
+/*videos*/
+#videos #video-featured header h2 {
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  padding-top: 8px;
+}
+#videos #video-featured header h2 a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: #fff;
+}
+#videos #video-featured header h2 a:visited, #videos #video-featured header h2 a:hover, #videos #video-featured header h2 a:active, #videos #video-featured header h2 a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+#videos #video-featured #video-container #video-body {
+  width: 720px;
+  padding-top: 24px;
+}
+#videos #video-featured #video-container #video-sponsor {
+  height: 118px;
+  background: transparent url(../img/video-sponsor-bg-desktop.png) center center no-repeat;
+  padding-top: 54px;
+}
+
+/*videos ends*/
 /*footer*/
 #footer ul {
   float: left;

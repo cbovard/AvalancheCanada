@@ -202,9 +202,6 @@
 					color:#b1b1b1;
 				}    		
 			}
-
-
-
 		}
 		/* http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click */
 		ul.nav li.dropdown:hover > ul.dropdown-menu {
@@ -295,6 +292,45 @@
     }
 }
 /*news ends*/
+
+/*videos*/
+#videos {
+    #video-featured {
+			header {
+					h2 {
+						@include font-size(1.6, 1.6);
+						margin:0;
+						font-family:$font-family-google;
+						padding-top:8px;
+						a {
+							font-weight:bold;
+							text-transform:uppercase;
+							@include font-size(1.6, 2.2);
+							color:#fff;
+			    		&:visited,
+			    		&:hover,
+			    		&:active,
+							&:focus {
+								text-decoration:none;
+								color:#fff;
+							}
+						}
+					}
+			}
+      #video-container {
+          #video-body {
+          	width:720px;
+          	padding-top:24px;
+          }
+          #video-sponsor {
+          	height:118px;	
+            background:transparent url(../img/video-sponsor-bg-desktop.png) center center no-repeat;
+            padding-top:54px;
+          }
+      }
+    }
+}
+/*videos ends*/
 
 
 

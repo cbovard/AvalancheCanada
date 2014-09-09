@@ -12,8 +12,6 @@
 
 /* =Tablet Layout and Styles
 ----------------------------------------------------------------------------------*/
-.div {border:1px blue solid;}
-.reddiv {border:1px red solid;}
 
 /*header*/
 #header {
@@ -26,30 +24,30 @@
 	}	
 	/*navigation*/
 	#navigation {
-    .navbar-header {
-    	#nav-donate {
-    		float:right;
-    		margin:0 28px 0 0;
-    		background-color:#d82631;
-    		color:#fff;
-    		@include font-size(1.5, 2.4);
-    		font-weight:bold;
-    		display:block;
-    		height:75px;
-    		width:94px;
-    		padding:24px 22px 30px 20px;
-            &:visited,
-            &:hover,
-            &:active,
-            &:focus {
-                text-decoration:none;
-                color:#fff;
-            } 
-            &:hover {
-                background-color:#b2212a;
-            }
-    	}
-    }
+        .navbar-header {
+        	#nav-donate {
+        		float:right;
+        		margin:0 28px 0 0;
+        		background-color:#d82631;
+        		color:#fff;
+        		@include font-size(1.5, 2.4);
+        		font-weight:bold;
+        		display:block;
+        		height:75px;
+        		width:94px;
+        		padding:24px 22px 30px 20px;
+                &:visited,
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration:none;
+                    color:#fff;
+                } 
+                &:hover {
+                    background-color:#b2212a;
+                }
+        	}
+        }
 	}
 	/*navigation ends*/
 }
@@ -144,6 +142,37 @@
     }
 }
 /*news ends*/
+
+/*videos*/
+#videos {
+    #video-featured {
+        #video-container {
+            #video-body {
+                width:332px;
+                padding:0;
+                float:left;
+                padding:18px 18px 18px 14px;
+            }
+            #video-sponsor {
+                width:260px;
+                height:166px;
+                float:right;
+                position:relative;
+                z-index:910;
+                top:-36px;
+                right:0;
+                background:transparent url(../img/video-sponsor-bg.png) center center no-repeat;
+                padding-top:86px;
+                #video-sponsor-link {
+                    img {
+                        @include center-block();
+                    }           
+                }
+            }
+        }
+    }
+}
+/*videos ends*/
 
 
 

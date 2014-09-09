@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 7, 2014
+ * Sept. 8, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -13,8 +13,7 @@
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
 
-
-//black button
+//buttons -- need to move?
 .black-button {
 	font-family:$font-family-google;
 	background-color:#121212;
@@ -39,8 +38,33 @@
 		@include font-size(2.0, 2.0);
 		font-weight:bold;
 	}
-
 }
+.blue-button {
+	font-family:$font-family-google;
+	background-color:#0056b7;
+	color:#fff;
+	@include font-size(1.6, 1.6);
+	font-weight:bold;
+	text-transform:uppercase;
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration:none;
+		color:#fff;
+	} 
+	&:hover {
+		background-color:#1e7be5;
+	}
+	&:focus {
+		background-color:#4299fc;
+	}
+	.fa-angle-right {
+		@include font-size(2.0, 2.0);
+		font-weight:bold;
+	}
+}
+
 .blue-border {
 	height:8px;
 	width:50px;
@@ -537,8 +561,45 @@
 
 /*videos*/
 #videos {
-	height:390px;
-	margin-top:32px;
+	min-height:390px;
+	@include clearfix();
+	margin-bottom:36px;
+	#video-featured {
+		header {
+			height:41px;
+			position:relative;
+			z-index:910;
+			background-color:#121212;
+			padding-left:182px;
+			#header-bg {
+				position:absolute;
+				left:-15px;
+				top:0;
+				height:52px;
+				width:182px;
+				background:transparent url(../img/video-header-bg.png) left center no-repeat;
+			}
+		}
+		#video-container {
+			min-height:1px;
+			@include clearfix();
+			position:relative;
+			z-index:900;
+			background-color:#eeeff1;
+			padding:4px;
+			margin-top:-4px;
+			#video-body {
+				min-height:1px;
+				@include clearfix();
+				padding:10px 10px 16px 6px;
+				p {
+					margin:0;
+					color:#5b5b5b;
+					@include font-size(1.5, 2.2);
+				}
+			}
+		}
+	}
 }
 /*videos ends*/
 
@@ -567,11 +628,12 @@
 	height:214px;
 	border-top:1px solid #e2e2e2;
 	padding-top:20px;
+	width:100%;
 	ul {
 		list-style:none;
 		padding:0;
 		margin:0;
-		background:transparent url(../img/footer-menu-mobile-bg.png) 30% top no-repeat;
+		background:transparent url(../img/footer-menu-mobile-bg.png) 33% top no-repeat;
 		display:block;
 		min-height:1px;
 		@include clearfix();
