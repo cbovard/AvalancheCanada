@@ -18,7 +18,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- compiled CSS -->
     <!--<link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />-->
 
@@ -37,8 +36,6 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <!--multilevel menu css-->
     <link rel="stylesheet" href="multilevelpushmenu/jquery.multilevelpushmenu.css">
-
-
 
     <!-- Le javascript
     ================================================== -->
@@ -91,9 +88,9 @@
           $('#multi-expand').click(function(){
             $('#menu').multilevelpushmenu('expand');
           });
+          /**/
 
-
-          //custom js for the left of the mega menu fun
+          /*assign the yamm mega menu full width*/
           $("ul.nav > li").each(function(){
               //assign li id and rebuild for jquery
               li_id = "#" + this.id;
@@ -119,10 +116,12 @@
       });
 
       $(window).resize(function () {
+          /*resize the multimenu for screen size change*/
           $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
           $('#menu').multilevelpushmenu('redraw');
       });
     </script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -194,8 +193,7 @@
             </ul>
         </nav>
     </div><!--/#multilevel menu-->
-
-
+    <!--page wrap-->
     <div id="page-wrap">
       <header id="header" role="banner" class="container">
         <div class="row">
@@ -690,20 +688,22 @@
           <div class="col-xs-12">
             <!--blog articles container-->
             <article id="blog-articles">
-              <header>
-                <h2>The <br />Avalanche <br /><span>Forecasters</span> <br />Blog</h2>
-              </header>
-              <section id="blog-tagline-link">
-                <p>We know Snow.</p>
-                <a id="blog-link" class="blue-button" href="#">Read The Blog&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-              </section>
+              <div id="blog-header-wrap">
+                <header>
+                  <h2>The <br class="visible-xs-inline" />Avalanche <br /><span>Forecasters</span> <br class="visible-xs-inline" />Blog</h2>
+                </header>
+                <section id="blog-tagline-link">
+                  <p>We know Snow.</p>
+                  <a id="blog-link" href="#">Read The Blog&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+                </section>
+              </div>
               <!--blog list rows-->  
-              <article class="list-row-1">
+              <article class="list-rows list-row-1">
                 <header>
                   <h3><a href="#">Farewell for the season</a></h3>
                 </header>
                 <section class="blog-author">
-                  by <a href="#">Karl Klassen
+                  <p>by <a href="#">Karl Klassen</a></p>
                 </section>
                 <section class="blog-body">
                   <p>With the winter season draw
@@ -713,12 +713,12 @@ ing to a close, the Canadian Avalanche Centre is winding down regular winter for
                     <p><time datetime="2008-02-14 20:00">Pub date here</time></p>
                   </footer>
               </article>  
-              <article class="list-row-2 list-row-last">
+              <article class="list-rows list-row-2 list-row-last">
                 <header>
                   <h3><a href="#">Farewell for the season</a></h3>
                 </header>
                 <section class="blog-author">
-                  by <a href="#">Karl Klassen
+                  <p>by <a href="#">Karl Klassen</a></p>
                 </section>
                 <section class="blog-body">
                   <p>With the winter season draw

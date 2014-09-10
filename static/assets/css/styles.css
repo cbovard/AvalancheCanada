@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 8, 2014
+ * Sept. 9, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -43,7 +43,7 @@
   font-weight: bold;
 }
 
-.blue-button {
+.blue-button, #blog #blog-articles #blog-header-wrap #blog-tagline-link a {
   font-family: "Montserrat", Arial, sans-serif;
   background-color: #0056b7;
   color: #fff;
@@ -54,17 +54,17 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.blue-button:visited, .blue-button:hover, .blue-button:active, .blue-button:focus {
+.blue-button:visited, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:visited, .blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover, .blue-button:active, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:active, .blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus {
   text-decoration: none;
   color: #fff;
 }
-.blue-button:hover {
+.blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover {
   background-color: #1e7be5;
 }
-.blue-button:focus {
+.blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus {
   background-color: #4299fc;
 }
-.blue-button .fa-angle-right {
+.blue-button .fa-angle-right, #blog #blog-articles #blog-header-wrap #blog-tagline-link a .fa-angle-right {
   font-size: 20px;
   line-height: 20px;
   font-size: 2rem;
@@ -734,7 +734,175 @@
 /*videos ends*/
 /*blog*/
 #blog {
-  min-height: 600px;
+  min-height: 1px;
+}
+#blog:before, #blog:after {
+  content: " ";
+  display: table;
+}
+#blog:after {
+  clear: both;
+}
+#blog #blog-articles {
+  min-height: 1px;
+  background: transparent url(../img/ribbon-bg.png) center top repeat-x;
+  padding-top: 38px;
+}
+#blog #blog-articles:before, #blog #blog-articles:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-articles:after {
+  clear: both;
+}
+#blog #blog-articles #blog-header-wrap > header {
+  margin-bottom: 22px;
+}
+#blog #blog-articles #blog-header-wrap > header h2 {
+  color: #121212;
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#blog #blog-articles #blog-header-wrap > header h2 span {
+  color: #0056b7;
+}
+#blog #blog-articles #blog-header-wrap #blog-tagline-link {
+  min-height: 1px;
+  border-bottom: 3px solid #eeeff1;
+  padding-bottom: 42px;
+}
+#blog #blog-articles #blog-header-wrap #blog-tagline-link:before, #blog #blog-articles #blog-header-wrap #blog-tagline-link:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-articles #blog-header-wrap #blog-tagline-link:after {
+  clear: both;
+}
+#blog #blog-articles #blog-header-wrap #blog-tagline-link p {
+  color: #121212;
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: bold;
+  margin: 0 0 36px 0;
+}
+#blog #blog-articles #blog-header-wrap #blog-tagline-link a {
+  display: block;
+  width: 230px;
+  padding: 22px 22px 20px 26px;
+  clear: both;
+}
+#blog #blog-articles > article {
+  min-height: 1px;
+}
+#blog #blog-articles > article:before, #blog #blog-articles > article:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-articles > article:after {
+  clear: both;
+}
+#blog #blog-articles > article.list-rows {
+  padding-top: 32px;
+}
+#blog #blog-articles > article.list-rows header {
+  min-height: 1px;
+}
+#blog #blog-articles > article.list-rows header:before, #blog #blog-articles > article.list-rows header:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-articles > article.list-rows header:after {
+  clear: both;
+}
+#blog #blog-articles > article.list-rows header h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 0;
+}
+#blog #blog-articles > article.list-rows header h3 a {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #121212;
+}
+#blog #blog-articles > article.list-rows header h3 a:visited, #blog #blog-articles > article.list-rows header h3 a:hover, #blog #blog-articles > article.list-rows header h3 a:active, #blog #blog-articles > article.list-rows header h3 a:focus {
+  text-decoration: none;
+}
+#blog #blog-articles > article.list-rows header h3 a:hover {
+  color: #0056b7;
+}
+#blog #blog-articles > article.list-rows .blog-author {
+  padding: 26px 0 28px 0;
+}
+#blog #blog-articles > article.list-rows .blog-author p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin: 0;
+  color: #5b5b5b;
+  font-weight: bold;
+}
+#blog #blog-articles > article.list-rows .blog-author p a {
+  color: #0056b7;
+}
+#blog #blog-articles > article.list-rows .blog-body p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#blog #blog-articles > article.list-rows .blog-body p a {
+  color: #0056b7;
+  font-weight: bold;
+}
+#blog #blog-articles > article.list-rows footer {
+  margin-top: 12px;
+  min-height: 1px;
+}
+#blog #blog-articles > article.list-rows footer:before, #blog #blog-articles > article.list-rows footer:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-articles > article.list-rows footer:after {
+  clear: both;
+}
+#blog #blog-articles > article.list-rows footer p {
+  color: #b5b5b5;
+  margin: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-transform: uppercase;
+}
+#blog #blog-articles > article.list-rows footer p a {
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: #b5b5b5;
+}
+#blog #blog-articles > article.list-rows footer p a:visited, #blog #blog-articles > article.list-rows footer p a:hover, #blog #blog-articles > article.list-rows footer p a:active, #blog #blog-articles > article.list-rows footer p a:focus {
+  text-decoration: none;
+}
+#blog #blog-articles > article.list-row-last {
+  margin: 42px 0 38px 0;
+  border-top: 3px solid #eeeff1;
 }
 
 /*blog ends*/
@@ -764,10 +932,6 @@
   background: transparent url(../img/footer-menu-mobile-bg.png) 33% top no-repeat;
   display: block;
   min-height: 1px;
-  /*#footer-contact {float:left;}
-  #footer-privacy {float:left;}
-  #footer-disclaimer {float:right;}
-  #footer-terms {float:right;}*/
 }
 #footer ul:before, #footer ul:after {
   content: " ";
@@ -812,7 +976,7 @@
 @media screen and (min-width: 600px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 8, 2014
+   * Sept. 9, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -981,6 +1145,31 @@
   }
 
   /*videos ends*/
+  /*blog*/
+  #blog #blog-articles {
+    padding-top: 42px;
+    margin-top: 8px;
+    margin-bottom: 68px;
+  }
+  #blog #blog-articles #blog-header-wrap > header h2 {
+    font-size: 50px;
+    line-height: 52px;
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+  #blog #blog-articles > article.list-rows {
+    margin: 42px 0 0 0;
+    padding: 0 18px 38px 0;
+    width: 50%;
+    float: left;
+    border-right: 3px solid #eeeff1;
+  }
+  #blog #blog-articles > article.list-row-last {
+    padding: 0 0 0 18px;
+    border: none;
+  }
+
+  /*blog ends*/
   /*footer*/
   #footer ul {
     background: none;
@@ -1010,7 +1199,7 @@
 @media screen and (min-width: 1025px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 8, 2014
+   * Sept. 9, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -1375,6 +1564,31 @@
   }
 
   /*videos ends*/
+  /*blog*/
+  #blog #blog-articles {
+    padding-top: 42px;
+    margin-top: 8px;
+    margin-bottom: 68px;
+  }
+  #blog #blog-articles #blog-header-wrap {
+    width: 500px;
+    float: left;
+  }
+  #blog #blog-articles #blog-header-wrap #blog-tagline-link {
+    border: none;
+  }
+  #blog #blog-articles > article.list-rows {
+    width: 262px;
+    margin: 0;
+    padding: 0 0 18px 18px;
+    border-left: 3px solid #eeeff1;
+    border-right: none;
+  }
+  #blog #blog-articles > article.list-row-last {
+    border-right: none;
+  }
+
+  /*blog ends*/
   /*footer*/
   #footer ul {
     float: left;
