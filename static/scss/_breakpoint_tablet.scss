@@ -203,6 +203,33 @@
 }
 /*blog ends*/
 
+
+/*communities*/
+#communities {
+    .communities-box {
+        height:336px
+    }
+    #communities-twitter {
+        border-right:3px solid #eeeff1;
+        .posted-by {
+            margin-bottom:123px;
+        }
+    }
+    #communities-facebook {
+        .posted-by {
+            margin-bottom:57px;
+        }        
+    }
+    #communities-youtube {
+        border-right:3px solid #eeeff1;
+        .posted-by {
+            margin-bottom:59px;
+        }
+    }
+}
+/*communities ends*/
+
+
 /*footer*/
 #footer {
     ul {

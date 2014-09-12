@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 9, 2014
+ * Sept. 11, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -908,13 +908,103 @@
 /*blog ends*/
 /*communities*/
 #communities {
-  min-height: 600px;
+  width: 100%;
+  min-height: 100px;
+  padding-bottom: 60px;
+  background: transparent url(../img/ribbon-grey-bg.png) repeat left top;
+}
+#communities:before, #communities:after {
+  content: " ";
+  display: table;
+}
+#communities:after {
+  clear: both;
+}
+#communities #dark-ribbon {
+  width: 100%;
+  height: 8px;
+  background: transparent url(../img/ribbon-greydark-bg.png) repeat-x center center;
+}
+#communities h3 {
+  color: #121212;
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 35px 0;
+  font-weight: bold;
+}
+#communities .communities-box {
+  margin-bottom: 50px;
+}
+#communities .communities-box .youtube-thumb {
+  margin-bottom: 22px;
+}
+#communities .communities-box p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin: 0;
+}
+#communities .communities-box p a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #0056b7;
+}
+#communities .communities-box p a:visited, #communities .communities-box p a:hover, #communities .communities-box p a:active, #communities .communities-box p a:focus {
+  text-decoration: none;
+}
+#communities .communities-box p a:hover {
+  color: #1e7be5;
+}
+#communities .communities-box p a:focus {
+  color: #4299fc;
+}
+#communities .communities-box .posted-by {
+  margin-top: 10px;
+  margin-bottom: 36px;
+  min-height: 30px;
+}
+#communities .communities-box .posted-by:before, #communities .communities-box .posted-by:after {
+  content: " ";
+  display: table;
+}
+#communities .communities-box .posted-by:after {
+  clear: both;
+}
+#communities .communities-box .posted-by .poster-image {
+  float: left;
+  margin-right: 9px;
+}
+#communities .communities-box .posted-by .postername-date {
+  float: left;
+  padding-top: 6px;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  color: #b5b5b5;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-transform: uppercase;
+}
+#communities .communities-box .posted-by .postername-date:visited, #communities .communities-box .posted-by .postername-date:hover, #communities .communities-box .posted-by .postername-date:active, #communities .communities-box .posted-by .postername-date:focus {
+  text-decoration: none;
+}
+#communities .communities-box .blue-button, #communities .communities-box #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #blog #blog-articles #blog-header-wrap #blog-tagline-link #communities .communities-box a {
+  display: block;
+  width: 230px;
+  padding: 22px 22px 20px 26px;
+  clear: both;
 }
 
 /*communities ends*/
 /*auction*/
 #auction {
-  min-height: 600px;
+  min-height: 100px;
 }
 
 /*auction ends*/
@@ -1170,6 +1260,27 @@
   }
 
   /*blog ends*/
+  /*communities*/
+  #communities .communities-box {
+    height: 336px;
+  }
+  #communities #communities-twitter {
+    border-right: 3px solid #eeeff1;
+  }
+  #communities #communities-twitter .posted-by {
+    margin-bottom: 123px;
+  }
+  #communities #communities-facebook .posted-by {
+    margin-bottom: 57px;
+  }
+  #communities #communities-youtube {
+    border-right: 3px solid #eeeff1;
+  }
+  #communities #communities-youtube .posted-by {
+    margin-bottom: 59px;
+  }
+
+  /*communities ends*/
   /*footer*/
   #footer ul {
     background: none;
@@ -1589,6 +1700,36 @@
   }
 
   /*blog ends*/
+  /*communities*/
+  #communities .communities-box {
+    height: 336px;
+  }
+  #communities .posted-by .postername-date {
+    width: 184px;
+    display: block;
+    float: right;
+    text-align: left;
+  }
+  #communities #communities-twitter {
+    border-right: 3px solid #eeeff1;
+  }
+  #communities #communities-twitter .posted-by {
+    margin-bottom: 79px;
+  }
+  #communities #communities-facebook {
+    border-right: 3px solid #eeeff1;
+  }
+  #communities #communities-facebook .posted-by {
+    margin-bottom: 37px;
+  }
+  #communities #communities-youtube {
+    border-right: 3px solid #eeeff1;
+  }
+  #communities #communities-youtube .posted-by {
+    margin-bottom: 61px;
+  }
+
+  /*communities ends*/
   /*footer*/
   #footer ul {
     float: left;

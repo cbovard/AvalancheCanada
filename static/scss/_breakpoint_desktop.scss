@@ -359,6 +359,40 @@
 }
 /*blog ends*/
 
+/*communities*/
+#communities {
+    .communities-box {
+        height:336px
+    }
+		.posted-by {
+			.postername-date {
+				width:184px;
+				display:block;
+				float:right;		
+				text-align:left;
+			}
+		}
+    #communities-twitter {
+        border-right:3px solid #eeeff1;
+        .posted-by {
+            margin-bottom:79px;
+        }
+    }
+    #communities-facebook {
+    	border-right:3px solid #eeeff1;
+        .posted-by {
+            margin-bottom:37px;
+        }        
+    }
+    #communities-youtube {
+        border-right:3px solid #eeeff1;
+        .posted-by {
+           margin-bottom:61px;
+        }
+    }
+}
+/*communities ends*/
+
 
 
 /*footer*/
