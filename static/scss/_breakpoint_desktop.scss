@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 9, 2014
+ * Sept. 12, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -210,7 +210,6 @@
 }
 /*header ends*/
 
-
 /*know-more*/
 #know-more {
     article {
@@ -362,7 +361,13 @@
 /*communities*/
 #communities {
     .communities-box {
-        height:336px
+        height:336px;
+				.blue-button {
+					display:block;
+					width:100%;
+					padding:22px 22px 20px 26px;
+					clear:both;
+				}
     }
 		.posted-by {
 			.postername-date {
@@ -375,19 +380,19 @@
     #communities-twitter {
         border-right:3px solid #eeeff1;
         .posted-by {
-            margin-bottom:79px;
+            margin-bottom:80px;
         }
     }
     #communities-facebook {
     	border-right:3px solid #eeeff1;
         .posted-by {
-            margin-bottom:37px;
+            margin-bottom:36px;
         }        
     }
     #communities-youtube {
         border-right:3px solid #eeeff1;
         .posted-by {
-           margin-bottom:61px;
+           margin-bottom:65px;
         }
     }
 }

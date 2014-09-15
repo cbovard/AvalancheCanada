@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 9, 2014
+ * Sept. 14, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -228,6 +228,85 @@
     }
 }
 /*communities ends*/
+
+/*auction*/
+#auction {
+    #auction-header {
+        min-height:100px;
+        @include clearfix();
+        padding-bottom:27px;
+        h4 {
+            @include font-size(5.0, 5.2);   
+            float:left;   
+        }
+        #auction-sponsor {
+            float:right;
+            with:124px;
+            p {
+                margin:0 0 12px 0;
+                @include font-size(1.1, 1.1);
+                font-family:$font-family-google;
+                font-weight:bold;   
+                text-transform:uppercase;  
+                color:#b5b5b5;
+            }
+        }
+    }
+    #auction-tagline-wrap,
+    #auction-time-wrap {
+        border-bottom:2px solid #eeeff1;
+    }
+    #auction-tagline-wrap {
+        margin-left:20px;
+        width:394px;
+        padding:0 30px 0 0;
+        border-right:2px solid #eeeff1;
+    }
+    #auction-time-wrap {
+        margin-right:20px;
+        width:206px;
+        padding:0 0 0 30px;
+    }
+    #auction-tagline {
+        height:156px;
+        border-bottom:none;
+        p {margin:0;}
+    }
+    #auction-time {
+        height:156px;
+        border-bottom:none;
+        margin:0;
+        p {
+            margin:0;
+            text-align:right;
+        }
+    }
+    #auction-featured-item {
+        padding:50px 0 0 0;
+        clear:both;
+ 
+
+        footer {
+            clear:both;
+            padding-top:32px;
+            padding-bottom:56px;
+            min-height:1px;
+            border-bottom:2px solid #eeeff1;
+            @include clearfix();
+            .auction-highest-bid {
+                width:154px;
+                float:left;
+                margin-left:54px;
+            }
+            .auction-bid-form {
+                width:335px;
+                float:left;  
+                margin:0 0 0 10px;              
+            }
+        }
+    }
+}
+/*auction ends*/
 
 
 /*footer*/
