@@ -927,10 +927,10 @@
 }
 #communities h3 {
   color: #121212;
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
   font-family: "Montserrat", Arial, sans-serif;
   margin: 35px 0;
   font-weight: bold;
@@ -1049,9 +1049,9 @@
 #auction #auction-time {
   color: #0056b7;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 28px;
   font-size: 1.6rem;
-  line-height: 1.6rem;
+  line-height: 2.8rem;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -1170,7 +1170,7 @@
 #auction #auction-featured-item footer .auction-bid-form form .form-control {
   border: none;
   border-top: 2px solid #d9d9d9;
-  height: 60px;
+  height: 64px;
   font-size: 24px;
   line-height: 28px;
   font-size: 2.4rem;
@@ -1184,6 +1184,101 @@
   border: none;
   float: right;
   margin-top: 14px;
+}
+#auction #auction-other {
+  min-height: 100px;
+  margin-top: 24px;
+}
+#auction #auction-other:before, #auction #auction-other:after {
+  content: " ";
+  display: table;
+}
+#auction #auction-other:after {
+  clear: both;
+}
+#auction #auction-other #auction-other-header {
+  border-top: 2px solid #eeeff1;
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+  padding: 34px 0;
+}
+#auction #auction-other #auction-other-header h4 {
+  color: #121212;
+  font-size: 26px;
+  line-height: 26px;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#auction #auction-other article {
+  min-height: 10px;
+  padding: 36px 0 40px 0;
+  border-bottom: 3px solid #eeeff1;
+}
+#auction #auction-other article:before, #auction #auction-other article:after {
+  content: " ";
+  display: table;
+}
+#auction #auction-other article:after {
+  clear: both;
+}
+#auction #auction-other article header h5 {
+  font-size: 20px;
+  line-height: 22px;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#auction #auction-other article header h5 a {
+  color: #0056b7;
+}
+#auction #auction-other article header h5 a span {
+  color: #121212;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+#auction #auction-other article header h5 a:visited, #auction #auction-other article header h5 a:hover, #auction #auction-other article header h5 a:active, #auction #auction-other article header h5 a:focus {
+  text-decoration: none;
+}
+#auction #auction-other article header h5 a:hover {
+  color: #121212;
+}
+#auction #auction-other article header h5 a:hover span {
+  color: #0056b7;
+}
+#auction #auction-other article .auction-other-image {
+  padding-top: 18px;
+  padding-bottom: 22px;
+}
+#auction #auction-other article .auction-other-image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#auction #auction-other article .auction-other-bid p {
+  color: #121212;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#auction #auction-other article #view-auction img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#auction #auction-other article.list-row-last {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /*auction ends*/
@@ -1245,7 +1340,7 @@
 @media screen and (min-width: 600px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 14, 2014
+   * Sept. 15, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -1526,15 +1621,26 @@
     text-align: right;
   }
   #auction #auction-featured-item {
-    padding: 50px 0 0 0;
+    padding-top: 50px;
     clear: both;
+  }
+  #auction #auction-featured-item:before, #auction #auction-featured-item:after {
+    content: " ";
+    display: table;
+  }
+  #auction #auction-featured-item:after {
+    clear: both;
+  }
+  #auction #auction-featured-item .auction-featured-item-inner {
+    width: 50%;
+    float: left;
   }
   #auction #auction-featured-item footer {
     clear: both;
     padding-top: 32px;
     padding-bottom: 56px;
     min-height: 1px;
-    border-bottom: 2px solid #eeeff1;
+    margin-bottom: 0;
   }
   #auction #auction-featured-item footer:before, #auction #auction-featured-item footer:after {
     content: " ";
@@ -1547,11 +1653,47 @@
     width: 154px;
     float: left;
     margin-left: 54px;
+    height: 135px;
+  }
+  #auction #auction-featured-item footer .auction-highest-bid p.highest-amount {
+    margin-top: 30px;
   }
   #auction #auction-featured-item footer .auction-bid-form {
     width: 335px;
+    height: 135px;
     float: left;
     margin: 0 0 0 10px;
+  }
+  #auction #auction-featured-item footer .auction-bid-form form .form-control {
+    float: left;
+    width: 158px;
+  }
+  #auction #auction-featured-item footer .auction-bid-form form #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #blog #blog-articles #blog-header-wrap #blog-tagline-link #auction #auction-featured-item footer .auction-bid-form form a, #auction #auction-featured-item footer .auction-bid-form form .blue-button {
+    margin: 0;
+    clear: none;
+    float: left;
+    width: 132px;
+  }
+  #auction #auction-other {
+    margin-top: 0;
+  }
+  #auction #auction-other #auction-other-header {
+    margin-bottom: 35px;
+  }
+  #auction #auction-other article {
+    padding: 36px 40px 40px 16px;
+    width: 50%;
+    float: left;
+    border-bottom: none;
+  }
+  #auction #auction-other article.list-row-1, #auction #auction-other article.list-row-3 {
+    border-right: 3px solid #eeeff1;
+  }
+  #auction #auction-other article.list-row-3, #auction #auction-other article.list-row-4 {
+    border-top: 3px solid #eeeff1;
+  }
+  #auction #auction-other article.list-row-last {
+    padding-right: 0;
   }
 
   /*auction ends*/
@@ -1584,7 +1726,7 @@
 @media screen and (min-width: 1025px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Sept. 12, 2014
+   * Sept. 15, 2014
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
@@ -2010,6 +2152,58 @@
   }
 
   /*communities ends*/
+  /*auction*/
+  #auction #auction-tagline-wrap {
+    width: 774px;
+  }
+  #auction #auction-time-wrap {
+    width: 252px;
+  }
+  #auction #auction-tagline {
+    height: 90px;
+  }
+  #auction #auction-time {
+    height: 90px;
+  }
+  #auction #auction-time p {
+    text-align: left;
+  }
+  #auction #auction-featured-item .auction-featured-item-inner {
+    width: 50%;
+    float: left;
+  }
+  #auction #auction-featured-item footer {
+    clear: none;
+    width: 50%;
+    float: right;
+    padding-top: 8px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #auction #auction-featured-item footer .auction-highest-bid {
+    margin: 0;
+  }
+  #auction #auction-other {
+    margin-top: 62px;
+    clear: both;
+  }
+  #auction #auction-other #auction-other-header {
+    margin-bottom: 32px;
+  }
+  #auction #auction-other article {
+    width: 25%;
+    padding-top: 0;
+    padding-bottom: 6px;
+  }
+  #auction #auction-other article.list-row-1, #auction #auction-other article.list-row-2, #auction #auction-other article.list-row-3, #auction #auction-other article.list-row-4 {
+    border: none;
+    border-right: 3px solid #eeeff1;
+  }
+  #auction #auction-other article.list-row-last {
+    border: none;
+  }
+
+  /*auction ends*/
   /*footer*/
   #footer ul {
     float: left;

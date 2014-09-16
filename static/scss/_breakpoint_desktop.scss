@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 12, 2014
+ * Sept. 15, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -398,7 +398,64 @@
 }
 /*communities ends*/
 
+/*auction*/
+#auction {
+  #auction-tagline-wrap {
+    width:774px;
+  }
+  #auction-time-wrap {
+    width:252px;
+  }
+  #auction-tagline {
+    height:90px;
+  }
+  #auction-time {
+    height:90px;
+    p {
+    	text-align:left;
+    }
+  }
+  #auction-featured-item {
+    .auction-featured-item-inner {
+      width:50%;
+      float:left;
+    }
+    footer {
+      clear:none;
+      width:50%;
+      float:right;
+      padding-top:8px;
+      padding-bottom:0;
+      margin-bottom:0;
+      .auction-highest-bid {
+      	margin:0;
+      }
+    }
+  }
 
+  #auction-other {
+  	margin-top:62px;
+  	clear:both;
+  	#auction-other-header {margin-bottom:32px;}
+  	article {
+  		width:25%;
+	  	padding-top:0;
+	  	padding-bottom:6px;
+      &.list-row-1,
+      &.list-row-2,
+      &.list-row-3,
+      &.list-row-4 {
+         border:none;
+         border-right:3px solid #eeeff1;
+      }
+			&.list-row-last {
+				border:none;
+			}
+  	}
+  }
+
+}
+/*auction ends*/
 
 /*footer*/
 #footer {

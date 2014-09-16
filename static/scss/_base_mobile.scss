@@ -588,7 +588,7 @@
 	}
 	h3 {
 		color:#121212;
-		@include font-size(5.0, 5.2);
+		@include font-size(3.6, 3.8);
 		font-family:$font-family-google;
 		margin:35px 0;
 		font-weight:bold;		
@@ -692,7 +692,7 @@
 	}
 	#auction-time {
 		color:#0056b7;
-		@include font-size(1.6, 1.6);
+		@include font-size(1.6, 2.8);
 		font-family:$font-family-google;
 		font-weight:bold;	
 		text-transform:uppercase;	
@@ -785,7 +785,7 @@
 					.form-control {
 						border:none;
 						border-top:2px solid #d9d9d9;
-						height:60px;
+						height:64px;
 						@include font-size(2.4, 2.8);
 					}
 					.blue-button {
@@ -801,6 +801,82 @@
 				}
 			}
 		}
+	}
+	#auction-other {
+		min-height:100px;
+		@include clearfix();
+		margin-top:24px;
+		#auction-other-header {
+			border-top:2px solid #eeeff1;
+			background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+			position:relative;
+			padding:34px 0;
+			h4 {
+				color:#121212;
+				@include font-size(2.6, 2.6);
+				font-family:$font-family-sans-serif;
+				margin:0;
+				font-weight:bold;	
+			}
+		}	
+		article {
+			min-height:10px;
+			@include clearfix();
+			padding:36px 0 40px 0;
+			border-bottom:3px solid #eeeff1;
+			header {
+				h5 {
+					@include font-size(2.0, 2.2);
+					font-family:$font-family-sans-serif;
+					margin:0;
+					font-weight:bold;	
+					a {
+						color:#0056b7;
+						span {
+							color:#121212;
+							@include font-size(1.5, 2.2);
+						}
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration:none;
+						} 
+						&:hover {
+							color:#121212;
+						}
+						&:hover span {
+							color:#0056b7;
+						}
+					}
+				}
+			}
+			.auction-other-image {
+				padding-top:18px;
+				padding-bottom:22px;
+				img {
+					@include center-block();
+				}	
+			}
+			.auction-other-bid {
+				p {
+					color:#121212;
+					@include font-size(1.5, 2.2);
+					font-family:$font-family-sans-serif;
+					margin:0;
+					font-weight:bold;						
+				}
+			}
+			#view-auction {
+				img {
+					@include center-block();
+				}					
+			}
+			&.list-row-last {
+				border-bottom:none;
+				padding-bottom:0;
+			}
+		}	
 	}
 }
 /*auction ends*/
