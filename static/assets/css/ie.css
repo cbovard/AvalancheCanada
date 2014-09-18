@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 12, 2014
+ * Sept. 18, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -1277,6 +1277,220 @@
 }
 
 /*auction ends*/
+/*sub page typography examples*/
+#sub-page-content {
+  padding-bottom: 30px;
+}
+#sub-page-content .featured {
+  color: #d82631;
+}
+#sub-page-content h1 {
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#sub-page-content h1 a {
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+#sub-page-content h1 a:visited, #sub-page-content h1 a:hover, #sub-page-content h1 a:active, #sub-page-content h1 a:focus {
+  text-decoration: none;
+}
+#sub-page-content h2 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#sub-page-content h2 a {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+#sub-page-content h2 a:visited, #sub-page-content h2 a:hover, #sub-page-content h2 a:active, #sub-page-content h2 a:focus {
+  text-decoration: none;
+}
+#sub-page-content h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#sub-page-content h3 a {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+#sub-page-content h3 a:visited, #sub-page-content h3 a:hover, #sub-page-content h3 a:active, #sub-page-content h3 a:focus {
+  text-decoration: none;
+}
+#sub-page-content h4 {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+#sub-page-content h4 a {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+#sub-page-content h4 a:visited, #sub-page-content h4 a:hover, #sub-page-content h4 a:active, #sub-page-content h4 a:focus {
+  text-decoration: none;
+}
+#sub-page-content h5 {
+  font-size: 16px;
+  line-height: 18px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+}
+#sub-page-content h5 a {
+  font-size: 16px;
+  line-height: 18px;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+#sub-page-content h5 a:visited, #sub-page-content h5 a:hover, #sub-page-content h5 a:active, #sub-page-content h5 a:focus {
+  text-decoration: none;
+}
+#sub-page-content h6 {
+  font-size: 14px;
+  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+}
+#sub-page-content h6 a {
+  font-size: 14px;
+  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+#sub-page-content h6 a:visited, #sub-page-content h6 a:hover, #sub-page-content h6 a:active, #sub-page-content h6 a:focus {
+  text-decoration: none;
+}
+#sub-page-content p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #ebebeb;
+}
+#sub-page-content p strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #121212;
+}
+#sub-page-content p em {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #b7b7b7;
+}
+#sub-page-content p a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#sub-page-content p a:visited, #sub-page-content p a:hover, #sub-page-content p a:active, #sub-page-content p a:focus {
+  text-decoration: none;
+}
+#sub-page-content ul li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #0056b7;
+}
+#sub-page-content ul li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#sub-page-content ul li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#sub-page-content ul li a:visited, #sub-page-content ul li a:hover, #sub-page-content ul li a:active, #sub-page-content ul li a:focus {
+  text-decoration: none;
+}
+#sub-page-content ul.border {
+  list-style: none;
+}
+#sub-page-content ul.border li {
+  border-bottom: 2px solid #eeeff1;
+}
+#sub-page-content ul.border li:last-child {
+  border-bottom: none;
+}
+#sub-page-content ol li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #0056b7;
+}
+#sub-page-content ol li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#sub-page-content ol li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#sub-page-content ol li a:visited, #sub-page-content ol li a:hover, #sub-page-content ol li a:active, #sub-page-content ol li a:focus {
+  text-decoration: none;
+}
+#sub-page-content blockquote {
+  border-left: 5px solid #eeeff1;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#sub-page-content blockquote strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #121212;
+  font-weight: bold;
+}
+
 /*footer*/
 #footer {
   height: 214px;

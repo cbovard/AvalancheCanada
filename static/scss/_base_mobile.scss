@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 12, 2014
+ * Sept. 18, 2014
 */
 
 /* =Import Files for Mixin Usage
@@ -13,7 +13,7 @@
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
 
-//buttons -- need to move?
+//buttons
 .black-button {
 	font-family:$font-family-google;
 	background-color:#121212;
@@ -880,6 +880,177 @@
 	}
 }
 /*auction ends*/
+
+/*sub page typography examples*/
+#sub-page-content {
+	padding-bottom:30px;
+	//classes
+	.featured {color:#d82631;}
+	//headers
+	h1 {
+		@include font-size(1.6, 2.8);
+		font-family:$font-family-google;
+		font-weight:bold;
+		text-transform:uppercase;
+		a {
+		  @include font-size(1.6, 2.8);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	h2 {
+		@include font-size(5.0, 5.2);
+		font-family:$font-family-google;
+		font-weight:bold;
+		text-transform:uppercase;
+		a {
+		  @include font-size(5.0, 5.2);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	h3 {
+		@include font-size(2.0, 2.4);
+		font-weight:bold;
+		a {
+		  @include font-size(2.0, 2.4);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	h4 {
+		@include font-size(1.8, 2.0);
+		font-weight:bold;
+		a {
+		  @include font-size(1.8, 2.0);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	h5 {
+		@include font-size(1.6, 1.8);
+		font-weight:bold;
+		a {
+		  @include font-size(1.6, 1.8);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	h6 {
+		@include font-size(1.4, 1.6);
+		font-weight:bold;
+		a {
+		  @include font-size(1.4, 1.6);
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}		
+	}
+	p {
+		@include font-size(1.5, 2.2);
+		color:#ebebeb;
+		strong {
+			@include font-size(1.5, 2.2);
+			color:#121212;
+		}
+		em {
+			@include font-size(1.5, 2.2);
+			color:#b7b7b7;			
+		}
+		a {
+		  @include font-size(1.5, 2.2);
+		  font-weight:bold;
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+			}
+		}
+	}
+	ul {
+		li {
+			@include font-size(1.5, 4.0);
+			margin:0;
+			color:#0056b7;
+			p {
+				margin:0;
+				@include font-size(1.5, 4.0);
+				color:#5b5b5b;
+			}
+			a {
+			  @include font-size(1.5, 4.0);
+				&:visited,
+				&:hover,
+				&:active,
+				&:focus {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	ul.border {
+		list-style:none;
+		li {
+			border-bottom:2px solid #eeeff1;
+			&:last-child {border-bottom:none;}
+		}
+	}
+	ol {
+		li {
+			@include font-size(1.5, 4.0);
+			margin:0;
+			color:#0056b7;
+			p {
+				margin:0;
+				@include font-size(1.5, 4.0);
+				color:#5b5b5b;
+			}
+			a {
+			  @include font-size(1.5, 4.0);
+				&:visited,
+				&:hover,
+				&:active,
+				&:focus {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	blockquote {
+	  border-left: 5px solid #eeeff1;
+	  @include font-size(1.5, 2.2);
+	  color:#5b5b5b;
+	  strong {
+		  @include font-size(1.5, 2.2);
+		  color:#121212;
+		  font-weight:bold;
+	  }
+	}
+}
 
 
 /*footer*/

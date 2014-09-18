@@ -1,6 +1,6 @@
 // CAC - Bootstrap Variables
 // Author: Chris Bovard -- www.chrisbovard.com
-// Sept. 2, 2014
+// Sept. 18, 2014
 
 //custom font mixin. I left this here because the other file might get wiped out.
 @mixin font-size($size:1.6, $line: $size * 1.5){
@@ -44,12 +44,15 @@ $brand-danger:          #d9534f !default;
 //## Background color for `<body>`.
 $body-bg:               #fff !default;
 //## Global text color on `<body>`.
-$text-color:            $gray-dark !default;
+//$text-color:            $gray-dark !default;
+$text-color: #121212 !default;
 
 //## Global textual link color.
-$link-color:            $brand-primary !default;
+//$link-color:            $brand-primary !default;
+$link-color: #0056b7 !default;
 //## Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+//$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color: #121212 !default;
 
 
 //== Typography

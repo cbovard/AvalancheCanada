@@ -328,7 +328,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #333333;
+  color: #121212;
   background-color: white;
 }
 
@@ -342,11 +342,11 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #0056b7;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #2a6496;
+  color: #121212;
   text-decoration: underline;
 }
 a:focus {
@@ -2363,7 +2363,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #525252;
 }
 
 @media (min-width: 600px) {
@@ -2640,7 +2640,7 @@ select[multiple].input-lg,
 }
 
 .btn-link {
-  color: #428bca;
+  color: #0056b7;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2654,7 +2654,7 @@ select[multiple].input-lg,
   border-color: transparent;
 }
 .btn-link:hover, .btn-link:focus {
-  color: #2a6496;
+  color: #121212;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2917,7 +2917,7 @@ tbody.collapse.in {
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #428bca;
+  border-color: #0056b7;
 }
 .nav .nav-divider {
   height: 1px;
