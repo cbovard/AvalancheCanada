@@ -5,93 +5,8 @@
  * Author: Chris Bovard - www.chrisbovard.com
  * Sept. 18, 2014
 */
-/* =Import Files for Mixin Usage
+/* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
-/* =Base Mobile Layout and Styles
-----------------------------------------------------------------------------------*/
-.black-button, #know-more article footer a {
-  font-family: "Montserrat", Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.black-button:visited, #know-more article footer a:visited, .black-button:hover, #know-more article footer a:hover, .black-button:active, #know-more article footer a:active, .black-button:focus, #know-more article footer a:focus {
-  text-decoration: none;
-  color: #fff;
-}
-.black-button:hover, #know-more article footer a:hover {
-  background-color: #474747;
-}
-.black-button:focus, #know-more article footer a:focus {
-  background-color: #737373;
-}
-.black-button .fa-angle-right, #know-more article footer a .fa-angle-right {
-  font-size: 20px;
-  line-height: 20px;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: bold;
-}
-
-.blue-button, #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #auction #auction-featured-item footer .auction-bid-form form .blue-button {
-  font-family: "Montserrat", Arial, sans-serif;
-  background-color: #0056b7;
-  color: #fff;
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.blue-button:visited, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:visited, #auction #auction-featured-item footer .auction-bid-form form .blue-button:visited, .blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover, #auction #auction-featured-item footer .auction-bid-form form .blue-button:hover, .blue-button:active, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:active, #auction #auction-featured-item footer .auction-bid-form form .blue-button:active, .blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus, #auction #auction-featured-item footer .auction-bid-form form .blue-button:focus {
-  text-decoration: none;
-  color: #fff;
-}
-.blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover, #auction #auction-featured-item footer .auction-bid-form form .blue-button:hover {
-  background-color: #1e7be5;
-}
-.blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus, #auction #auction-featured-item footer .auction-bid-form form .blue-button:focus {
-  background-color: #4299fc;
-}
-.blue-button .fa-angle-right, #blog #blog-articles #blog-header-wrap #blog-tagline-link a .fa-angle-right, #auction #auction-featured-item footer .auction-bid-form form .blue-button .fa-angle-right {
-  font-size: 20px;
-  line-height: 20px;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: bold;
-}
-
-.blue-border {
-  height: 8px;
-  width: 50px;
-  background-color: #0056b7;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.div {
-  border: 1px red solid;
-}
-
-#page-wrap {
-  width: 100%;
-  min-height: 1px;
-}
-#page-wrap:before, #page-wrap:after {
-  content: " ";
-  display: table;
-}
-#page-wrap:after {
-  clear: both;
-}
-
 /*multilevel - mobile menu*/
 #menu {
   position: absolute;
@@ -241,6 +156,91 @@
 }
 
 /*multilevel - mobile menu ends*/
+/* =Base Mobile Layout and Styles
+----------------------------------------------------------------------------------*/
+.black-button, #know-more article footer a {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.black-button:visited, #know-more article footer a:visited, .black-button:hover, #know-more article footer a:hover, .black-button:active, #know-more article footer a:active, .black-button:focus, #know-more article footer a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.black-button:hover, #know-more article footer a:hover {
+  background-color: #474747;
+}
+.black-button:focus, #know-more article footer a:focus {
+  background-color: #737373;
+}
+.black-button .fa-angle-right, #know-more article footer a .fa-angle-right {
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.blue-button, #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #auction #auction-featured-item footer .auction-bid-form form .blue-button {
+  font-family: "Montserrat", Arial, sans-serif;
+  background-color: #0056b7;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.blue-button:visited, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:visited, #auction #auction-featured-item footer .auction-bid-form form .blue-button:visited, .blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover, #auction #auction-featured-item footer .auction-bid-form form .blue-button:hover, .blue-button:active, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:active, #auction #auction-featured-item footer .auction-bid-form form .blue-button:active, .blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus, #auction #auction-featured-item footer .auction-bid-form form .blue-button:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.blue-button:hover, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:hover, #auction #auction-featured-item footer .auction-bid-form form .blue-button:hover {
+  background-color: #1e7be5;
+}
+.blue-button:focus, #blog #blog-articles #blog-header-wrap #blog-tagline-link a:focus, #auction #auction-featured-item footer .auction-bid-form form .blue-button:focus {
+  background-color: #4299fc;
+}
+.blue-button .fa-angle-right, #blog #blog-articles #blog-header-wrap #blog-tagline-link a .fa-angle-right, #auction #auction-featured-item footer .auction-bid-form form .blue-button .fa-angle-right {
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.blue-border {
+  height: 8px;
+  width: 50px;
+  background-color: #0056b7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.div {
+  border: 1px red solid;
+}
+
+#page-wrap {
+  width: 100%;
+  min-height: 1px;
+}
+#page-wrap:before, #page-wrap:after {
+  content: " ";
+  display: table;
+}
+#page-wrap:after {
+  clear: both;
+}
+
 /*header*/
 #header {
   height: 75px;

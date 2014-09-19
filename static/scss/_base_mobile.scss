@@ -3,12 +3,15 @@
  * Sept. 18, 2014
 */
 
-/* =Import Files for Mixin Usage
+/* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
 //the variable file is the one that will be modified by the themer - chris bovard
 @import "custom_cac_variables"; 
-//boostrap mixins
+//bootstrap mixins
 @import "bootstrap/mixins";
+
+//Mobile Multilevel SASS include
+@import "_mobile_multilevel"; 
 
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
@@ -77,14 +80,13 @@
 .div {border:1px red solid;}
 //end of custom classes
 
+
 #page-wrap {
 	width:100%;
 	min-height:1px;
 	@include clearfix();
 }
 
-//Mobile Multilevel SASS include
-@import "_mobile_multilevel"; 
 
 /*header*/
 #header {
