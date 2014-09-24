@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 18, 2014
+ * Sept. 24, 2014
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -246,6 +246,27 @@
   line-height: 2.7rem;
 }
 
+.scroll-up {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  /*position:absolute;
+  bottom:0;
+  left:50%;
+  z-index:9999;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0 0 17px;
+}
+.scroll-up .fa {
+  color: #fff;
+  font-size: 27px;
+  line-height: 27px;
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+}
+
 #page-wrap {
   width: 100%;
   min-height: 1px;
@@ -342,6 +363,15 @@
 }
 
 /*header ends*/
+/*scroll*/
+#scroll {
+  width: 100%;
+  height: 60px;
+  margin-top: 75px;
+  background-color: #000;
+}
+
+/*scroll ends*/
 /*map*/
 #map {
   padding-top: 75px;
