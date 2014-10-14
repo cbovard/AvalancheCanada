@@ -89,22 +89,6 @@
           });
           /**/
 
-          /*assign the yamm mega menu full width*/
-          //$("ul.nav > li").each(function(){
-              //assign li id and rebuild for jquery
-              //li_id = "#" + this.id;
-              //get left position of li parent
-             // yamm_offset = $(li_id).offset();
-              //yamm_left = "-=" + yamm_offset.left;
-              //rebuild jquery element id
-              //li_id_drop_down = li_id + " .dropdown-menu";
-              //assign the left position to the mega menu
-              //$(li_id_drop_down).css("left", yamm_left);
-         // });
-          //Returns width of browser viewport
-          //var browser_viewport = $(window).width();
-          //set the yamm - mega menu width
-          //$(".dropdown-menu").width(browser_viewport);
           //weird hover off bug. Need to apply open class and remove - http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
           $('ul.nav li.dropdown').hover(function() {
             $(this).addClass('open');
@@ -129,7 +113,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body id="forecast-page">
     <!--multilevel menu - http://multi-level-push-menu.make.rs/ -->
     <div id="menu">
         <nav>
@@ -480,326 +464,123 @@
           </nav>
         </div>
       </header><!--/#header-->
+      <div id="forecast">
+        <div id="inner-forecast">
+          <article class="container">
+            <div class="row">
 
-      <div id="scroll">
-        <div class="scroll-up">
-          <a href="#">Up</a>
-          <i class="fa fa-chevron-up"></i>
-        </div>
-      </div><!--/#scroll-up-->
-
-      <div id="map" class="container-fluid">
-        <div class="row">
-          <!--map html here-->
-          <div class="scroll-down">
-            <i ng-click="scrollPage()"class="fa fa-chevron-down"></i>
-          </div><!--/#scroll-down-->
-        </div>
-      </div><!--/#map-->
-
-      <div id="sponsor-bar" class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="sponsor-ad-container">
-              <p id="sponsor-text" class="hidden-xs">Thanks To Our Title Sponsor</p>
-              <a id="sponsor-link" href="http://www.smithoptics.com/" target="_blank" title="Smith Optics"><img src="assets/img/sponsor-mobile-smith-logo.png" class="img-responsive" alt="Smith Optics"></a>
-            </div>
-          </div>
-        </div>
-      </div><!--/#sponsor-bar-->
-
-      <div id="know-more">
-        <div class="container">
-          <div class="row">
-            <article class="col-xs-12">
-              <header>
-                <h2>Know More.<br /><span>Go Further.</span></h2>
+              <header class="col-xs-12">
+                <div id="header-inner">
+                  <h1>South Columbia</h1>
+                  <div class="blue-border"></div>
+                </div>
               </header>
-              <footer>
-                <a class="button-left" href="/">Take a Course&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-                <a class="button-right" href="/">Get the Gear&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-              </footer>
-            </article>
-          </div>
-        </div>
-      </div><!--/#know-more-->
 
-      <div id="news" class="container ">
-        <div class="row">
-          <div class="col-xs-12">
-            <!--news articles container-->
-            <article id="news-articles">
-              <header>
-                <h1>News <br /><span>and Events</span></h1>
-                <div class="blue-border"></div>
-              </header>
-              <!--news list rows-->
-              <article class="list-row-1">
-                <section class="news-image">
-                  <img src="assets/img/news-article-test-pic.jpg" class="im" alt="">
-                  <ul class="news-social">
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i>&nbsp;25</a>
+              <section id="forecast-date" class="col-xs-12">
+                <div class="forecast-date-inner" id="date-issued">
+                  Date Issued <span>Monday, 31 March 2014 4:55 pm</span>
+                </div>
+                <div class="forecast-date-inner" id="date-valid">
+                  Valid Until <span>Tuesday, 01 April 2014 9:00 pm</span>
+                </div> 
+              </section>
+
+
+
+
+              <section id="forecast-body" class="col-xs-12 col-md-9">
+                <h2>Expect to see sunny breaks over the next couple days. Brief periods of solar radiation could be enough to trigger stubborn persistent slabs or cause cornice failures. Conservative route selection remains crucial at this time.</h2>
+
+                <div id="forecast-tabs">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                    <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home">...</div>
+                    <div class="tab-pane" id="profile">...</div>
+                    <div class="tab-pane" id="messages">...</div>
+                    <div class="tab-pane" id="settings">...</div>
+                  </div>
+                </div>
+              </section>
+
+              <aside class="col-xs-12 col-md-3">
+                <div class="dark-ribbon"></div>
+                <div class="sidebar-inner">
+                  <h3>Related</h3>
+                  <article class="first sidebar-related">
+                    <h4><a href="#">Spring Conditions Scenario Series</a></h4>
+                    <section class="sidebar-related-author">By <a href="#">Karl Klassen</a></section>
+                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                  </article>
+                  <article class="sidebar-related">
+                    <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                  </article>
+                  <article class="last sidebar-related">
+                    <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                  </article>
+                  <ul class="sidebar-related-links">
+                    <li class="first">
+                      <a href="#">Related Data</a>
                     </li>
                     <li>
-                      <a href="#"><i class="fa fa-twitter"></i>&nbsp;12</a>
+                      <a href="#">Forecast Archive</a>
                     </li>
-                    <li>
-                      <a href="#"><i class="fa fa-eye"></i>&nbsp;63</a>
+                    <li class="last">
+                      <a href="#">Any Additional Links</a>
                     </li>
                   </ul>
-                </section>
-                <header>
-                  <span>Featured</span>
-                  <h2><a href="#">Featured News Article</a></h2>
-                </header>
-                <section class="news-body">
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
-                </section>
-                <footer>
-                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
-&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                </footer>
-              </article>
-              <article class="list-rows list-row-2">
-                <header>
-                  <h2><a href="#">Sub News Article Sub News Article Sub News Article Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
-                </header>
-                <footer>
-                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
-&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                </footer>
-              </article>
-              <article class="list-rows list-row-3">
-                <header>
-                  <h2><a href="#">Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
-                </header>
-                <footer>
-                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
-&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                </footer>
-              </article>
-              <article class="list-rows list-row-4 list-row-last">
-                <header>
-                  <h2><a href="#">Sub News Article&nbsp;<i class="fa fa-angle-right"></i></a></h2>
-                </header>
-                <footer>
-                  <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
-&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
-                </footer>
-              </article>
-              <!--news list rows ends-->
-            </article>
-            <!--news articles container ends-->
-          </div>
-        </div>
-      </div><!--/#news-->
-
-      <div id="videos" class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <article id="video-featured">
-              <header>
-                <div id="header-bg"></div>
-                <h2 class="hidden-xs hidden-sm"><a href="#">Throttle Decisions: Outreach Componet</a></h2>
-              </header>
-              <section id="video-container">
-                <a id="video-link" href="#"><img src="assets/img/video-link-bg-temp.jpg" class="img-responsive" alt="Feature Video title HERE"></a>
-                <div id="video-body">
-                  <p>Throttle Decisions is a fast-paced video series aimed at encouraging mountain sledders to become better trained in avalanche safety. Its eight short components move through the AST course.</p>
                 </div>
-                <div id="video-sponsor" class="hidden-xs">
-                  <a id="video-sponsor-link" href="http://www.smithoptics.com/" target="_blank" title="Smith Optics"><img src="assets/img/sponsor-mobile-smith-logo.png" class="img-responsive" alt="Smith Optics"></a>
+              </aside>
+
+              <footer class="col-xs-12 div">
+                <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          Collapsible Group Item #1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          Collapsible Group Item #2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </section>
-            </article>
-          </div>
+              </footer>
+
+            </div>
+
+
+          </article>
         </div>
-      </div><!--/#videos-->
 
-      <div id="blog" class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <!--blog articles container-->
-            <article id="blog-articles">
-              <div id="blog-header-wrap">
-                <header>
-                  <h2>The <br class="visible-xs-inline" />Avalanche <br /><span>Forecasters</span> <br class="visible-xs-inline" />Blog</h2>
-                </header>
-                <section id="blog-tagline-link">
-                  <p>We know Snow.</p>
-                  <a id="blog-link" href="#">Read The Blog&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-                </section>
-              </div>
-              <!--blog list rows-->  
-              <article class="list-rows list-row-1">
-                <header>
-                  <h3><a href="#">Farewell for the season</a></h3>
-                </header>
-                <section class="blog-author">
-                  <p>by <a href="#">Karl Klassen</a></p>
-                </section>
-                <section class="blog-body">
-                  <p>With the winter season draw
-ing to a close, the Canadian Avalanche Centre is winding down regular winter forecast products. We’ll provide occasional updates into early May if conditions undergo a dramatic change. <a href="#">Read on</a></p>
-                </section>
-                 <footer>
-                    <p><time datetime="2008-02-14 20:00">Pub date here</time></p>
-                 </footer>
-              </article>  
-              <article class="list-rows list-row-2 list-row-last">
-                <header>
-                  <h3><a href="#">Farewell for the season</a></h3>
-                </header>
-                <section class="blog-author">
-                  <p>by <a href="#">Karl Klassen</a></p>
-                </section>
-                <section class="blog-body">
-                  <p>With the winter season draw
-ing to a close, the Canadian Avalanche Centre is winding down regular winter forecast products. We’ll provide occasional updates into early May if conditions undergo a dramatic change. <a href="#">Read on</a></p>
-                </section>
-                 <footer>
-                    <p><time datetime="2008-02-14 20:00">Pub date here</time></p>
-                  </footer>
-              </article> 
-            </article>        
-          </div>
-        </div>
-      </div><!--/#blog-->
-
-      <div id="communities">
-        <div id="dark-ribbon"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12">
-              <h3>Our <br class="visible-xs-inline" />Communities</h3>
-            </div>
-            <div id="communities-twitter" class="col-xs-12 col-sm-6 col-md-3 communities-box">
-              <p>New winter #backcountry terrain atlas available for <a href="#">#mtrevelstokenp</a> &amp; <a href="#">#glaciernp</a> <a href="#">@avalancheca</a>  <a href="#"><strong>http://www.pc.gc.ca/eng/pn-np/bc/glacier/activ/activ1/b.aspx</strong></p>
-              <div class="posted-by">
-                <a class="poster-image" href="#"><img width="30" height="30" src="assets/img/twitter-image.jpg"></a><a class="postername-date">@ryanbougie&nbsp;&nbsp;&nbsp;&nbsp;May 7</a>
-              </div>
-              <a href="#" class="blue-button"><i class="fa fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;Follow Us&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-            </div>
-            <div id="communities-facebook" class="col-xs-12 col-sm-6 col-md-3 communities-box">
-              <p>The Valemount Area Recreation Development Association is fundraising for the construction of a new 20x32 Shelter in the Clemina Creek Managed snowmobile area this summer. Interesting in helping them out?<br /><strong><a href="https://www.facebook.com/events/496763173745045/">https://www.facebook.com/events/496763173745045/</a></strong></p>
-              <div class="posted-by">
-                <a class="poster-image" href="#"><img width="30" height="30" src="assets/img/avalanche-center-profile-img.jpg"></a><a class="postername-date">Canadian Avalanche Center - May 7</a>
-              </div>
-              <a href="#" class="blue-button"><i class="fa fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;Like Us&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-            </div>
-            <div id="communities-youtube" class="col-xs-12 col-sm-6 col-md-3 communities-box">
-              <img class="youtube-thumb img-responsive" width="233" height="130" src="assets/img/youtube-thumb.jpg">
-              <p>3 The Three Winter Essentials</p>
-              <div class="posted-by">
-                <a class="poster-image" href="#"><a class="postername-date">8 months ago | 81 views</a>
-              </div>
-              <a href="#" class="blue-button"><i class="fa fa-youtube"></i>&nbsp;&nbsp;&nbsp;&nbsp;Like Us&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-            </div>
-            <div id="communities-misc" class="col-xs-12 col-sm-6 col-md-3 communities-box">
-              <p>The Valemount Area Recreation Development Association is fundraising for the construction of a new 20x32 Shelter in the Clemina Creek Managed snowmobile area this summer. Interesting in helping them out?<br /><strong><a href="https://www.facebook.com/events/496763173745045/">https://www.facebook.com/events/496763173745045/</a></strong></p>
-              <div class="posted-by">
-                <a class="poster-image" href="#"><img width="30" height="30" src="assets/img/avalanche-center-profile-img.jpg"></a><a class="postername-date">Canadian Avalanche Center - May 7</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><!--/#communities-->
-
-      <div id="auction" class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="auction-header">
-              <h4>Online <br class="visible-xs-inline" /><span>Auction</span></h4>
-              <div id="auction-sponsor" class="hidden-xs">
-                <p>Brought to you by</p>
-                <a href="http://arcteryx.com" target="_blank"><img src="assets/img/arcteryx-logo.jpg"></a>
-              </div>
-              <div class="blue-border"></div>
-            </div>
-          </div>
-          <div id="auction-tagline-wrap" class="col-xs-12">
-            <div id="auction-tagline">
-              <p>Our sponsors donate products to support our programs lore ispum dolor</p>
-            </div>
-          </div>
-          <div id="auction-time-wrap"class="col-xs-12">
-            <div id="auction-time">
-              <p>closes in 00:00:00</p>
-            </div>
-          </div>
-          <article id="auction-featured-item" class="col-xs-12">
-            <div class="auction-featured-item-inner">
-              <a href="#"><img class="img-responsive" src="assets/img/jacket.jpg"></a>
-            </div>
-            <div class="auction-featured-item-inner">
-              <h5><a href="#">Arc’teryx Lorem Ipsum Jacket</a></h5>
-              <section class="auction-item-body">
-                <p class="auction-item-size-price">retail value $000.00&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;SIZE Medium</p>
-                <p class="auction-item-body">All-round mountain apparel with increased coverage | SV: Severe Weather. A highly featured, severe weather condition jacket, designed for wet, stormy days. Our toughest and longest length waterproof jacket constructed with hardwearing GORE-TEX® 80D face fabric.</p>
-                <p class="auction-item-info">Must be in <span>$10.00</span> increments</p>
-              </section>
-            </div>
-            <footer>
-              <section class="auction-highest-bid">
-                <p>Highest bid</p>
-                <p class="highest-amount">$0,000.00</p>
-              </section>
-              <section class="auction-bid-form">
-                <p>Your Bid</p>
-                <form>
-                  <input type="text" class="form-control" name="bid" placeholder="">
-                  <button type="button" class="blue-button">Submit&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
-                </form>
-              </section>
-            </footer>
-          </article><!--/#auction-featured-item-->
-
-          <div id="auction-other" class="col-xs-12">
-            <div id="auction-other-header">
-              <h4>Other Auction Items</h4>
-            </div>
-            <article class="list-rows list-row-1 list-row-even list-row-first">
-              <header>
-                <h5><a href="#"><span>Marmot®</span><br />Exum Guide Undercuff Glove</a></h5>
-              </header>
-              <section class="auction-other-image">
-                <a href="#"><img class="img-responsive" src="assets/img/marmot-gloves.jpg"></a>
-              </section>
-              <section class="auction-other-bid">
-                <p>Highest Bid $000.00</p>
-              </section>
-            </article>
-            <article class="list-rows list-row-2 list-row-odd">
-              <header>
-                <h5><a href="#"><span>Marmot®</span><br />Exum Guide Undercuff Glove</a></h5>
-              </header>
-              <section class="auction-other-image">
-                <a href="#"><img class="img-responsive" src="assets/img/marmot-gloves.jpg"></a>
-              </section>
-              <section class="auction-other-bid">
-                <p>Highest Bid $000.00</p>
-              </section>
-            </article>
-            <article class="list-rows list-row-3 list-row-even ">
-              <header>
-                <h5><a href="#"><span>Marmot®</span><br />Exum Guide Undercuff Glove</a></h5>
-              </header>
-              <section class="auction-other-image">
-                <a href="#"><img class="img-responsive" src="assets/img/marmot-gloves.jpg"></a>
-              </section>
-              <section class="auction-other-bid">
-                <p>Highest Bid $000.00</p>
-              </section>
-            </article>
-            <article class="list-rows list-row-4 list-row-odd list-row-last">
-              <section id="view-auction">
-                <a href="#"><img class="img-responsive" src="assets/img/checkout-other-auction.jpg"></a>
-              </section>
-            </article>
-          </div><!--/#auction-other-->
-        </div><!--/.row-->
-      </div><!--/#auction-->
+      </div><!--/#forecast-->
 
       <footer id="footer" role="contentinfo">
         <div class="container">

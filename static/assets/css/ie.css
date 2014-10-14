@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 24, 2014
+ * Oct. 13, 2014
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -248,16 +248,12 @@
 
 .scroll-up {
   width: 60px;
-  height: 60px;
+  height: 70px;
   background-color: #000;
-  /*position:absolute;
-  bottom:0;
-  left:50%;
-  z-index:9999;*/
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px 0 0 17px;
+  padding: 14px 0 14px 0;
 }
 .scroll-up .fa {
   color: #fff;
@@ -265,6 +261,29 @@
   line-height: 27px;
   font-size: 2.7rem;
   line-height: 2.7rem;
+  padding-left: 17px;
+}
+.scroll-up a {
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding-left: 14px;
+}
+.scroll-up a:visited, .scroll-up a:hover, .scroll-up a:active, .scroll-up a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.div {
+  border: 1px solid red;
+}
+
+.dark-ribbon {
+  width: 100%;
+  height: 8px;
+  background: transparent url(../img/ribbon-greydark-bg.png) repeat-x center center;
 }
 
 #page-wrap {
@@ -1544,6 +1563,199 @@
   font-weight: bold;
 }
 
+/*forecast page*/
+#forecast-page #header {
+  border-bottom: 1px solid #ececec;
+}
+
+#forecast {
+  width: 100%;
+  min-height: 200px;
+  margin-top: 75px;
+}
+#forecast:before, #forecast:after {
+  content: " ";
+  display: table;
+}
+#forecast:after {
+  clear: both;
+}
+#forecast #inner-forecast {
+  min-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1226px;
+  background: transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+}
+#forecast #inner-forecast:before, #forecast #inner-forecast:after {
+  content: " ";
+  display: table;
+}
+#forecast #inner-forecast:after {
+  clear: both;
+}
+#forecast article header #header-inner {
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+  padding: 34px 0 36px;
+}
+#forecast article header #header-inner h1 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0;
+  font-weight: bold;
+}
+#forecast article #forecast-date {
+  height: 64px;
+  margin-bottom: 36px;
+}
+#forecast article .forecast-date-inner {
+  height: 64px;
+  float: left;
+  padding-top: 20px;
+  border-bottom: 1px solid #eeeff1;
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #0056b7;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#forecast article .forecast-date-inner span {
+  color: #b5b5b5;
+}
+#forecast article #date-issued {
+  width: 420px;
+  border-right: 1px solid #eeeff1;
+}
+#forecast article #date-valid {
+  width: 606px;
+  padding-left: 18px;
+}
+#forecast article aside {
+  min-height: 100px;
+  padding: 0;
+  background: transparent url(../img/ribbon-grey-bg.png) repeat left top;
+}
+#forecast article aside:before, #forecast article aside:after {
+  content: " ";
+  display: table;
+}
+#forecast article aside:after {
+  clear: both;
+}
+#forecast article aside .sidebar-inner {
+  padding: 18px 20px 40px 20px;
+}
+#forecast article aside h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  color: #1e59a9;
+  font-weight: bold;
+  margin: 0 0 34px 0;
+}
+#forecast article aside article {
+  border-bottom: 5px solid #fff;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  clear: both;
+  min-height: 1px;
+}
+#forecast article aside article:before, #forecast article aside article:after {
+  content: " ";
+  display: table;
+}
+#forecast article aside article:after {
+  clear: both;
+}
+#forecast article aside article h4 {
+  margin: 0;
+}
+#forecast article aside article h4 a {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  color: #121212;
+}
+#forecast article aside article h4 a:visited, #forecast article aside article h4 a:hover, #forecast article aside article h4 a:active, #forecast article aside article h4 a:focus {
+  text-decoration: none;
+  color: #121212;
+}
+#forecast article aside article h4 a:hover {
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author {
+  color: #b5b5b5;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#forecast article aside article .sidebar-related-author a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author a:visited, #forecast article aside article .sidebar-related-author a:hover, #forecast article aside article .sidebar-related-author a:active, #forecast article aside article .sidebar-related-author a:focus {
+  text-decoration: none;
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author a:hover {
+  color: #121212;
+}
+#forecast article aside article .sidebar-related-pubdate {
+  color: #b5b5b5;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 28px;
+  font-size: 1.1rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+#forecast article aside .sidebar-related-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#forecast article aside .sidebar-related-links li {
+  border-bottom: 2px solid #fff;
+  margin: 0;
+}
+#forecast article aside .sidebar-related-links li.last {
+  border: none;
+}
+#forecast article aside .sidebar-related-links li a {
+  font-size: 15px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  font-weight: bold;
+  color: #0056b7;
+}
+#forecast article aside .sidebar-related-links li a:visited, #forecast article aside .sidebar-related-links li a:hover, #forecast article aside .sidebar-related-links li a:active, #forecast article aside .sidebar-related-links li a:focus {
+  text-decoration: none;
+  color: #0056b7;
+}
+#forecast article aside .sidebar-related-links li a:hover {
+  color: #121212;
+}
+
+/*forecast page ends*/
 /*footer*/
 #footer {
   height: 214px;
@@ -1601,7 +1813,7 @@
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 15, 2014
+ * Oct. 12, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -1985,7 +2197,7 @@
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 15, 2014
+ * Oct. 12, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/

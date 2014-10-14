@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Sept. 24, 2014
+ * Oct. 13, 2014
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -94,18 +94,34 @@
 }
 .scroll-up {
 	width:60px;
-	height:60px;
+	height:70px;
 	background-color:#000;
-	/*position:absolute;
-	bottom:0;
-	left:50%;
-	z-index:9999;*/
 	@include center-block();
-	padding:15px 0 0 17px;
+	padding:14px 0 14px 0;
 	.fa {
 		color:#fff;
 		@include font-size(2.7, 2.7);
+		padding-left:17px;
 	}
+	a {
+		color:#fff;
+		@include font-size(1.2, 1.2);
+		padding-left:14px;
+		&:visited,
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration:none;
+			color:#fff;
+		} 
+	}
+}
+
+.div {border:1px solid red;}
+.dark-ribbon {
+	width:100%;
+	height:8px;
+	background:transparent url(../img/ribbon-greydark-bg.png) repeat-x center center;
 }
 //end of custom classes
 
@@ -1096,6 +1112,177 @@
 	  }
 	}
 }
+
+/*forecast page*/
+#forecast-page {
+	#header {
+		border-bottom:1px solid #ececec;
+	}
+}
+#forecast {
+	width:100%;
+	min-height:200px;
+	@include clearfix();	
+	margin-top:75px;
+
+	#inner-forecast {
+		min-height:200px;
+		@include clearfix();	
+		@include center-block();
+		//need to add 160px for the map bg image on the left
+		width:1226px;
+		//padding:0 80px
+		background:transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+	}
+	article {
+
+		header {
+			#header-inner {
+				h1 {
+					//@include font-size(3.6, 3.8);
+					@include font-size(5.0, 5.2);
+					font-family:$font-family-google;
+					margin:0;
+					font-weight:bold;
+				}
+				background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+				position:relative;
+				padding:34px 0 36px;
+			}
+		}
+
+		#forecast-date {
+			height:64px;
+			margin-bottom:36px;
+		}
+		.forecast-date-inner {
+			height:64px;
+			float:left;
+			padding-top:20px;
+			border-bottom:1px solid #eeeff1;
+			@include font-size(1.6, 2.8);
+			font-family:$font-family-google;
+			color:#0056b7;
+			font-weight:bold;
+			text-transform:uppercase;
+			span {color:#b5b5b5;}
+		}
+
+		#date-issued {
+			width:420px;
+			border-right:1px solid #eeeff1;
+		}
+		#date-valid {
+			 width:606px;
+			 padding-left:18px;
+		}
+
+
+
+
+		#forecast-body {
+			//padding-top:36px;
+		}
+
+		aside {
+			min-height:100px;
+			@include clearfix();
+			padding:0;
+			background:transparent url(../img/ribbon-grey-bg.png) repeat left top;
+			.sidebar-inner {padding:18px 20px 40px 20px;}
+			h3 {
+				@include font-size(2.6, 3.0);
+				color:#1e59a9;
+				font-weight:bold;
+				margin:0 0 34px 0;				
+			}
+
+			article {
+				border-bottom:5px solid #fff;
+				padding-bottom:14px;
+				margin-bottom:14px;
+				clear:both;
+				@include clearfix();
+				min-height:1px;
+				h4 {
+					margin:0;
+					a {
+					  @include font-size(2.0, 2.4);
+					  font-weight:bold;
+					  color:#121212;
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration:none;
+							color:#121212;
+						}
+						&:hover {
+							color:#1e59a9;
+						}
+					}
+				}
+				.sidebar-related-author {
+					color:#b5b5b5;
+					@include font-size(1.5, 2.2);
+					font-weight:bold;
+					a {
+					  @include font-size(1.5, 2.2);
+					  font-weight:bold;
+					  color:#1e59a9;
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration:none;
+							color:#1e59a9;
+						}
+						&:hover {
+							color:#121212;
+						}
+					}					
+				}
+				.sidebar-related-pubdate {
+					color:#b5b5b5;
+					font-family:$font-family-google;
+					@include font-size(1.1, 2.8);
+					text-transform:uppercase;
+					margin-top:4px;
+				}
+			}
+			.sidebar-related-links {
+				margin:0;
+				padding:0;
+				list-style:none;
+				li {
+					border-bottom:2px solid #fff;
+					margin:0;
+					&.last {border:none;}
+					a {
+					  @include font-size(1.5, 5.0);
+					  font-weight:bold;
+					  color:#0056b7;
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration:none;
+							color:#0056b7;
+						}
+						&:hover {
+							color:#121212;
+						}
+					}
+				}
+			}
+		}
+
+		footer {
+
+		}
+	}
+}
+/*forecast page ends*/
 
 
 /*footer*/
