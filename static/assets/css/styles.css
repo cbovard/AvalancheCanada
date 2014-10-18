@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 13, 2014
+ * Oct. 17, 2014
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -1642,6 +1642,292 @@
 #forecast article #date-valid {
   width: 606px;
   padding-left: 18px;
+}
+#forecast article #forecast-body h2 {
+  color: #242424;
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  margin: 0 0 36px 0;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs {
+  border: none;
+  margin-bottom: 18px;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li {
+  margin: 0;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a {
+  display: block;
+  width: 252px;
+  height: 75px;
+  background-color: #99bbe2;
+  color: #fff;
+  position: relative;
+  font-size: 15px;
+  line-height: 52px;
+  font-size: 1.5rem;
+  line-height: 5.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 0;
+  text-align: center;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a:focus, #forecast article #forecast-body #forecast-tabs .nav-tabs li a:hover, #forecast article #forecast-body #forecast-tabs .nav-tabs li a.active {
+  color: #fff;
+  background-color: #0056b7;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a:focus .arrow-down, #forecast article #forecast-body #forecast-tabs .nav-tabs li a:hover .arrow-down, #forecast article #forecast-body #forecast-tabs .nav-tabs li a.active .arrow-down {
+  display: block;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a .arrow-down {
+  position: absolute;
+  z-index: 1060;
+  bottom: -10px;
+  left: 44%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #0056b7;
+  display: none;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li#public-forecast-li, #forecast article #forecast-body #forecast-tabs .nav-tabs li#forecast-details-li {
+  border-right: 1px solid #fff;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li#blank-forecast-tab {
+  background-color: #99bbe2;
+  width: 252px;
+  height: 75px;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li.active > a {
+  color: #fff;
+  background-color: #0056b7;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li.active > a .arrow-down {
+  display: block;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content {
+  padding-bottom: 70px;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .featured {
+  color: #d82631;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 {
+  font-size: 30px;
+  line-height: 35px;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a {
+  font-size: 30px;
+  line-height: 35px;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 {
+  font-size: 24px;
+  line-height: 26px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a {
+  font-size: 24px;
+  line-height: 26px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #121212;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p em {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #b7b7b7;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border {
+  list-style: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border li {
+  border-bottom: 2px solid #eeeff1;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border li:last-child {
+  border-bottom: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane blockquote {
+  border-left: 5px solid #eeeff1;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane blockquote strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table thead tr th {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table tbody tr td {
+  border: none;
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(even) > td {
+  background-color: #EBEBEB;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #fff;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #fff;
 }
 #forecast article aside {
   min-height: 100px;

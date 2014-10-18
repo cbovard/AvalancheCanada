@@ -486,26 +486,65 @@
               </section>
 
 
-
-
               <section id="forecast-body" class="col-xs-12 col-md-9">
                 <h2>Expect to see sunny breaks over the next couple days. Brief periods of solar radiation could be enough to trigger stubborn persistent slabs or cause cornice failures. Conservative route selection remains crucial at this time.</h2>
 
                 <div id="forecast-tabs">
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
-                    <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-                    <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-                    <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-                    <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                    <li id="public-forecast-li" class="active">
+                      <a href="#public-forecast" role="tab" data-toggle="tab">Public Avalanche Forecast<span class="arrow-down"></span></a>
+                    </li>
+                    <li id="forecast-details-li">
+                      <a href="#forecast-details" role="tab" data-toggle="tab">Forecast Details<span class="arrow-down"></span></a>
+                    </li>
+                    <li id="blank-forecast-tab"></li>
                   </ul>
 
                   <!-- Tab panes -->
                   <div class="tab-content">
-                    <div class="tab-pane active" id="home">...</div>
-                    <div class="tab-pane" id="profile">...</div>
-                    <div class="tab-pane" id="messages">...</div>
-                    <div class="tab-pane" id="settings">...</div>
+                    <div class="tab-pane active" id="public-forecast">
+
+                    </div>
+                    <div class="tab-pane" id="forecast-details">
+                      <h3>Avalanche Summary</h3>
+                      <p>A low probability, but high consequence avalanche problem plagues the Columbia regions. These highly destructive and largely unpredictable avalanches are expected to be isolated, but certainly possible anywhere at any time. Avalanches continue to step down to old, deep weak layers. The most recent was a natural size 3 in the Cariboo region on Thursday. The S Columbia had one step down on Tuesday and the N Columbia on Monday. While these layers are typically dormant, they are expected to become reactive again with the new loading or the upcoming strong solar inputs</p>
+                      <p>Most recent reports for the South Columbia include isolated human and explosive triggered avalanches up to size 1.5 in the recent storm snow down around 20cm. Loose sluffing from steep terrain features was also reported.</p>
+                      <p>&nbsp;</p>
+                      <h3>Snowpack Summary</h3>
+                      <p>Recent warm temperatures have resulted in good settlement and improved bonding of the storm snow from earlier in the week, and human-triggering has generally become stubborn. Three persistent weaknesses contribute to a highly variable, fundamentally unstable, complex snowpack with step-down potential. The mid-March sun crust/surface hoar layer down 50-80cm still has potential for human-triggering in isolated areas. The early-March crust/facet/surface hoar layer down around 80-120cm has become less susceptible to human-triggers, but still has the potential to produce large avalanches, and we continue to see fractures stepping down to this layer. The mid-February crust/facet/surface hoar layer is typically down at least 1.5m and direct triggering has become unlikely. However, large loads like cornices or smaller avalanches stepping down can still trigger this layer and produce very large avalanches.</p>
+                      <p>&nbsp;</p>
+                      <h3>Weather Forecast</h3>
+                      <p>A ridge of high pressure persists until Wednesday. A weak disturbance may cross the region on Wednesday night resulting in increased cloud cover and isolated light showers.</p>
+
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mostly sunny</td>
+                            <td>A mix of sun and cloud</td>
+                            <td>Mainly cloudy.</td>
+                          </tr> 
+                          <tr>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                          </tr>
+                          <tr>
+                            <td>Ridgetop wind: light NW</td>
+                            <td>Ridgetop wind: light NW</td>
+                            <td>Ridgetop wind: light NW</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </section>
