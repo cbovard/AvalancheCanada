@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 17, 2014
+ * Oct. 19, 2014
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -1124,7 +1124,6 @@
 	min-height:200px;
 	@include clearfix();	
 	margin-top:75px;
-
 	#inner-forecast {
 		min-height:200px;
 		@include clearfix();	
@@ -1174,10 +1173,7 @@
 			 width:606px;
 			 padding-left:18px;
 		}
-
-
-		#forecast-body {
-			
+		#forecast-body {			
 			h2 {
 				color:#242424;
 				@include font-size(2.6, 3.0);
@@ -1204,8 +1200,11 @@
 							margin:0;
 							border-radius:0;
 							text-align:center;
-							&:focus,
-							&:hover,
+							&:focus {
+								color:#fff;
+								background-color:#4299fc;
+							}
+							&:hover
 							&.active {
 								color:#fff;
 								background-color:#0056b7;
@@ -1213,7 +1212,7 @@
 							}
 							.arrow-down {
 								position:absolute;
-								z-index:$zindex-popover;
+								z-index:999;
 								bottom:-10px;
 								left:44%;
 								width:0; 
@@ -1242,10 +1241,10 @@
 						}
 					}
 				}
-
 				.tab-content {
 					padding-bottom:70px;
 					.tab-pane {
+						padding-top:32px;
 						//classes
 						.featured {color:#d82631;}
 						h2 {
@@ -1428,8 +1427,34 @@
 					}
 				}
 			}
-		}
+			#public-forecast {
+				.forecast-image {
+					clear:both;
+					margin-bottom:24px;
+				}
+				#forecast-by {
+					@include font-size(1.5, 2.2);
+					color:#b1b1b1;
+					a {
+					  @include font-size(1.5, 2.2);
+					  color:#b1b1b1;
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							text-decoration:none;
+							color:#b1b1b1;
+						}
+						&:hover {
+							text-decoration:underline;
+							color:#b1b1b1;							
+						}
+					}						
+				}
+			}
 
+		}
+		//right sidebar
 		aside {
 			min-height:100px;
 			@include clearfix();
@@ -1442,7 +1467,6 @@
 				font-weight:bold;
 				margin:0 0 34px 0;				
 			}
-
 			article {
 				border-bottom:5px solid #fff;
 				padding-bottom:14px;
@@ -1522,9 +1546,70 @@
 				}
 			}
 		}
-
-		footer {
-
+		//forecast bulletin footer
+		#forecast-bulletin {
+			margin-bottom:80px;
+			.panel {
+				padding:12px 10px 12px 4px;
+				border-bottom:2px solid #eeeff1;
+				h4 {
+					margin:0;
+					@include font-size(1.5, 1.5);
+					a {
+					  @include font-size(1.5, 3.0);
+					  color:#0056b7;
+					  font-weight:bold;
+					  display:block;
+					  height:31px;
+					  padding:0 0 0 42px;
+					  background:transparent url(../img/bulletin-buttons.jpg) left bottom no-repeat;
+						&:visited,
+						&:focus,
+						&:active {
+							text-decoration:none;
+							color:#0056b7;
+							background:transparent url(../img/bulletin-buttons.jpg) left bottom no-repeat;
+						}
+					  &.collapsed,
+						&:hover,{
+							text-decoration:none;
+							color:#0056b7;
+							background:transparent url(../img/bulletin-buttons.jpg) left top no-repeat;
+						}
+						&:hover {
+							text-decoration:none;
+							color:#0056b7;	
+							background-position:left bottom;						
+						}
+					}						
+				}
+				.panel-body {
+					padding:14px 0;
+					p {
+						@include font-size(1.5, 2.2);
+						color:#5b5b5b;
+						strong {
+							@include font-size(1.5, 2.2);
+							color:#121212;
+						}
+						em {
+							@include font-size(1.5, 2.2);
+							color:#5b5b5b;			
+						}
+						a {
+						  @include font-size(1.5, 2.2);
+						  font-weight:bold;
+							&:visited,
+							&:hover,
+							&:active,
+							&:focus {
+								text-decoration:none;
+							}
+						}
+					}
+				}
+			}
+			.panel.first {border-top:2px solid #eeeff1;}
 		}
 	}
 }
