@@ -466,22 +466,33 @@
       </header><!--/#header-->
       <div id="forecast">
         <div id="inner-forecast">
+          <div id="back-link">
+            <i class="fa fa-chevron-left"></i>
+          </div>
           <article class="container">
             <div class="row">
-
               <header class="col-xs-12">
                 <div id="header-inner">
                   <h1>South Columbia</h1>
+                  <div id="forecast-sponsor-desktop" class="hidden-xs hidden-sm">
+                    <p>Brought to you by</p>
+                    <a href="http://arcteryx.com" target="_blank"><img src="assets/img/arcteryx-logo.jpg"></a>
+                  </div>
                   <div class="blue-border"></div>
                 </div>
               </header>
-
+              <div id="forecast-sponsor-mobile" class="col-xs-12 visible-xs-block">
+                <div id="forecast-sponsor-mobile-inner">
+                  <p class="pull-left">Brought<br />to you by</p>
+                  <a class="pull-right" href="http://arcteryx.com" target="_blank"><img src="assets/img/arcteryx-logo.jpg"></a>
+                </div>
+              </div>
               <section id="forecast-date" class="col-xs-12">
                 <div class="forecast-date-inner" id="date-issued">
-                  Date Issued <span>Monday, 31 March 2014 4:55 pm</span>
+                  Date Issued <br class="visible-xs-inline" /><span>Monday, 31 March 2014 4:55 pm</span>
                 </div>
                 <div class="forecast-date-inner" id="date-valid">
-                  Valid Until <span>Tuesday, 01 April 2014 9:00 pm</span>
+                  Valid Until <br class="visible-xs-inline" /><span>Tuesday, 01 April 2014 9:00 pm</span>
                 </div> 
               </section>
 
@@ -493,12 +504,12 @@
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
                     <li id="public-forecast-li" class="active">
-                      <a href="#public-forecast" role="tab" data-toggle="tab">Public Avalanche Forecast<span class="arrow-down"></span></a>
+                      <a href="#public-forecast" role="tab" data-toggle="tab">Public Avalanche Forecast<i class="fa fa-chevron-down visible-xs-block"></i><span class="hidden-xs arrow-down"></span></a>
                     </li>
                     <li id="forecast-details-li">
-                      <a href="#forecast-details" role="tab" data-toggle="tab">Forecast Details<span class="arrow-down"></span></a>
+                      <a href="#forecast-details" role="tab" data-toggle="tab">Forecast Details<i class="fa fa-chevron-down visible-xs-block"></i><span class="hidden-xs arrow-down"></span></a>
                     </li>
-                    <li id="blank-forecast-tab"></li>
+                    <li id="blank-forecast-tab" class="hidden-xs"></li>
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">
@@ -529,7 +540,63 @@
                       <p>&nbsp;</p>
                       <h3>Weather Forecast</h3>
                       <p>A ridge of high pressure persists until Wednesday. A weak disturbance may cross the region on Wednesday night resulting in increased cloud cover and isolated light showers.</p>
-                      <table class="table table-striped">
+                      <!--mobile tables-->
+                      <table class="table table-striped visible-xs-block">
+                        <thead>
+                          <tr>
+                            <th>Tuesday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mostly sunny</td>
+                          </tr> 
+                          <tr>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                          </tr>
+                          <tr>
+                            <td>Ridgetop wind: light NW</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table table-striped visible-xs-block">
+                        <thead>
+                          <tr>
+                            <th>Wednesday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>A mix of sun and cloud</td>
+                          </tr> 
+                          <tr>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                          </tr>
+                          <tr>
+                            <td>Ridgetop wind: light NW</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="table table-striped visible-xs-block">
+                        <thead>
+                          <tr>
+                            <th>Thursday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mainly cloudy.</td>
+                          </tr> 
+                          <tr>
+                            <td>Freezing level<br />AM: 400m  |  PM: 1800m</td>
+                          </tr>
+                          <tr>
+                            <td>Ridgetop wind: light NW</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!--tablet - desktop table-->
+                      <table class="table table-striped hidden-xs">
                         <thead>
                           <tr>
                             <th>Tuesday</th>
@@ -559,36 +626,38 @@
                   </div>
                 </div>
               </section>
-              <aside class="col-xs-12 col-md-3">
-                <div class="dark-ribbon"></div>
-                <div class="sidebar-inner">
-                  <h3>Related</h3>
-                  <article class="first sidebar-related">
-                    <h4><a href="#">Spring Conditions Scenario Series</a></h4>
-                    <section class="sidebar-related-author">By <a href="#">Karl Klassen</a></section>
-                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
-                  </article>
-                  <article class="sidebar-related">
-                    <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
-                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
-                  </article>
-                  <article class="last sidebar-related">
-                    <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
-                    <section class="sidebar-related-pubdate">Date 00, 0000</section>
-                  </article>
-                  <ul class="sidebar-related-links">
-                    <li class="first">
-                      <a href="#">Related Data</a>
-                    </li>
-                    <li>
-                      <a href="#">Forecast Archive</a>
-                    </li>
-                    <li class="last">
-                      <a href="#">Any Additional Links</a>
-                    </li>
-                  </ul>
-                </div>
-              </aside>
+              <div id="mobile-sidebar-container" class="col-xs-12">
+                <aside class="col-md-3">
+                  <div class="dark-ribbon"></div>
+                  <div class="sidebar-inner">
+                    <h3>Related</h3>
+                    <article class="first sidebar-related">
+                      <h4><a href="#">Spring Conditions Scenario Series</a></h4>
+                      <section class="sidebar-related-author">By <a href="#">Karl Klassen</a></section>
+                      <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                    </article>
+                    <article class="sidebar-related">
+                      <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                      <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                    </article>
+                    <article class="last sidebar-related">
+                      <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                      <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                    </article>
+                    <ul class="sidebar-related-links">
+                      <li class="first">
+                        <a href="#">Related Data</a>
+                      </li>
+                      <li>
+                        <a href="#">Forecast Archive</a>
+                      </li>
+                      <li class="last">
+                        <a href="#">Any Additional Links</a>
+                      </li>
+                    </ul>
+                  </div>
+                </aside>
+              </div>
               <footer id="forecast-bulletin" class="col-xs-12">
                 <div class="panel-group" id="accordion">
                   <div class="panel panel-default first">

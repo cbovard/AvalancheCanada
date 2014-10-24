@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 19, 2014
+ * Oct. 23, 2014
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -1585,8 +1585,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 1226px;
-  background: transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+  width: 100%;
+  position: relative;
 }
 #forecast #inner-forecast:before, #forecast #inner-forecast:after {
   content: " ";
@@ -1594,6 +1594,1112 @@
 }
 #forecast #inner-forecast:after {
   clear: both;
+}
+#forecast #inner-forecast #back-link {
+  width: 60px;
+  height: 60px;
+  padding: 20px 0 0 20px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #000;
+}
+#forecast #inner-forecast #back-link .fa {
+  color: #fff;
+  font-size: 27px;
+  line-height: 27px;
+  font-size: 2.7rem;
+  line-height: 2.7rem;
+}
+#forecast article header #header-inner {
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+  padding: 34px 0 36px;
+}
+#forecast article header #header-inner h1 {
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  margin: 0 0 0 50px;
+  font-weight: bold;
+  float: left;
+}
+#forecast article header #header-inner #forecast-sponsor-desktop {
+  float: right;
+  width: 124px;
+}
+#forecast article header #header-inner #forecast-sponsor-desktop p {
+  margin: 0 0 12px 0;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b5b5b5;
+}
+#forecast article header #header-inner:before, #forecast article header #header-inner:after {
+  content: " ";
+  display: table;
+}
+#forecast article header #header-inner:after {
+  clear: both;
+}
+#forecast article #forecast-sponsor-mobile #forecast-sponsor-mobile-inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eeeff1;
+}
+#forecast article #forecast-sponsor-mobile #forecast-sponsor-mobile-inner:before, #forecast article #forecast-sponsor-mobile #forecast-sponsor-mobile-inner:after {
+  content: " ";
+  display: table;
+}
+#forecast article #forecast-sponsor-mobile #forecast-sponsor-mobile-inner:after {
+  clear: both;
+}
+#forecast article #forecast-sponsor-mobile p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 13px;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b5b5b5;
+}
+#forecast article #forecast-date {
+  min-height: 1px;
+}
+#forecast article #forecast-date:before, #forecast article #forecast-date:after {
+  content: " ";
+  display: table;
+}
+#forecast article #forecast-date:after {
+  clear: both;
+}
+#forecast article .forecast-date-inner {
+  min-height: 1px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eeeff1;
+  font-size: 16px;
+  line-height: 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #0056b7;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#forecast article .forecast-date-inner:before, #forecast article .forecast-date-inner:after {
+  content: " ";
+  display: table;
+}
+#forecast article .forecast-date-inner:after {
+  clear: both;
+}
+#forecast article .forecast-date-inner span {
+  color: #b5b5b5;
+}
+#forecast article #date-issued,
+#forecast article #date-valid {
+  width: 100%;
+}
+#forecast article #forecast-body h2 {
+  color: #242424;
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin: 26px 0 26px 0;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs {
+  border: none;
+  margin-bottom: 18px;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li {
+  margin: 0;
+  width: 100%;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a {
+  display: block;
+  width: 100%;
+  height: 75px;
+  background-color: #99bbe2;
+  color: #fff;
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 0;
+  text-align: center;
+  padding-right: 60px;
+  padding-top: 30px;
+  text-align: left;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a:focus {
+  color: #fff;
+  background-color: #4299fc;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a:hover, #forecast article #forecast-body #forecast-tabs .nav-tabs li a.active {
+  color: #fff;
+  background-color: #0056b7;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a:hover .arrow-down, #forecast article #forecast-body #forecast-tabs .nav-tabs li a.active .arrow-down {
+  display: block;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a .fa {
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  right: 12px;
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li a .arrow-down {
+  position: absolute;
+  z-index: 999;
+  bottom: -10px;
+  left: 44%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #0056b7;
+  display: none;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li#public-forecast-li, #forecast article #forecast-body #forecast-tabs .nav-tabs li#forecast-details-li {
+  border-right: 1px solid #fff;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li#public-forecast-li a {
+  padding-top: 20px;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li#blank-forecast-tab {
+  background-color: #99bbe2;
+  width: 252px;
+  height: 75px;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li.active > a {
+  color: #fff;
+  background-color: #0056b7;
+}
+#forecast article #forecast-body #forecast-tabs .nav-tabs li.active > a .arrow-down {
+  display: block;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content {
+  padding-bottom: 70px;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .featured {
+  color: #d82631;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h2 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 {
+  font-size: 24px;
+  line-height: 26px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a {
+  font-size: 24px;
+  line-height: 26px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h3 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 {
+  font-size: 22px;
+  line-height: 24px;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a {
+  font-size: 22px;
+  line-height: 24px;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h4 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h5 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a {
+  font-size: 18px;
+  line-height: 20px;
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane h6 a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #121212;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p em {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #b7b7b7;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane p a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul li a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border {
+  list-style: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border li {
+  border-bottom: 2px solid #eeeff1;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ul.border li:last-child {
+  border-bottom: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 0;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a {
+  font-size: 15px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:visited, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:hover, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:active, #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane ol li a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane blockquote {
+  border-left: 5px solid #eeeff1;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane blockquote strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table thead tr th {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table tbody tr td {
+  border: none;
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(even) > td {
+  background-color: #EBEBEB;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: #fff;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table-striped > tbody > tr:nth-child(2n+1) > th {
+  background-color: #fff;
+}
+#forecast article #forecast-body #public-forecast .forecast-image {
+  clear: both;
+  margin-bottom: 24px;
+}
+#forecast article #forecast-body #public-forecast #forecast-by {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #b1b1b1;
+}
+#forecast article #forecast-body #public-forecast #forecast-by a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #b1b1b1;
+}
+#forecast article #forecast-body #public-forecast #forecast-by a:visited, #forecast article #forecast-body #public-forecast #forecast-by a:hover, #forecast article #forecast-body #public-forecast #forecast-by a:active, #forecast article #forecast-body #public-forecast #forecast-by a:focus {
+  text-decoration: none;
+  color: #b1b1b1;
+}
+#forecast article #forecast-body #public-forecast #forecast-by a:hover {
+  text-decoration: underline;
+  color: #b1b1b1;
+}
+#forecast article aside {
+  min-height: 100px;
+  padding: 0;
+  margin-bottom: 40px;
+  background: transparent url(../img/ribbon-grey-bg.png) repeat left top;
+}
+#forecast article aside:before, #forecast article aside:after {
+  content: " ";
+  display: table;
+}
+#forecast article aside:after {
+  clear: both;
+}
+#forecast article aside .sidebar-inner {
+  padding: 18px 20px 40px 20px;
+}
+#forecast article aside h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  color: #1e59a9;
+  font-weight: bold;
+  margin: 0 0 34px 0;
+}
+#forecast article aside article {
+  border-bottom: 5px solid #fff;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  clear: both;
+  min-height: 1px;
+}
+#forecast article aside article:before, #forecast article aside article:after {
+  content: " ";
+  display: table;
+}
+#forecast article aside article:after {
+  clear: both;
+}
+#forecast article aside article h4 {
+  margin: 0;
+}
+#forecast article aside article h4 a {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  color: #121212;
+}
+#forecast article aside article h4 a:visited, #forecast article aside article h4 a:hover, #forecast article aside article h4 a:active, #forecast article aside article h4 a:focus {
+  text-decoration: none;
+  color: #121212;
+}
+#forecast article aside article h4 a:hover {
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author {
+  color: #b5b5b5;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#forecast article aside article .sidebar-related-author a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author a:visited, #forecast article aside article .sidebar-related-author a:hover, #forecast article aside article .sidebar-related-author a:active, #forecast article aside article .sidebar-related-author a:focus {
+  text-decoration: none;
+  color: #1e59a9;
+}
+#forecast article aside article .sidebar-related-author a:hover {
+  color: #121212;
+}
+#forecast article aside article .sidebar-related-pubdate {
+  color: #b5b5b5;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 28px;
+  font-size: 1.1rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+#forecast article aside .sidebar-related-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#forecast article aside .sidebar-related-links li {
+  border-bottom: 2px solid #fff;
+  margin: 0;
+}
+#forecast article aside .sidebar-related-links li.last {
+  border: none;
+}
+#forecast article aside .sidebar-related-links li a {
+  font-size: 15px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  font-weight: bold;
+  color: #0056b7;
+}
+#forecast article aside .sidebar-related-links li a:visited, #forecast article aside .sidebar-related-links li a:hover, #forecast article aside .sidebar-related-links li a:active, #forecast article aside .sidebar-related-links li a:focus {
+  text-decoration: none;
+  color: #0056b7;
+}
+#forecast article aside .sidebar-related-links li a:hover {
+  color: #121212;
+}
+#forecast article #forecast-bulletin {
+  margin-bottom: 80px;
+}
+#forecast article #forecast-bulletin .panel {
+  padding: 12px 10px 12px 4px;
+  border-bottom: 2px solid #eeeff1;
+}
+#forecast article #forecast-bulletin .panel h4 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 15px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+#forecast article #forecast-bulletin .panel h4 a {
+  font-size: 15px;
+  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #0056b7;
+  font-weight: bold;
+  display: block;
+  height: 31px;
+  padding: 0 0 0 42px;
+  background: transparent url(../img/bulletin-buttons.jpg) left bottom no-repeat;
+}
+#forecast article #forecast-bulletin .panel h4 a:visited, #forecast article #forecast-bulletin .panel h4 a:focus, #forecast article #forecast-bulletin .panel h4 a:active {
+  text-decoration: none;
+  color: #0056b7;
+  background: transparent url(../img/bulletin-buttons.jpg) left bottom no-repeat;
+}
+#forecast article #forecast-bulletin .panel h4 a.collapsed, #forecast article #forecast-bulletin .panel h4 a:hover {
+  text-decoration: none;
+  color: #0056b7;
+  background: transparent url(../img/bulletin-buttons.jpg) left top no-repeat;
+}
+#forecast article #forecast-bulletin .panel h4 a:hover {
+  text-decoration: none;
+  color: #0056b7;
+  background-position: left bottom;
+}
+#forecast article #forecast-bulletin .panel .panel-body {
+  padding: 14px 0;
+}
+#forecast article #forecast-bulletin .panel .panel-body p {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-bulletin .panel .panel-body p strong {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #121212;
+}
+#forecast article #forecast-bulletin .panel .panel-body p em {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#forecast article #forecast-bulletin .panel .panel-body p a {
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: bold;
+}
+#forecast article #forecast-bulletin .panel .panel-body p a:visited, #forecast article #forecast-bulletin .panel .panel-body p a:hover, #forecast article #forecast-bulletin .panel .panel-body p a:active, #forecast article #forecast-bulletin .panel .panel-body p a:focus {
+  text-decoration: none;
+}
+#forecast article #forecast-bulletin .panel.first {
+  border-top: 2px solid #eeeff1;
+}
+
+/*forecast page ends*/
+/*footer*/
+#footer {
+  height: 214px;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 20px;
+  width: 100%;
+}
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: transparent url(../img/footer-menu-mobile-bg.png) 33% top no-repeat;
+  display: block;
+  min-height: 1px;
+}
+#footer ul:before, #footer ul:after {
+  content: " ";
+  display: table;
+}
+#footer ul:after {
+  clear: both;
+}
+#footer ul li {
+  list-style: none;
+  display: block;
+  width: 40%;
+  float: left;
+  margin-bottom: 30px;
+}
+#footer ul li a {
+  font-size: 15px;
+  line-height: 18px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #121212;
+}
+#footer ul li a:visited, #footer ul li a:hover, #footer ul li a:active, #footer ul li a:focus {
+  text-decoration: none;
+}
+#footer ul li a:hover {
+  color: #0056B7;
+}
+#footer h6 {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  color: #b7b7b7;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: normal;
+}
+
+/*footer ends*/
+/* CAC Custom styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Oct. 23, 2014
+*/
+/* =Import Files for Mixin Usage
+----------------------------------------------------------------------------------*/
+/* =Tablet Layout and Styles
+----------------------------------------------------------------------------------*/
+/*header*/
+#header {
+  /*navigation*/
+  /*navigation ends*/
+}
+#header h1 {
+  background: transparent url(../img/logo.png) no-repeat center center;
+}
+#header h1,
+#header h1 a {
+  width: 264px;
+  height: 47px;
+  display: block;
+}
+#header #navigation .navbar-header #nav-donate {
+  float: right;
+  margin: 0 28px 0 0;
+  background-color: #d82631;
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  display: block;
+  height: 75px;
+  width: 94px;
+  padding: 24px 22px 30px 20px;
+}
+#header #navigation .navbar-header #nav-donate:visited, #header #navigation .navbar-header #nav-donate:hover, #header #navigation .navbar-header #nav-donate:active, #header #navigation .navbar-header #nav-donate:focus {
+  text-decoration: none;
+  color: #fff;
+}
+#header #navigation .navbar-header #nav-donate:hover {
+  background-color: #b2212a;
+}
+
+/*header ends*/
+/*sponsor-bar*/
+#sponsor-bar #sponsor-ad-container {
+  padding: 23px 16px 0 16px;
+}
+#sponsor-bar #sponsor-ad-container #sponsor-text {
+  float: left;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  color: #121212;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  padding: 16px 0 0 0;
+  margin: 0;
+}
+#sponsor-bar #sponsor-ad-container #sponsor-link {
+  float: right;
+}
+
+/*sponsor-bar ends*/
+/*know-more*/
+#know-more {
+  height: 243px;
+}
+#know-more article {
+  padding-top: 50px;
+}
+#know-more article header {
+  width: 318px;
+  float: left;
+  clear: none;
+  padding-top: 16px;
+}
+#know-more article header h2 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+#know-more article header h2 span {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+#know-more article footer {
+  width: 230px;
+  float: right;
+  clear: none;
+}
+
+/*know-more ends*/
+/*news*/
+#news #news-articles {
+  margin-bottom: 30px;
+}
+#news #news-articles > header h1 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+#news #news-articles > header h1 br {
+  display: none;
+}
+#news #news-articles > article.list-row-1 {
+  margin: 45px 0 22px 0;
+}
+#news #news-articles > article.list-row-1 .news-image {
+  min-height: 1px;
+  width: 236px;
+  float: left;
+}
+#news #news-articles > article.list-row-1 .news-image:before, #news #news-articles > article.list-row-1 .news-image:after {
+  content: " ";
+  display: table;
+}
+#news #news-articles > article.list-row-1 .news-image:after {
+  clear: both;
+}
+#news #news-articles > article.list-row-1 .news-image img {
+  margin-bottom: 8px;
+}
+#news #news-articles > article.list-row-1 header {
+  width: 334px;
+  float: right;
+  padding-top: 0;
+}
+#news #news-articles > article.list-row-1 .news-body {
+  width: 334px;
+  float: right;
+}
+#news #news-articles > article.list-row-1 footer {
+  width: 334px;
+  float: right;
+}
+
+/*news ends*/
+/*videos*/
+#videos #video-featured #video-container #video-body {
+  width: 332px;
+  padding: 0;
+  float: left;
+  padding: 18px 18px 18px 14px;
+}
+#videos #video-featured #video-container #video-sponsor {
+  width: 260px;
+  height: 166px;
+  float: right;
+  position: relative;
+  z-index: 910;
+  top: -36px;
+  right: 0;
+  background: transparent url(../img/video-sponsor-bg.png) center center no-repeat;
+  padding-top: 86px;
+}
+#videos #video-featured #video-container #video-sponsor #video-sponsor-link img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*videos ends*/
+/*blog*/
+#blog #blog-articles {
+  padding-top: 42px;
+  margin-top: 8px;
+  margin-bottom: 68px;
+}
+#blog #blog-articles #blog-header-wrap > header h2 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+#blog #blog-articles > article.list-rows {
+  margin: 42px 0 0 0;
+  padding: 0 18px 38px 0;
+  width: 50%;
+  float: left;
+  border-right: 3px solid #eeeff1;
+}
+#blog #blog-articles > article.list-row-last {
+  padding: 0 0 0 18px;
+  border: none;
+}
+
+/*blog ends*/
+/*communities*/
+#communities .communities-box {
+  height: 336px;
+}
+#communities #communities-twitter {
+  border-right: 3px solid #eeeff1;
+}
+#communities #communities-twitter .posted-by {
+  margin-bottom: 123px;
+}
+#communities #communities-facebook .posted-by {
+  margin-bottom: 57px;
+}
+#communities #communities-youtube {
+  border-right: 3px solid #eeeff1;
+}
+#communities #communities-youtube .posted-by {
+  margin-bottom: 59px;
+}
+
+/*communities ends*/
+/*auction*/
+#auction #auction-header {
+  min-height: 100px;
+  padding-bottom: 27px;
+}
+#auction #auction-header:before, #auction #auction-header:after {
+  content: " ";
+  display: table;
+}
+#auction #auction-header:after {
+  clear: both;
+}
+#auction #auction-header h4 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  float: left;
+}
+#auction #auction-header #auction-sponsor {
+  float: right;
+  width: 124px;
+}
+#auction #auction-header #auction-sponsor p {
+  margin: 0 0 12px 0;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b5b5b5;
+}
+#auction #auction-tagline-wrap,
+#auction #auction-time-wrap {
+  border-bottom: 2px solid #eeeff1;
+}
+#auction #auction-tagline-wrap {
+  margin-left: 20px;
+  width: 394px;
+  padding: 0 30px 0 0;
+  border-right: 2px solid #eeeff1;
+}
+#auction #auction-time-wrap {
+  margin-right: 20px;
+  width: 206px;
+  padding: 0 0 0 30px;
+}
+#auction #auction-tagline {
+  height: 156px;
+  border-bottom: none;
+}
+#auction #auction-tagline p {
+  margin: 0;
+}
+#auction #auction-time {
+  height: 156px;
+  border-bottom: none;
+  margin: 0;
+}
+#auction #auction-time p {
+  margin: 0;
+  text-align: right;
+}
+#auction #auction-featured-item {
+  padding-top: 50px;
+  clear: both;
+}
+#auction #auction-featured-item:before, #auction #auction-featured-item:after {
+  content: " ";
+  display: table;
+}
+#auction #auction-featured-item:after {
+  clear: both;
+}
+#auction #auction-featured-item .auction-featured-item-inner {
+  width: 50%;
+  float: left;
+}
+#auction #auction-featured-item footer {
+  clear: both;
+  padding-top: 32px;
+  padding-bottom: 56px;
+  min-height: 1px;
+  margin-bottom: 0;
+}
+#auction #auction-featured-item footer:before, #auction #auction-featured-item footer:after {
+  content: " ";
+  display: table;
+}
+#auction #auction-featured-item footer:after {
+  clear: both;
+}
+#auction #auction-featured-item footer .auction-highest-bid {
+  width: 154px;
+  float: left;
+  margin-left: 54px;
+  height: 135px;
+}
+#auction #auction-featured-item footer .auction-highest-bid p.highest-amount {
+  margin-top: 30px;
+}
+#auction #auction-featured-item footer .auction-bid-form {
+  width: 335px;
+  height: 135px;
+  float: left;
+  margin: 0 0 0 10px;
+}
+#auction #auction-featured-item footer .auction-bid-form form .form-control {
+  float: left;
+  width: 158px;
+}
+#auction #auction-featured-item footer .auction-bid-form form #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #blog #blog-articles #blog-header-wrap #blog-tagline-link #auction #auction-featured-item footer .auction-bid-form form a, #auction #auction-featured-item footer .auction-bid-form form .blue-button {
+  margin: 0;
+  clear: none;
+  float: left;
+  width: 132px;
+}
+#auction #auction-other {
+  margin-top: 0;
+}
+#auction #auction-other #auction-other-header {
+  margin-bottom: 35px;
+}
+#auction #auction-other article {
+  padding: 36px 40px 40px 16px;
+  width: 50%;
+  float: left;
+  border-bottom: none;
+}
+#auction #auction-other article.list-row-1, #auction #auction-other article.list-row-3 {
+  border-right: 3px solid #eeeff1;
+}
+#auction #auction-other article.list-row-3, #auction #auction-other article.list-row-4 {
+  border-top: 3px solid #eeeff1;
+}
+#auction #auction-other article.list-row-last {
+  padding-right: 0;
+}
+
+/*auction ends*/
+/*forecast page*/
+#forecast-page #header {
+  border-bottom: 1px solid #ececec;
+}
+
+#forecast {
+  width: 100%;
+  min-height: 200px;
+  margin-top: 75px;
+}
+#forecast:before, #forecast:after {
+  content: " ";
+  display: table;
+}
+#forecast:after {
+  clear: both;
+}
+#forecast #inner-forecast {
+  min-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1226px;
+  background: transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+  position: relative;
+}
+#forecast #inner-forecast:before, #forecast #inner-forecast:after {
+  content: " ";
+  display: table;
+}
+#forecast #inner-forecast:after {
+  clear: both;
+}
+#forecast #inner-forecast #back-link {
+  width: 60px;
+  height: 60px;
+  padding: 20px 0 0 20px;
+  position: absolute;
+  top: 172px;
+  left: 20px;
+  background-color: #000;
+}
+#forecast #inner-forecast #back-link .fa {
+  color: #fff;
+  font-size: 27px;
+  line-height: 27px;
+  font-size: 2.7rem;
+  line-height: 2.7rem;
 }
 #forecast article header #header-inner {
   background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
@@ -1606,8 +2712,19 @@
   font-size: 5rem;
   line-height: 5.2rem;
   font-family: "Montserrat", Arial, sans-serif;
-  margin: 0;
+  margin: 48px 0 0 0;
   font-weight: bold;
+  float: left;
+}
+#forecast article header #header-inner #forecast-sponsor-desktop {
+  float: right;
+}
+#forecast article header #header-inner:before, #forecast article header #header-inner:after {
+  content: " ";
+  display: table;
+}
+#forecast article header #header-inner:after {
+  clear: both;
 }
 #forecast article #forecast-date {
   height: 64px;
@@ -2155,420 +3272,6 @@
 }
 
 /*forecast page ends*/
-/*footer*/
-#footer {
-  height: 214px;
-  border-top: 1px solid #e2e2e2;
-  padding-top: 20px;
-  width: 100%;
-}
-#footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: transparent url(../img/footer-menu-mobile-bg.png) 33% top no-repeat;
-  display: block;
-  min-height: 1px;
-}
-#footer ul:before, #footer ul:after {
-  content: " ";
-  display: table;
-}
-#footer ul:after {
-  clear: both;
-}
-#footer ul li {
-  list-style: none;
-  display: block;
-  width: 40%;
-  float: left;
-  margin-bottom: 30px;
-}
-#footer ul li a {
-  font-size: 15px;
-  line-height: 18px;
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  color: #121212;
-}
-#footer ul li a:visited, #footer ul li a:hover, #footer ul li a:active, #footer ul li a:focus {
-  text-decoration: none;
-}
-#footer ul li a:hover {
-  color: #0056B7;
-}
-#footer h6 {
-  margin: 0;
-  padding: 0;
-  clear: both;
-  color: #b7b7b7;
-  font-size: 15px;
-  line-height: 22px;
-  font-size: 1.5rem;
-  line-height: 2.2rem;
-  font-weight: normal;
-}
-
-/*footer ends*/
-/* CAC Custom styles
- * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 12, 2014
-*/
-/* =Import Files for Mixin Usage
-----------------------------------------------------------------------------------*/
-/* =Tablet Layout and Styles
-----------------------------------------------------------------------------------*/
-/*header*/
-#header {
-  /*navigation*/
-  /*navigation ends*/
-}
-#header h1 {
-  background: transparent url(../img/logo.png) no-repeat center center;
-}
-#header h1,
-#header h1 a {
-  width: 264px;
-  height: 47px;
-  display: block;
-}
-#header #navigation .navbar-header #nav-donate {
-  float: right;
-  margin: 0 28px 0 0;
-  background-color: #d82631;
-  color: #fff;
-  font-size: 15px;
-  line-height: 24px;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
-  font-weight: bold;
-  display: block;
-  height: 75px;
-  width: 94px;
-  padding: 24px 22px 30px 20px;
-}
-#header #navigation .navbar-header #nav-donate:visited, #header #navigation .navbar-header #nav-donate:hover, #header #navigation .navbar-header #nav-donate:active, #header #navigation .navbar-header #nav-donate:focus {
-  text-decoration: none;
-  color: #fff;
-}
-#header #navigation .navbar-header #nav-donate:hover {
-  background-color: #b2212a;
-}
-
-/*header ends*/
-/*sponsor-bar*/
-#sponsor-bar #sponsor-ad-container {
-  padding: 23px 16px 0 16px;
-}
-#sponsor-bar #sponsor-ad-container #sponsor-text {
-  float: left;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: bold;
-  color: #121212;
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  text-transform: uppercase;
-  padding: 16px 0 0 0;
-  margin: 0;
-}
-#sponsor-bar #sponsor-ad-container #sponsor-link {
-  float: right;
-}
-
-/*sponsor-bar ends*/
-/*know-more*/
-#know-more {
-  height: 243px;
-}
-#know-more article {
-  padding-top: 50px;
-}
-#know-more article header {
-  width: 318px;
-  float: left;
-  clear: none;
-  padding-top: 16px;
-}
-#know-more article header h2 {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
-}
-#know-more article header h2 span {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
-}
-#know-more article footer {
-  width: 230px;
-  float: right;
-  clear: none;
-}
-
-/*know-more ends*/
-/*news*/
-#news #news-articles {
-  margin-bottom: 30px;
-}
-#news #news-articles > header h1 {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
-}
-#news #news-articles > header h1 br {
-  display: none;
-}
-#news #news-articles > article.list-row-1 {
-  margin: 45px 0 22px 0;
-}
-#news #news-articles > article.list-row-1 .news-image {
-  min-height: 1px;
-  width: 236px;
-  float: left;
-}
-#news #news-articles > article.list-row-1 .news-image:before, #news #news-articles > article.list-row-1 .news-image:after {
-  content: " ";
-  display: table;
-}
-#news #news-articles > article.list-row-1 .news-image:after {
-  clear: both;
-}
-#news #news-articles > article.list-row-1 .news-image img {
-  margin-bottom: 8px;
-}
-#news #news-articles > article.list-row-1 header {
-  width: 334px;
-  float: right;
-  padding-top: 0;
-}
-#news #news-articles > article.list-row-1 .news-body {
-  width: 334px;
-  float: right;
-}
-#news #news-articles > article.list-row-1 footer {
-  width: 334px;
-  float: right;
-}
-
-/*news ends*/
-/*videos*/
-#videos #video-featured #video-container #video-body {
-  width: 332px;
-  padding: 0;
-  float: left;
-  padding: 18px 18px 18px 14px;
-}
-#videos #video-featured #video-container #video-sponsor {
-  width: 260px;
-  height: 166px;
-  float: right;
-  position: relative;
-  z-index: 910;
-  top: -36px;
-  right: 0;
-  background: transparent url(../img/video-sponsor-bg.png) center center no-repeat;
-  padding-top: 86px;
-}
-#videos #video-featured #video-container #video-sponsor #video-sponsor-link img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*videos ends*/
-/*blog*/
-#blog #blog-articles {
-  padding-top: 42px;
-  margin-top: 8px;
-  margin-bottom: 68px;
-}
-#blog #blog-articles #blog-header-wrap > header h2 {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
-}
-#blog #blog-articles > article.list-rows {
-  margin: 42px 0 0 0;
-  padding: 0 18px 38px 0;
-  width: 50%;
-  float: left;
-  border-right: 3px solid #eeeff1;
-}
-#blog #blog-articles > article.list-row-last {
-  padding: 0 0 0 18px;
-  border: none;
-}
-
-/*blog ends*/
-/*communities*/
-#communities .communities-box {
-  height: 336px;
-}
-#communities #communities-twitter {
-  border-right: 3px solid #eeeff1;
-}
-#communities #communities-twitter .posted-by {
-  margin-bottom: 123px;
-}
-#communities #communities-facebook .posted-by {
-  margin-bottom: 57px;
-}
-#communities #communities-youtube {
-  border-right: 3px solid #eeeff1;
-}
-#communities #communities-youtube .posted-by {
-  margin-bottom: 59px;
-}
-
-/*communities ends*/
-/*auction*/
-#auction #auction-header {
-  min-height: 100px;
-  padding-bottom: 27px;
-}
-#auction #auction-header:before, #auction #auction-header:after {
-  content: " ";
-  display: table;
-}
-#auction #auction-header:after {
-  clear: both;
-}
-#auction #auction-header h4 {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
-  float: left;
-}
-#auction #auction-header #auction-sponsor {
-  float: right;
-  with: 124px;
-}
-#auction #auction-header #auction-sponsor p {
-  margin: 0 0 12px 0;
-  font-size: 11px;
-  line-height: 11px;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #b5b5b5;
-}
-#auction #auction-tagline-wrap,
-#auction #auction-time-wrap {
-  border-bottom: 2px solid #eeeff1;
-}
-#auction #auction-tagline-wrap {
-  margin-left: 20px;
-  width: 394px;
-  padding: 0 30px 0 0;
-  border-right: 2px solid #eeeff1;
-}
-#auction #auction-time-wrap {
-  margin-right: 20px;
-  width: 206px;
-  padding: 0 0 0 30px;
-}
-#auction #auction-tagline {
-  height: 156px;
-  border-bottom: none;
-}
-#auction #auction-tagline p {
-  margin: 0;
-}
-#auction #auction-time {
-  height: 156px;
-  border-bottom: none;
-  margin: 0;
-}
-#auction #auction-time p {
-  margin: 0;
-  text-align: right;
-}
-#auction #auction-featured-item {
-  padding-top: 50px;
-  clear: both;
-}
-#auction #auction-featured-item:before, #auction #auction-featured-item:after {
-  content: " ";
-  display: table;
-}
-#auction #auction-featured-item:after {
-  clear: both;
-}
-#auction #auction-featured-item .auction-featured-item-inner {
-  width: 50%;
-  float: left;
-}
-#auction #auction-featured-item footer {
-  clear: both;
-  padding-top: 32px;
-  padding-bottom: 56px;
-  min-height: 1px;
-  margin-bottom: 0;
-}
-#auction #auction-featured-item footer:before, #auction #auction-featured-item footer:after {
-  content: " ";
-  display: table;
-}
-#auction #auction-featured-item footer:after {
-  clear: both;
-}
-#auction #auction-featured-item footer .auction-highest-bid {
-  width: 154px;
-  float: left;
-  margin-left: 54px;
-  height: 135px;
-}
-#auction #auction-featured-item footer .auction-highest-bid p.highest-amount {
-  margin-top: 30px;
-}
-#auction #auction-featured-item footer .auction-bid-form {
-  width: 335px;
-  height: 135px;
-  float: left;
-  margin: 0 0 0 10px;
-}
-#auction #auction-featured-item footer .auction-bid-form form .form-control {
-  float: left;
-  width: 158px;
-}
-#auction #auction-featured-item footer .auction-bid-form form #blog #blog-articles #blog-header-wrap #blog-tagline-link a, #blog #blog-articles #blog-header-wrap #blog-tagline-link #auction #auction-featured-item footer .auction-bid-form form a, #auction #auction-featured-item footer .auction-bid-form form .blue-button {
-  margin: 0;
-  clear: none;
-  float: left;
-  width: 132px;
-}
-#auction #auction-other {
-  margin-top: 0;
-}
-#auction #auction-other #auction-other-header {
-  margin-bottom: 35px;
-}
-#auction #auction-other article {
-  padding: 36px 40px 40px 16px;
-  width: 50%;
-  float: left;
-  border-bottom: none;
-}
-#auction #auction-other article.list-row-1, #auction #auction-other article.list-row-3 {
-  border-right: 3px solid #eeeff1;
-}
-#auction #auction-other article.list-row-3, #auction #auction-other article.list-row-4 {
-  border-top: 3px solid #eeeff1;
-}
-#auction #auction-other article.list-row-last {
-  padding-right: 0;
-}
-
-/*auction ends*/
 /*footer*/
 #footer ul {
   background: none;

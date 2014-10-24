@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 19, 2014
+ * Oct. 23, 2014
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -1128,56 +1128,98 @@
 		min-height:200px;
 		@include clearfix();	
 		@include center-block();
-		//need to add 160px for the map bg image on the left
-		width:1226px;
-		//padding:0 80px
-		background:transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+		width:100%;
+		//background:transparent url(../img/forecast-inner-map-bg.jpg) left top repeat-y;
+		position:relative;
+		#back-link {
+			width:60px;
+			height:60px;
+			padding:20px 0 0 20px;
+			position:absolute;
+			top:40px;
+			left:0;
+			background-color:#000;
+			.fa {
+				color:#fff;
+				@include font-size(2.7, 2.7);
+			}
+		}
 	}
 	article {
 		header {
 			#header-inner {
 				h1 {
-					//@include font-size(3.6, 3.8);
-					@include font-size(5.0, 5.2);
+					@include font-size(3.6, 3.8);
 					font-family:$font-family-google;
-					margin:0;
+					margin:0 0 0 50px;
 					font-weight:bold;
+					float:left;
 				}
+				#forecast-sponsor-desktop {
+					float:right;
+          width:124px;
+          p {
+              margin:0 0 12px 0;
+              @include font-size(1.1, 1.1);
+              font-family:$font-family-google;
+              font-weight:bold;   
+              text-transform:uppercase;  
+              color:#b5b5b5;
+          }
+				}
+				@include clearfix();	
 				background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
 				position:relative;
 				padding:34px 0 36px;
 			}
 		}
+
+		#forecast-sponsor-mobile {
+			#forecast-sponsor-mobile-inner {
+				padding-top:24px;
+				padding-bottom:24px;
+				border-bottom:1px solid #eeeff1;
+				@include clearfix();	
+			}
+      p {
+          margin:0;
+          @include font-size(1.1, 1.3);
+          font-family:$font-family-google;
+          font-weight:bold;   
+          text-transform:uppercase;  
+          color:#b5b5b5;
+      }
+		}
 		#forecast-date {
-			height:64px;
-			margin-bottom:36px;
+			min-height:1px;
+			@include clearfix();	
+			//margin-bottom:36px;
 		}
 		.forecast-date-inner {
-			height:64px;
-			float:left;
-			padding-top:20px;
+			min-height:1px;
+			@include clearfix();	
+			//float:left;
+			//padding-top:20px;
+			padding:18px 0;
 			border-bottom:1px solid #eeeff1;
-			@include font-size(1.6, 2.8);
+			@include font-size(1.6, 2.0);
 			font-family:$font-family-google;
 			color:#0056b7;
 			font-weight:bold;
 			text-transform:uppercase;
 			span {color:#b5b5b5;}
 		}
-
-		#date-issued {
-			width:420px;
-			border-right:1px solid #eeeff1;
-		}
+		#date-issued,
 		#date-valid {
-			 width:606px;
-			 padding-left:18px;
+			width:100%;
+			//border-right:1px solid #eeeff1;
 		}
+
 		#forecast-body {			
 			h2 {
 				color:#242424;
-				@include font-size(2.6, 3.0);
-				margin:0 0 36px 0;
+				@include font-size(2.0, 2.4);
+				margin:26px 0 26px 0;
 				font-weight:bold;
 			}
 			#forecast-tabs {
@@ -1186,29 +1228,41 @@
 					margin-bottom:18px;
 					li {
 						margin:0;
+						width:100%;
 					  a {
 							display:block;
-							width:252px;
+							//width:252px;
+							width:100%;
 							height:75px;
 							background-color:#99bbe2;
 							color:#fff;
 							position:relative;
-							@include font-size(1.5, 5.2);
+							@include font-size(1.5, 2.0);
 							font-weight:bold;
 							border:none;
 							cursor:pointer;
 							margin:0;
 							border-radius:0;
 							text-align:center;
+							padding-right:60px;
+							padding-top:30px;
+							text-align:left;
 							&:focus {
 								color:#fff;
 								background-color:#4299fc;
 							}
-							&:hover
+							&:hover,
 							&.active {
 								color:#fff;
 								background-color:#0056b7;
 								.arrow-down {display:block;}
+							}
+							.fa {
+								position:absolute;
+								z-index:999;
+								top:30px;
+								right:12px;
+								@include font-size(2.0, 2.0);
 							}
 							.arrow-down {
 								position:absolute;
@@ -1227,6 +1281,7 @@
 						&#forecast-details-li {
 							border-right:1px solid #fff;
 						}
+						&#public-forecast-li a {padding-top:20px;}
 						&#blank-forecast-tab {
 							background-color:#99bbe2;
 							width:252px;
@@ -1244,27 +1299,14 @@
 				.tab-content {
 					padding-bottom:70px;
 					.tab-pane {
-						padding-top:32px;
+						//padding-top:32px;
 						//classes
 						.featured {color:#d82631;}
 						h2 {
-							@include font-size(3.0, 3.5);
+							@include font-size(2.6, 3.0);
 							font-family:$font-family-google;
 							font-weight:bold;
 							text-transform:uppercase;
-							a {
-							  @include font-size(3.0, 3.5);
-								&:visited,
-								&:hover,
-								&:active,
-								&:focus {
-									text-decoration:none;
-								}
-							}		
-						}
-						h3 {
-							@include font-size(2.6, 3.0);
-							font-weight:bold;
 							a {
 							  @include font-size(2.6, 3.0);
 								&:visited,
@@ -1275,11 +1317,24 @@
 								}
 							}		
 						}
-						h4 {
+						h3 {
 							@include font-size(2.4, 2.6);
 							font-weight:bold;
 							a {
 							  @include font-size(2.4, 2.6);
+								&:visited,
+								&:hover,
+								&:active,
+								&:focus {
+									text-decoration:none;
+								}
+							}		
+						}
+						h4 {
+							@include font-size(2.2, 2.4);
+							font-weight:bold;
+							a {
+							  @include font-size(2.2, 2.4);
 								&:visited,
 								&:hover,
 								&:active,
@@ -1459,6 +1514,7 @@
 			min-height:100px;
 			@include clearfix();
 			padding:0;
+			margin-bottom:40px;
 			background:transparent url(../img/ribbon-grey-bg.png) repeat left top;
 			.sidebar-inner {padding:18px 20px 40px 20px;}
 			h3 {
