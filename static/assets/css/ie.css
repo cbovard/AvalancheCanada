@@ -1622,7 +1622,7 @@
   font-size: 3.6rem;
   line-height: 3.8rem;
   font-family: "Montserrat", Arial, sans-serif;
-  margin: 0 0 0 50px;
+  margin: 0 0 30px 50px;
   font-weight: bold;
   float: left;
 }
@@ -1798,7 +1798,7 @@
   display: block;
 }
 #forecast article #forecast-body #forecast-tabs .tab-content {
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .featured {
   color: #d82631;
@@ -1991,7 +1991,14 @@
   color: #5b5b5b;
   font-weight: bold;
 }
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table thead {
+  width: 100%;
+}
+#forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table thead tr {
+  width: 100%;
+}
 #forecast article #forecast-body #forecast-tabs .tab-content .tab-pane .table thead tr th {
+  width: 100%;
   font-size: 20px;
   line-height: 24px;
   font-size: 2rem;
