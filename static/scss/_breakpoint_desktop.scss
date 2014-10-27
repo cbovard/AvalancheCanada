@@ -458,6 +458,220 @@
 }
 /*auction ends*/
 
+/*forecast page*/
+#forecast {
+  #inner-forecast {
+    width:1226px;
+		#top-link {
+			top:160px;
+		}
+  }
+  article {
+    #forecast-date {
+        height:64px;
+        margin-bottom:36px;
+    }
+    .forecast-date-inner {
+        height:64px;
+        float:left;
+        padding-top:20px;
+        border-bottom:1px solid #eeeff1;
+        @include font-size(1.6, 2.8);
+        font-family:$font-family-google;
+        color:#0056b7;
+        font-weight:bold;
+        text-transform:uppercase;
+        span {color:#b5b5b5;}
+    }
+    #date-issued {
+        width:420px;
+        border-right:1px solid #eeeff1;
+    }
+    #date-valid {
+         width:606px;
+         padding-left:18px;
+    }
+    #forecast-body {   
+      padding-top:0;     
+      #forecast-tabs {
+        .nav-tabs {
+          border:none;
+          margin-bottom:18px;
+          li {
+              margin:0;
+              width:252px;
+            a {
+              width:252px;
+              .arrow-down {
+                 bottom:-10px;
+              }
+            }
+            &#public-forecast-li a,
+            &#forecast-details-li a {
+              border-right:1px solid #fff;
+            }
+          }
+        }
+        .tab-content {
+          padding-bottom:70px;
+          .tab-pane {
+            padding-top:0;
+            h2 {
+                @include font-size(3.0, 3.5);
+                font-family:$font-family-google;
+                font-weight:bold;
+                text-transform:uppercase;
+                a {
+                  @include font-size(3.0, 3.5);
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }       
+            }
+            h3 {
+                @include font-size(2.6, 3.0);
+                font-weight:bold;
+                a {
+                  @include font-size(2.6, 3.0);
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }       
+            }
+            h4 {
+                @include font-size(2.4, 2.6);
+                font-weight:bold;
+                a {
+                  @include font-size(2.4, 2.6);
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }       
+            }
+            h5 {
+                @include font-size(2.0, 2.4);
+                font-weight:bold;
+                a {
+                  @include font-size(2.0, 2.4);
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }       
+            }
+            h6 {
+                @include font-size(1.8, 2.0);
+                font-weight:bold;
+                a {
+                  @include font-size(1.8, 2.0);
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }       
+            }
+            p {
+                @include font-size(1.5, 2.2);
+                color:#5b5b5b;
+                strong {
+                    @include font-size(1.5, 2.2);
+                    color:#121212;
+                }
+                em {
+                    @include font-size(1.5, 2.2);
+                    color:#b7b7b7;          
+                }
+                a {
+                  @include font-size(1.5, 2.2);
+                  font-weight:bold;
+                    &:visited,
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        text-decoration:none;
+                    }
+                }
+            }
+            ul {
+                li {
+                    @include font-size(1.5, 4.0);
+                    margin:0;
+                    color:#5b5b5b;
+                    p {
+                        margin:0;
+                        @include font-size(1.5, 4.0);
+                        color:#5b5b5b;
+                    }
+                    a {
+                      @include font-size(1.5, 4.0);
+                        &:visited,
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            text-decoration:none;
+                        }
+                    }
+                }
+            }
+            ul.border {
+                list-style:none;
+                li {
+                    border-bottom:2px solid #eeeff1;
+                    &:last-child {border-bottom:none;}
+                }
+            }
+            ol {
+                li {
+                    @include font-size(1.5, 4.0);
+                    margin:0;
+                    color:#5b5b5b;
+                    p {
+                        margin:0;
+                        @include font-size(1.5, 4.0);
+                        color:#5b5b5b;
+                    }
+                    a {
+                      @include font-size(1.5, 4.0);
+                        &:visited,
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            text-decoration:none;
+                        }
+                    }
+                }
+            }
+            blockquote {
+              border-left: 5px solid #eeeff1;
+              @include font-size(1.5, 2.2);
+              color:#5b5b5b;
+              strong {
+                  @include font-size(1.5, 2.2);
+                  color:#5b5b5b;
+                  font-weight:bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*forecast page ends*/
+
 /*footer*/
 #footer {
     ul {
