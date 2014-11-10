@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title ng-bind="pageTitle"></title>
+    <!-- /todo social media tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:image:src" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- compiled CSS -->
+    <!--<link rel="stylesheet" type="text/css" href="vendor/fullpage.js/jquery.fullPage.css" />-->
+
+    <!--google font include http://www.google.com/fonts#UsePlace:use/Collection:Montserrat -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- font awesome from BootstrapCDN -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- YAMM Mega Menu - http://geedmo.github.io/yamm/ -->
+    <link href="assets/yamm/yamm.css" rel="stylesheet">
+    
+    <!--CAC styles-->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <!--CAC News - Events - Blog - Styles-->
+     <link href="assets/css/news-blog-events.css" rel="stylesheet">
+    <!--multilevel menu css-->
+    <link rel="stylesheet" href="multilevelpushmenu/jquery.multilevelpushmenu.css">
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the begining because of a FOUC - -->
+    <!-- Modernizr required by multilevelpushmenu -->
+    <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <!-- JQuery is required by fullpage.js and multilevelpushmenu. needs to be done before vendor scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- compiled JavaScript -->
+    <!--<script type="text/javascript" src="vendor/fullpage.js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="vendor/fullpage.js/vendors/jquery.slimscroll.min.js"></script>-->
+
+    <!-- Bootstrap core JS -->
+    <script src="assets/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="multilevelpushmenu/jquery.multilevelpushmenu.min.js"></script>
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      { "parsetags": "explicit" }
+    </script>-->
+
+    <!-- initialise fullpage.js and multilevel push menu. /todo when angular is included simply do this from controller -->
+    <!--<script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+        console.log( "fullpage initialised" );
+
+        $('#menu').multilevelpushmenu();
+        console.log( "multilevelpushmenu initialised" );
+      });
+    </script>-->
+
+    <script>
+      $(document).ready(function () {
+          $('#menu').multilevelpushmenu({
+              containersToPush: [$('#page-wrap')],
+              menuWidth: '320px',
+              menuHeight: '100%',
+              collapsed: true,
+              fullCollapse: true,
+              backText: '',
+              overlapWidth:60
+          });
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+          //Multi Menu Expand
+          $('#multi-expand').click(function(){
+            $('#menu').multilevelpushmenu('expand');
+          });
+          /**/
+
+          //weird hover off bug. Need to apply open class and remove - http://stackoverflow.com/questions/8878033/how-to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
+          $('ul.nav li.dropdown').hover(function() {
+            $(this).addClass('open');
+          }, function() {
+            $(this).removeClass('open');
+          });
+          /**/
+      });
+
+      $(window).resize(function () {
+          /*resize the multimenu for screen size change*/
+          $('#menu').multilevelpushmenu('option', 'menuHeight', $(document).height());
+          $('#menu').multilevelpushmenu('redraw');
+      });
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--multilevel menu - http://multi-level-push-menu.make.rs/ -->
+    <div id="menu">
+        <nav>
+            <h2><i class="fa fa-times"></i><a id="multinav-home" href="/static"><i class="fa fa-home"></i></a></h2>
+            <ul>
+                <li>
+                    <a href="#">Avalanche Information</a>
+                    <h2>Avalanche Information</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Forecasts</a>
+                            <h2>Forecasts</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Banff Yoho &amp; Kootenay National Park</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cariboos</a>
+                                </li>
+                                <li>
+                                    <a href="#">Chic-Chocs, CAHG</a>
+                                </li>
+                                <li>
+                                    <a href="#">Glacier National Park</a>
+                                </li>
+                                <li>
+                                    <a href="#">Jasper National Park</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kananaskis Country, Alberta Parks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Data</a>
+                        </li>
+                        <li>
+                            <a href="#">Forecast Archive</a>
+                        </li>
+                        <li>
+                            <a href="#">Forecaster's Blog</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Learn</a>
+                </li>
+                <li>
+                    <a href="#">Community</a>
+                </li>
+                <li>
+                    <a href="#">News &amp; Events</a>
+                </li>
+                <li>
+                    <a href="#">Store</a>
+                </li>
+                <li id="multilevel-donate">
+                    <a href="#">Donate</a>
+                </li>
+            </ul>
+        </nav>
+    </div><!--/#multilevel menu-->
+    <!--page wrap-->
+    <div id="page-wrap">
+      <header id="header" class="navbar-fixed-top" role="banner">
+        <div class="container">
+          <nav id="navigation" class="yamm navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <h1 class="navbar-brand">
+                <a href="/" title="TITLE HERE" rel="home">
+                  CAC title here
+                </a>
+              </h1>
+              <div class="visible-xs visible-sm">
+                <a id="nav-search" href="#"><i class="fa fa-search"></i></a>
+                <a id="nav-donate" href="#" class="visible-sm">Donate</a><a id="multi-expand" ng-click="multiExpand()" href="#" role="button" class="navbar-toggle"><i class="fa fa-reorder"></i></a>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li id="nav-avalanche-info" class="dropdown yamm-fw"><a href="#">Avalanche Information<span class="arrow-down"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Forecasts</h2>
+                              </li>
+                              <!-- ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/banff-yoho-kootenay" class="ng-binding">Banff Yoho And Kootenay</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/glacier" class="ng-binding">glacier</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/chic-chocs" class="ng-binding">chic-chocs</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/jasper" class="ng-binding">jasper</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/kananaskis" class="ng-binding">kananaskis</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/kootenay-boundary" class="ng-binding">kootenay-boundary</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/lizard-range" class="ng-binding">lizard-rangey</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/north-columbia" class="ng-binding">north-columbia</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/northwest-coastal" class="ng-binding">northwest-coastal</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/northwest-inland" class="ng-binding">northwest-inland</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/cariboos" class="ng-binding">cariboos</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/north-rockies" class="ng-binding">north-rockies</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/south-rockies" class="ng-binding">south-rockies</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/north-shore" class="ng-binding">north-shore</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/purcells" class="ng-binding">purcells</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/sea-to-sky" class="ng-binding">sea-to-sky</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/south-columbia" class="ng-binding">south-columbia</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/south-coast-inland" class="ng-binding">south-coast-inland</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/vancouver-island" class="ng-binding">vancouver-island</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/whistler-blackcomb" class="ng-binding">whistler-blackcomb</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/waterton" class="ng-binding">waterton</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li ng-repeat="region in forecastRegions" class="ng-scope"><a href="/forecasts/yukon" class="ng-binding">yukon</a></li>
+                              <!-- end ngRepeat: region in forecastRegions-->
+                              <li><a href="/forecasts/archive">Archive</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Data</h2>
+                              </li>
+                              <!-- ngRepeat: item in dataMenu-->
+                              <li ng-repeat="item in dataMenu" class="ng-scope"><a href="/observations" class="ng-binding">Observations</a></li>
+                              <!-- end ngRepeat: item in dataMenu-->
+                              <li ng-repeat="item in dataMenu" class="ng-scope"><a href="/incidents" class="ng-binding">Incidents</a></li>
+                              <!-- end ngRepeat: item in dataMenu-->
+                              <li ng-repeat="item in dataMenu" class="ng-scope"><a href="/webcams" class="ng-binding">Webcams</a></li>
+                              <!-- end ngRepeat: item in dataMenu-->
+                              <li ng-repeat="item in dataMenu" class="ng-scope"><a href="/weather" class="ng-binding">Weather Forecasts</a></li>
+                              <!-- end ngRepeat: item in dataMenu-->
+                            </ul>
+                          </div>
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Blogs</h2>
+                              </li>
+                              <!-- ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/all" class="ng-binding">All</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/forecaster" class="ng-binding">Forecaster</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/north-rockies" class="ng-binding">North Rockies</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/south-rockies" class="ng-binding">South Rockies</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/summary" class="ng-binding">Summaries and Outlooks</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/conditions" class="ng-binding">Conditions Outlook</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/conditions-summary" class="ng-binding">Conditions Summary</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/weather" class="ng-binding">Weather Outlook</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                              <li ng-repeat="blog in blogs" class="ng-scope"><a href="/blogs/tech" class="ng-binding">Tech and Talk</a></li>
+                              <!-- end ngRepeat: blog in blogs-->
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li id="nav-learn" class="dropdown yamm-fw"><a href="#">Learn<span class="arrow-down"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Avalanche Canada Training Courses</h2>
+                              </li>
+                              <!-- ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/find" class="ng-binding">Find a course</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/ast1" class="ng-binding">Avalanche Skills Training 1</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/ast2" class="ng-binding">Avalanche Skills Training 2</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/companion-rescue" class="ng-binding">Companion Rescue Skills</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/why" class="ng-binding">Why should I take an avalanche course ?</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/what" class="ng-binding">What course should I take</a></li>
+                              <!-- end ngRepeat: page in training-->
+                              <li ng-repeat="page in training" class="ng-scope"><a href="/training/calendar" class="ng-binding">Calendar</a></li>
+                              <!-- end ngRepeat: page in training-->
+                            </ul>
+                          </div>
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Online Avalanche Course</h2>
+                              </li>
+                              <!-- ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/formation" class="ng-binding">Avalanche Formation</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/terrain" class="ng-binding">Avalanche Terrain</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/planning" class="ng-binding">Pre-trip Planning</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/reducing-risk" class="ng-binding">Reducing Risk in the Field</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/rescue" class="ng-binding">Rescue</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                              <li ng-repeat="page in online_course" class="ng-scope"><a href="/training/report" class="ng-binding">Reporting Observation</a></li>
+                              <!-- end ngRepeat: page in online_course-->
+                            </ul>
+                          </div>
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2>Parents & Educators</h2>
+                              </li>
+                              <!-- ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/mentors" class="ng-binding">Mentors</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/youth-guidelines" class="ng-binding">Guidelines for Youth Education</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/youth-programs" class="ng-binding">Existing Youth Programs</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/curriculum" class="ng-binding">Curriculum Ideas/Lesson Plans</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/materials" class="ng-binding">Resource Materials</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/grants" class="ng-binding">School Programs - Grants</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                              <li ng-repeat="page in parents_educators" class="ng-scope"><a href="/parents-educators/toolbox" class="ng-binding">Tool Box - Safety gear loans</a></li>
+                              <!-- end ngRepeat: page in parents_educators-->
+                            </ul>
+                          </div>
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li><a href="/Gear">
+                                  <h2>Essential and recommended gear</h2></a></li>
+                              <li><a href="/library">
+                                  <h2>Library</h2></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li id="nav-community" class="dropdown yamm-fw"><a href="#">Community</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2><a href="about">About<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="membership">Membership<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="sponsors">Sponsors<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="collaborators">Collaborators<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li id="nav-news-events" class="dropdown yamm-fw"><a href="#">News and events</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-4 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2><a href="events">Events<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="outreach">Outreach<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="news">News<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li id="nav-store" class="dropdown yamm-fw"><a href="#">Store</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-2 mega-content-inner">
+                            <ul class="mega-sub-menu">
+                              <li>
+                                <h2><a href="store">Store<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                              <li>
+                                <h2><a href="web-auction">Web Auction<i class="fa fa-angle-right"></i></a></h2>
+                                <p>Some short event description text</p>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul><a id="nav-search-desktop" href="#"><i class="fa fa-search"></i></a><a id="nav-donate-desktop" href="#">Donate</a>
+            </div>
+          </nav>
+        </div>
+      </header><!--/#header-->
+
+      <div id="news-blog-event-content" class="container">
+        <div id="top-link" class="visible-xs-block">
+          <i class="fa fa-chevron-up"></i><br />
+          Top
+        </div>
+        <div class="row">
+          <header class="col-xs-12">
+            <div id="header-inner">
+              <h1>Recent <br class="visible-xs-block" />News</h1>
+              <div id="sponsor-desktop" class="hidden-xs">
+                <p>Brought to you by</p>
+                <a href="http://arcteryx.com" target="_blank"><img src="assets/img/arcteryx-logo.jpg"></a>
+              </div>
+              <div class="blue-border"></div>
+            </div>
+          </header>
+          <div id="sponsor-mobile" class="col-xs-12 visible-xs-block">
+            <div id="sponsor-mobile-inner">
+              <p class="pull-left">Brought<br />to you by</p>
+              <a class="pull-right" href="http://arcteryx.com" target="_blank"><img src="assets/img/arcteryx-logo.jpg"></a>
+            </div>
+          </div><!--/#sponsor-mobile-->
+
+          <div id="filters" class="col-xs-12">
+            <div id="filters-inner">
+              <div class="dropdown">
+                <!--filter-year-->
+                <div class="dropdown-filters hidden-xs" id="filter-year-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="filter-year" data-toggle="dropdown">
+                    Year
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="filter-year">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                    <li class="last" role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!--filter-year ends-->
+                <!--filter-month-->
+                <div class="dropdown-filters hidden-xs" id="filter-month-dropdown">
+                  <button class="btn btn-default dropdown-toggle hidden-xs" type="button" id="filter-month" data-toggle="dropdown">
+                    Month
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="filter-month">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                    <li class="last" role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!--filter-month ends-->
+
+                <!--filter-filter-->
+                <div class="dropdown-filters" id="filter-filter-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="filter-filters" data-toggle="dropdown">
+                    Filters <span>(00)</span>
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="filter-filters">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                    <li class="last" role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+                <!--filter-filter-->
+
+              </div>
+            </div>
+          </div><!--/#filters-->
+
+          <div class="col-xs-12">
+            <div id="sponsor-ad-container">
+              <p id="sponsor-text" class="hidden-xs">Thanks To Our Title Sponsor</p>
+              <a id="sponsor-link" href="http://www.smithoptics.com/" target="_blank" title="Smith Optics"><img src="assets/img/sponsor-mobile-smith-logo.png" class="img-responsive" alt="Smith Optics"></a>
+            </div>
+          </div>
+
+          <div id="news-blog-event-list-rows" class="col-xs-12 col-md-9">
+            <!--news list rows-->
+            <article class="list-rows list-row-1">
+              <section class="news-blog-event-image">
+                <img src="assets/img/news-article-test-pic.jpg" alt="">
+                <ul class="news-blog-event-social">
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i>&nbsp;25</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i>&nbsp;12</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-eye"></i>&nbsp;63</a>
+                  </li>
+                </ul>
+              </section>
+              <header>
+                <span>Featured</span>
+                <h2><a href="#">Featured News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-2">
+              <header>
+                <h2><a href="#">Sub News Article Sub News Article Sub News Article Sub News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-3">
+              <header>
+                <h2><a href="#">Sub News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-4">
+              <header>
+                <h2><a href="#">Sub News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-5">
+              <header>
+                <h2><a href="#">Sub News Article&nbsp;</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-6">
+              <header>
+                <h2><a href="#">Sub News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <article class="list-rows list-row-7 list-row-last">
+              <header>
+                <h2><a href="#">Sub News Article</a></h2>
+              </header>
+              <section class="news-blog-event-body">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="/">Watch now</a></p>
+              </section>
+              <footer>
+                <p><a href="/">Source</a>&nbsp;<i class="fa fa-circle"></i>
+&nbsp;<time datetime="2008-02-14 20:00">Pub date here</time></p>
+              </footer>
+            </article>
+            <!--news-blog-event list rows ends-->
+          </div><!--/#news-blog-event-list-rows-->
+
+          <div id="mobile-sidebar-container" class="col-xs-12 col-md-3">
+            <aside>
+              <div class="dark-ribbon"></div>
+              <div class="sidebar-inner">
+                <h3>Related</h3>
+                <article class="first sidebar-related">
+                  <h4><a href="#">Spring Conditions Scenario Series</a></h4>
+                  <section class="sidebar-related-author">By <a href="#">Karl Klassen</a></section>
+                  <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                </article>
+                <article class="sidebar-related">
+                  <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                  <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                </article>
+                <article class="last sidebar-related">
+                  <h4><a href="#">Avalanche Incident Description at Frisby Ridge, Revelstoke</a></h4>
+                  <section class="sidebar-related-pubdate">Date 00, 0000</section>
+                </article>
+                <ul class="sidebar-related-links">
+                  <li class="first">
+                    <a href="#">Related Data</a>
+                  </li>
+                  <li>
+                    <a href="#">Forecast Archive</a>
+                  </li>
+                  <li>
+                    <a href="#">Any Additional Links</a>
+                  </li>
+                  <li class="last">
+                    <h5>More Information</h5>
+                    <p>Mary Clayton<br />
+                    Communications Director, Avalanche Canada<br />
+                    mclayton@avalanche.ca<br />
+                    250.837.2141 (228)<br />
+                    250.837.1492</p>
+                  </li>
+
+
+
+                </ul>
+              </div>
+            </aside>
+          </div><!--/#mobile-sidebar-container-->
+
+        </div>
+      </div><!--/#news-blog-event-content-->
+
+      <footer id="footer" role="contentinfo">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul>
+                <li id="footer-contact" class="first"><a href="#">Contact</a></li>
+                <li id="footer-privacy"><a href="#">Privacy Policy</a></li>
+                <li id="footer-disclaimer"><a href="#">Disclaimer</a></li>
+                <li id="footer-terms"><a href="#">Terms of Use</a></li>
+              </ul>
+              <h6>&copy;2014 Avalanche Canada, <br />All Rights Reserved</h6>
+              <!-- Front End Development by Chris Bovard - www.chrisbovard.com -->
+            </div>
+          </div>
+        </div>
+      </footer><!--/#footer-->
+
+    </div><!--/#page-wrap-->
+  </body>
+</html>
