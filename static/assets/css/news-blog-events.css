@@ -1,6 +1,6 @@
 /* CAC Custom News / Blog / Events styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Nov.9 , 2014
+ * Nov. 11, 2014
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -243,12 +243,22 @@
 #news-blog-event-list-rows > article.list-rows header:after {
   clear: both;
 }
+#news-blog-event-list-rows > article.list-rows header span {
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: #ee3d3d;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 #news-blog-event-list-rows > article.list-rows header h2 {
   font-size: 20px;
   line-height: 24px;
   font-size: 2rem;
   line-height: 2.4rem;
-  margin: 0;
+  margin: 4px 0 0 0;
 }
 #news-blog-event-list-rows > article.list-rows header h2 a {
   font-weight: bold;
@@ -263,6 +273,14 @@
 }
 #news-blog-event-list-rows > article.list-rows .news-blog-event-body {
   padding-top: 10px;
+  min-height: 1px;
+}
+#news-blog-event-list-rows > article.list-rows .news-blog-event-body:before, #news-blog-event-list-rows > article.list-rows .news-blog-event-body:after {
+  content: " ";
+  display: table;
+}
+#news-blog-event-list-rows > article.list-rows .news-blog-event-body:after {
+  clear: both;
 }
 #news-blog-event-list-rows > article.list-rows .news-blog-event-body p {
   font-size: 15px;
@@ -276,6 +294,11 @@
   color: #0056b7;
   font-weight: bold;
 }
+#news-blog-event-list-rows > article.list-rows .news-blog-event-body img {
+  clear: both;
+  border: 4px solid #eeeff1;
+  margin-bottom: 8px;
+}
 #news-blog-event-list-rows > article.list-rows footer {
   margin-top: 12px;
   min-height: 1px;
@@ -286,6 +309,39 @@
 }
 #news-blog-event-list-rows > article.list-rows footer:after {
   clear: both;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags {
+  min-height: 1px;
+  margin-bottom: 10px;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags:before, #news-blog-event-list-rows > article.list-rows footer .blog-tags:after {
+  content: " ";
+  display: table;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags:after {
+  clear: both;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags a {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 6px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 28px;
+  font-size: 1.1rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #e0e0e0;
+  padding: 0 8px;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags a:visited, #news-blog-event-list-rows > article.list-rows footer .blog-tags a:hover, #news-blog-event-list-rows > article.list-rows footer .blog-tags a:active, #news-blog-event-list-rows > article.list-rows footer .blog-tags a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+#news-blog-event-list-rows > article.list-rows footer .blog-tags a:hover {
+  color: #fff;
+  background-color: #0056b7;
 }
 #news-blog-event-list-rows > article.list-rows footer p {
   color: #b5b5b5;
@@ -374,16 +430,6 @@
 }
 #news-blog-event-list-rows > article.list-row-1 header:after {
   clear: both;
-}
-#news-blog-event-list-rows > article.list-row-1 header span {
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  color: #ee3d3d;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 #news-blog-event-list-rows > article.list-row-1 header h2 {
   font-size: 26px;
@@ -624,6 +670,39 @@ aside .sidebar-related-links li p {
     left: -2px;
   }
 
+  .blog-filters #filters-inner #filter-category-dropdown {
+    width: 178px;
+  }
+  .blog-filters #filters-inner #filter-category-dropdown .fa {
+    right: 22px;
+  }
+  .blog-filters #filters-inner #filter-filter-dropdown {
+    width: 202px;
+    border-right: 2px solid #eeeff1;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown {
+    width: 110px;
+    padding-left: 22px;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown .fa {
+    display: none;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown .dropdown-menu {
+    width: 110px !important;
+    min-width: 112px !important;
+    left: -2px;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown {
+    width: 110px;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown .fa {
+    display: none;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown .dropdown-menu {
+    width: 110px !important;
+    min-width: 112px !important;
+  }
+
   #header-inner {
     padding: 34px 0 36px;
   }
@@ -707,10 +786,52 @@ aside .sidebar-related-links li p {
     margin: 12px 0 20px 0;
     padding-top: 18px;
   }
+  #news-blog-event-list-rows > article.list-rows .news-blog-event-body img {
+    clear: none;
+    float: right;
+    border: 4px solid #eeeff1;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+  #news-blog-event-list-rows > article.list-row-last {
+    margin-bottom: 36px;
+    padding-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1025px) {
   #filters-inner #filter-filter-dropdown {
     float: right;
+  }
+
+  .blog-filters #filters-inner #filter-category-dropdown {
+    width: 200px;
+  }
+  .blog-filters #filters-inner #filter-filter-dropdown {
+    border-left: 2px solid #eeeff1;
+    width: 202px;
+    border-right: 2px solid #eeeff1;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown {
+    width: 200px;
+    padding-left: 22px;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown .fa {
+    display: block;
+  }
+  .blog-filters #filters-inner #filter-year-dropdown .dropdown-menu {
+    width: 202px !important;
+    min-width: 202px !important;
+    left: -2px;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown {
+    width: 200px;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown .fa {
+    display: block;
+  }
+  .blog-filters #filters-inner #filter-month-dropdown .dropdown-menu {
+    width: 202px !important;
+    min-width: 202px !important;
   }
 
   #sponsor-ad-container {
