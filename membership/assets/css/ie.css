@@ -3,41 +3,37 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 27, 2014
+ * March 5, 2015
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
-.black-button {
-  font-family: "Montserrat", Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.black-button:visited, .black-button:hover, .black-button:active, .black-button:focus {
-  text-decoration: none;
-  color: #fff;
-}
-.black-button:hover {
-  background-color: #474747;
-}
-.black-button:focus {
-  background-color: #737373;
-}
-.black-button .fa-angle-right {
-  font-size: 20px;
-  line-height: 20px;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: bold;
-}
-
+/*.black-button {
+	font-family:$font-family-google;
+	background-color:#121212;
+	color:#fff;
+	@include font-size(1.6, 1.6);
+	font-weight:bold;
+	text-transform:uppercase;
+	&:visited,
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration:none;
+		color:#fff;
+	} 
+	&:hover {
+		background-color:#474747;
+	}
+	&:focus {
+		background-color:#737373;
+	}
+	.fa-angle-right {
+		@include font-size(2.0, 2.0);
+		font-weight:bold;
+	}
+}*/
 .blue-button {
   font-family: "Montserrat", Arial, sans-serif;
   background-color: #0056b7;
@@ -48,6 +44,7 @@
   line-height: 1.6rem;
   font-weight: bold;
   text-transform: uppercase;
+  border: none;
 }
 .blue-button:visited, .blue-button:hover, .blue-button:active, .blue-button:focus {
   text-decoration: none;
@@ -65,6 +62,7 @@
   font-size: 2rem;
   line-height: 2rem;
   font-weight: bold;
+  padding-left: 8px;
 }
 
 .blue-border {
@@ -86,6 +84,19 @@
   background: transparent url(../img/ribbon-greydark-bg.png) repeat-x center center;
 }
 
+.grey-bg {
+  background-color: #eeeff1;
+  padding: 20px;
+  min-height: 1px;
+}
+.grey-bg:before, .grey-bg:after {
+  content: " ";
+  display: table;
+}
+.grey-bg:after {
+  clear: both;
+}
+
 /*http://getbootstrap.com/components/#navbar-fixed-top*/
 body {
   padding-top: 75px;
@@ -96,6 +107,7 @@ body {
   width: 100%;
   height: 75px;
   border-bottom: 1px solid #ececec;
+  background: #fff;
 }
 #header h1 {
   margin: 14px 0 0 0;
@@ -143,11 +155,11 @@ body {
   float: left;
 }
 #navigation .navbar-nav li a {
-  font-size: 13px;
-  line-height: 21px;
-  font-size: 1.3rem;
-  line-height: 2.1rem;
-  padding: 24px 22px 30px 20px;
+  font-size: 11px;
+  line-height: 19px;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  padding: 24px 0 30px 10px;
   color: #121212;
 }
 #navigation .navbar-nav li a:visited, #navigation .navbar-nav li a:hover, #navigation .navbar-nav li a:active, #navigation .navbar-nav li a:focus {
@@ -173,25 +185,201 @@ body {
 }
 
 /*navigation ends*/
-/*account-login*/
-#account-login {
+/*main content global classes*/
+.main-content {
   min-height: 100px;
+  z-index: 1000;
+  position: relative;
+  padding-bottom: 50px;
 }
-#account-login:before, #account-login:after {
+.main-content:before, .main-content:after {
   content: " ";
   display: table;
 }
-#account-login:after {
+.main-content:after {
   clear: both;
+}
+.main-content header {
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+  padding: 10px 0 32px 0;
+  margin: 20px 0 30px 0;
+}
+.main-content header:before, .main-content header:after {
+  content: " ";
+  display: table;
+}
+.main-content header:after {
+  clear: both;
+}
+.main-content header h1 {
+  font-size: 52px;
+  line-height: 50px;
+  font-size: 5.2rem;
+  line-height: 5rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+
+/*main content global classes ends*/
+/*form globals*/
+.form-group {
+  margin-bottom: 22px;
+}
+
+label {
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #2f63c9;
+  text-transform: uppercase;
+}
+
+.checkbox label {
+  color: #5b5b5b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: capitalize;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
+.form-control {
+  border: none;
+  border-top: 2px solid #d9d9d9;
+  height: 64px;
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #d9d9d9;
+}
+
+/*form globals ends*/
+/*account-login*/
+#account-login #login-form .checkbox {
+  float: none;
+  clear: both;
+  width: 100%;
+}
+#account-login #login-form .checkbox input[type="checkbox"] {
+  display: none;
+}
+#account-login #login-form button {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin-top: 18px;
+  padding: 22px 22px 20px 26px;
+}
+#account-login #login-form-wrapper {
+  margin-bottom: 20px;
+}
+#account-login #forgot-pass-sigup {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 20px 0;
+}
+#account-login #forgot-pass-sigup li {
+  border-bottom: 1px solid #eeeff1;
+  padding-bottom: 8px;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+}
+#account-login #forgot-pass-sigup li a {
+  font-weight: bold;
+}
+#account-login #forgot-pass-sigup li.last {
+  border: none;
+  padding-top: 6px;
+}
+#account-login #account-or-wrap {
+  min-height: 344px;
+  position: relative;
+}
+#account-login #account-or {
+  background-color: #000;
+  font-size: 16px;
+  line-height: 26px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  padding: 16px 0 0 15px;
+  color: #fff;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 145px auto 0 auto;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+#account-login #social-signup-wrapper {
+  min-height: 144px;
+}
+#account-login #social-signup-wrapper:before, #account-login #social-signup-wrapper:after {
+  content: " ";
+  display: table;
+}
+#account-login #social-signup-wrapper:after {
+  clear: both;
+}
+#account-login #social-signup-wrapper #social-signup {
+  list-style: none;
+  padding-left: 0;
+  margin: 6px 0 0 0;
+}
+#account-login #social-signup-wrapper #social-signup li {
+  display: block;
+  height: 60px;
+  margin-bottom: 20px;
+  padding-left: 58px;
+}
+#account-login #social-signup-wrapper #social-signup li.last {
+  margin: 0;
+}
+#account-login #social-signup-wrapper #social-signup #social-signup-facebook {
+  background: #366ad0 url(../img/facebook-icon.png) no-repeat 20px center;
+}
+#account-login #social-signup-wrapper #social-signup #social-signup-facebook a {
+  background-color: #366ad0;
+  border-left: #2b5ac6 3px solid;
+}
+#account-login #social-signup-wrapper #social-signup #social-signup-twitter {
+  background: #00d8ff url(../img/twitter-icon.png) no-repeat 20px center;
+}
+#account-login #social-signup-wrapper #social-signup #social-signup-twitter a {
+  background-color: #00d8ff;
+  border-left: #00b7ff 3px solid;
+}
+#account-login #social-signup-wrapper #social-signup a {
+  display: block;
+  height: 60px;
+  padding-left: 20px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 59px;
+  font-size: 1.2rem;
+  line-height: 5.9rem;
+}
+#account-login #social-signup-wrapper #social-signup a .fa {
+  display: none;
 }
 
 /*account-login ends*/
 /*footer*/
 #footer {
-  height: 214px;
+  min-height: 76px;
   border-top: 1px solid #e2e2e2;
-  padding-top: 20px;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 20px 0;
   width: 100%;
+  margin-bottom: 100px;
 }
 #footer ul {
   list-style: none;
@@ -243,12 +431,50 @@ body {
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Feb. 23, 2015
+ * March 5, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
 /* =Tablet Layout and Styles
 ----------------------------------------------------------------------------------*/
+.main-content {
+  padding-bottom: 100px;
+}
+
+#navigation .navbar-nav li a {
+  font-size: 13px;
+  line-height: 21px;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  padding: 24px 22px 30px 20px;
+}
+
+#account-login #login-form .checkbox {
+  width: 60%;
+  padding-right: 14px;
+  float: left;
+  clear: none;
+  margin-top: 0;
+}
+#account-login #login-form button {
+  width: 40%;
+  float: right;
+  clear: none;
+  margin-top: 0;
+}
+#account-login #social-signup-wrapper #social-signup {
+  padding-left: 0;
+}
+#account-login #social-signup-wrapper #social-signup a {
+  font-size: 16px;
+  line-height: 58px;
+  font-size: 1.6rem;
+  line-height: 5.8rem;
+}
+#account-login #social-signup-wrapper #social-signup a .fa {
+  display: inline-block;
+}
+
 /*footer*/
 #footer ul {
   background: none;
@@ -282,6 +508,19 @@ body {
 ----------------------------------------------------------------------------------*/
 /* =Desktop Layout and Styles
 ----------------------------------------------------------------------------------*/
+/*main content global classes*/
+.main-content {
+  padding-bottom: 120px;
+}
+.main-content header {
+  margin: 40px 0 40px 0;
+}
+
+/*main content global classes ends*/
+#account-login #social-signup-wrapper {
+  min-height: 344px;
+}
+
 /*footer*/
 #footer ul {
   float: left;
