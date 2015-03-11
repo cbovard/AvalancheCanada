@@ -13,14 +13,21 @@
 /* =Tablet Layout and Styles
 ----------------------------------------------------------------------------------*/
 
-.main-content {
-padding-bottom:100px;
-}
-
+/*navigation*/
 #navigation .navbar-nav li a {
   @include font-size(1.3, 2.1);
   padding:24px 22px 30px 20px;
 }
+/*navigation ends*/
+
+/*main content global classes*/
+.main-content {
+  padding-bottom:100px;
+}
+/*main content global classes ends*/
+
+
+/*account-login*/
 #account-login {
   #login-form {
     .checkbox {
@@ -37,21 +44,18 @@ padding-bottom:100px;
       margin-top:0;   
     }
   }
-
   #social-signup-wrapper {
     //min-height:344px;
     #social-signup {
       padding-left:0;
-     //margin:22px 0 0 0;
-
       a {
         @include font-size(1.6, 5.8);
         .fa {display:inline-block;}
       }
     }
   }
-
 }
+/*account-login ends*/
 
 /*footer*/
 #footer {

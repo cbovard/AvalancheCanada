@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * March 5, 2015
+ * March 10, 2015
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -15,7 +15,7 @@
 ----------------------------------------------------------------------------------*/
 
 //buttons
-/*.black-button {
+.black-button {
 	font-family:$font-family-google;
 	background-color:#121212;
 	color:#fff;
@@ -39,7 +39,7 @@
 		@include font-size(2.0, 2.0);
 		font-weight:bold;
 	}
-}*/
+}
 .blue-button {
 	font-family:$font-family-google;
 	background-color:#0056b7;
@@ -91,6 +91,14 @@
 	min-height:1px;
 	@include clearfix();
 }
+
+hr {
+	border-width:2px 0 0;
+	border-color:#ebebeb;
+}
+.required {
+	color:#d82631;
+}
 //end of custom classes
 
 
@@ -130,7 +138,6 @@ body {padding-top:75px;}
   .navbar-header {
   	height:75px;
   	@include clearfix();
-
   }
   .navbar-header {
   	float: left;
@@ -226,11 +233,13 @@ label {
 	border-top:2px solid #d9d9d9;
 	height:64px;
 	@include font-size(2.4, 2.8);
-	color:#d9d9d9;
+	color:#000;
+	background-color:#eeeff1;
 }
-
-
-
+button {
+  padding:22px 22px 20px 26px;
+  width:100%;
+}
 /*form globals ends*/
 
 
@@ -247,10 +256,10 @@ label {
 		button {
 			float:none;
 			clear:both;
-			width:100%;
 			margin-top:18px;
-			//maybe move to global
-			padding:22px 22px 20px 26px;
+		}
+		.form-control {
+			background-color:#fff;
 		}
 	}
 	#login-form-wrapper {
@@ -322,7 +331,6 @@ label {
 				height:60px;
 				padding-left:20px;
 				width:100%;
-				//@include font-size(1.6, 5.8);
 				@include font-size(1.2, 5.9);
 				.fa {display:none;}
 			}
@@ -330,6 +338,135 @@ label {
 	}
 }
 /*account-login ends*/
+
+
+
+/*membership-renewal*/
+#membership-renewal {
+	#login-forgot-box {
+		min-height:1px;
+		@include clearfix(); 
+
+		#login-forgot-box-inner {
+			min-height:304px;
+			@include clearfix(); 
+			background:#0056b7 url(../img/login-forgot-box-bg.png) no-repeat center top;	
+			background-size:100% auto;
+			padding:25px 20px 22px 28px;
+
+			#login-forgot-box-left,
+			#login-forgot-box-right {
+				float:left;
+				width:50%;
+				min-height:277px;
+				position:relative;
+				padding-bottom:92px;
+				h2 {
+					@include font-size(2.6, 3.0);
+					font-weight:bold;
+					color:#fff;
+					margin:0;
+					span {
+						color:#ffd306;
+					}
+				}
+				a.black-button {
+					padding:22px 22px 20px 26px;
+					position:absolute;
+					left:0;
+					bottom:0;
+				}
+			}
+			#login-forgot-box-left {
+				background:transparent url(../img/ribbon-down-bg.png) right top repeat-y;
+				padding-right:30px;
+			}
+			#login-forgot-box-right {
+				padding-left:40px;
+				padding-right:30px;
+				a.black-button {left:40px;}
+			}
+		}
+  }	
+  #nologin-box {
+  	min-height:1px;
+		@include clearfix(); 
+		#nologin-box-inner {
+			min-height:324px;
+			@include clearfix(); 
+	  	background-color:#000;
+	  	position:relative;
+	  	padding-bottom:30px;
+	  	padding:25px 20px 30px 28px;
+			h2 {
+				@include font-size(2.6, 3.0);
+				font-weight:bold;
+				color:#fff;
+				margin:0;
+				span {
+					color:#ffd306;
+				}
+			}
+			p {
+				position:absolute;
+				left:28px;
+				bottom:30px;
+				@include font-size(2.0, 2.4);
+				font-weight:bold;
+				color:#fff;
+				margin:0;
+				padding:0;
+			}
+		}
+  }
+
+
+  #membership-renewal-form {
+  	header {
+  		min-height:1px;
+  		@include clearfix(); 
+  		background:transparent url("../img/ribbon-bg.png") repeat-x center top;
+  		padding-top:46px;
+  		padding-bottom:0;
+  		h3 {
+  			@include font-size(2.6, 3.0);
+  			font-weight:bold;
+  			float:left;
+  			margin:0;
+  		}
+  		h4 {
+  			font-family:$font-family-google;
+  			font-weight:bold;
+  			@include font-size(1.6, 2.8);
+  			text-transform:uppercase;
+  			float:right;
+  			margin:0 0 0 20%;
+  		}
+  	}
+		h3 {
+			@include font-size(2.6, 3.0);
+			font-weight:bold;
+			margin:26px 0 34px 0;
+		}
+
+  	#birthdate-selects {
+  		label {
+  			clear:both;
+        display:block; 
+  		}
+  		select {
+	  		width:30%;
+	  		float:left;
+	  	}
+	  	#birthdate-mm,
+	  	#birthdate-dd {
+	  		margin-right:4.5%;
+	  	}
+  	}
+  }
+}
+
+/*membership-renewal ends*/
 
 
 

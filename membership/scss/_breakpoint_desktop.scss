@@ -13,9 +13,6 @@
 /* =Desktop Layout and Styles
 ----------------------------------------------------------------------------------*/
 
-
-
-
 /*main content global classes*/
 .main-content {
   padding-bottom:120px;
@@ -25,11 +22,18 @@
 }
 /*main content global classes ends*/
 
+/*account-login*/
 #account-login {
+  #login-form .checkbox {padding-right:24px;}
   #social-signup-wrapper {
     min-height:344px;
+    #social-signup {
+      margin:22px 0 0 0;
+      padding-left:40px;
+    }
   }
 }
+/*account-login ends*/
 
 
 /*footer*/
