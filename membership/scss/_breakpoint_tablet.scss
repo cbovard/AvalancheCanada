@@ -20,6 +20,10 @@
 }
 /*navigation ends*/
 
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+  margin-left:20px;
+}
+
 /*main content global classes*/
 .main-content {
   padding-bottom:100px;
@@ -56,6 +60,71 @@
   }
 }
 /*account-login ends*/
+
+/*membership-renewal*/
+#membership-renewal {
+  #login-forgot-box {
+    #login-forgot-box-inner { 
+      min-height:304px;
+      background:#0056b7 url(../img/login-forgot-box-bg.png) no-repeat center top;  
+      background-size:100% auto;
+      #login-forgot-box-left,
+      #login-forgot-box-right {
+        float:left;
+        width:50%;
+        min-height:277px;
+        padding-bottom:92px;
+        clear:none;
+        h2 {
+          text-align:left;
+        }
+        a.black-button {
+          //padding:22px 22px 20px 26px;
+          position:absolute;
+          left:0;
+          bottom:0;
+          display:inline;
+        }
+      }
+      #login-forgot-box-left {
+        background:transparent url(../img/ribbon-down-bg.png) right top repeat-y;
+        padding-right:30px;
+      }
+      #login-forgot-box-right {
+        padding-left:40px;
+        padding-right:30px;
+        a.black-button {left:40px;}
+      }
+    }
+  }
+
+  #nologin-box {
+    margin:0;
+    #nologin-box-inner { 
+      min-height:324px;
+      h2 {
+        margin:0;
+      }
+      p {
+        position:absolute;
+        left:28px;
+        bottom:30px;
+      }
+    }
+  }
+
+  #membership-renewal-form {
+      h3 {
+        float:left;
+      }
+      h4 {
+        float:right;
+        margin:0 0 0 20%;
+      }
+  }
+
+}
+/*membership-renewal ends*/
 
 /*footer*/
 #footer {

@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * March 10, 2015
+ * March 11, 2015
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -266,6 +266,14 @@ label {
   line-height: 2.2rem;
 }
 
+.radio label {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
 .form-control {
   border: none;
   border-top: 2px solid #d9d9d9;
@@ -276,6 +284,10 @@ label {
   line-height: 2.8rem;
   color: #000;
   background-color: #eeeff1;
+}
+
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+  margin-left: 0px;
 }
 
 button {
@@ -409,9 +421,8 @@ button {
   clear: both;
 }
 #membership-renewal #login-forgot-box #login-forgot-box-inner {
-  min-height: 304px;
-  background: #0056b7 url(../img/login-forgot-box-bg.png) no-repeat center top;
-  background-size: 100% auto;
+  min-height: 1px;
+  background-color: #0056b7;
   padding: 25px 20px 22px 28px;
 }
 #membership-renewal #login-forgot-box #login-forgot-box-inner:before, #membership-renewal #login-forgot-box #login-forgot-box-inner:after {
@@ -423,11 +434,20 @@ button {
 }
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left,
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right {
-  float: left;
-  width: 50%;
-  min-height: 277px;
+  min-height: 1px;
   position: relative;
-  padding-bottom: 92px;
+  padding-bottom: 20px;
+  clear: both;
+}
+#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left:before, #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left:after,
+#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right:before,
+#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right:after {
+  content: " ";
+  display: table;
+}
+#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left:after,
+#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right:after {
+  clear: both;
 }
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left h2,
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right h2 {
@@ -438,6 +458,7 @@ button {
   font-weight: bold;
   color: #fff;
   margin: 0;
+  text-align: center;
 }
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left h2 span,
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right h2 span {
@@ -446,23 +467,14 @@ button {
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left a.black-button,
 #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right a.black-button {
   padding: 22px 22px 20px 26px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left {
-  background: transparent url(../img/ribbon-down-bg.png) right top repeat-y;
-  padding-right: 30px;
-}
-#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right {
-  padding-left: 40px;
-  padding-right: 30px;
-}
-#membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right a.black-button {
-  left: 40px;
+  display: block;
+  width: 65%;
+  margin: 16px auto 0 auto;
+  text-align: center;
 }
 #membership-renewal #nologin-box {
   min-height: 1px;
+  margin-top: 20px;
 }
 #membership-renewal #nologin-box:before, #membership-renewal #nologin-box:after {
   content: " ";
@@ -472,7 +484,7 @@ button {
   clear: both;
 }
 #membership-renewal #nologin-box #nologin-box-inner {
-  min-height: 324px;
+  min-height: 1px;
   background-color: #000;
   position: relative;
   padding-bottom: 30px;
@@ -492,15 +504,12 @@ button {
   line-height: 3rem;
   font-weight: bold;
   color: #fff;
-  margin: 0;
+  margin: 0 0 14px 0;
 }
 #membership-renewal #nologin-box #nologin-box-inner h2 span {
   color: #ffd306;
 }
 #membership-renewal #nologin-box #nologin-box-inner p {
-  position: absolute;
-  left: 28px;
-  bottom: 30px;
   font-size: 20px;
   line-height: 24px;
   font-size: 2rem;
@@ -524,32 +533,39 @@ button {
   clear: both;
 }
 #membership-renewal #membership-renewal-form header h3 {
-  font-size: 26px;
-  line-height: 30px;
-  font-size: 2.6rem;
-  line-height: 3rem;
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   font-weight: bold;
-  float: left;
   margin: 0;
 }
 #membership-renewal #membership-renewal-form header h4 {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 28px;
-  font-size: 1.6rem;
-  line-height: 2.8rem;
+  font-size: 12px;
+  line-height: 26px;
+  font-size: 1.2rem;
+  line-height: 2.6rem;
   text-transform: uppercase;
-  float: right;
-  margin: 0 0 0 20%;
 }
 #membership-renewal #membership-renewal-form h3 {
-  font-size: 26px;
-  line-height: 30px;
-  font-size: 2.6rem;
-  line-height: 3rem;
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   font-weight: bold;
   margin: 26px 0 34px 0;
+}
+#membership-renewal #membership-renewal-form #birthdate-selects {
+  min-height: 1px;
+}
+#membership-renewal #membership-renewal-form #birthdate-selects:before, #membership-renewal #membership-renewal-form #birthdate-selects:after {
+  content: " ";
+  display: table;
+}
+#membership-renewal #membership-renewal-form #birthdate-selects:after {
+  clear: both;
 }
 #membership-renewal #membership-renewal-form #birthdate-selects label {
   clear: both;
@@ -562,6 +578,35 @@ button {
 #membership-renewal #membership-renewal-form #birthdate-selects #birthdate-mm,
 #membership-renewal #membership-renewal-form #birthdate-selects #birthdate-dd {
   margin-right: 4.5%;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox {
+  background-color: #000;
+  padding: 18px 16px;
+  min-height: 1px;
+  margin-top: 20px;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox:before, #membership-renewal #membership-renewal-form #renew-checkbox:after {
+  content: " ";
+  display: table;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox:after {
+  clear: both;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox label {
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-transform: uppercase;
+  padding-left: 0;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox label span {
+  color: #ffd306;
+}
+#membership-renewal #membership-renewal-form #renew-checkbox #account-renew-checkbox {
+  display: none;
 }
 
 /*membership-renewal ends*/
@@ -641,6 +686,10 @@ button {
   }
 
   /*navigation ends*/
+  .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-left: 20px;
+  }
+
   /*main content global classes*/
   .main-content {
     padding-bottom: 100px;
@@ -675,6 +724,65 @@ button {
   }
 
   /*account-login ends*/
+  /*membership-renewal*/
+  #membership-renewal #login-forgot-box #login-forgot-box-inner {
+    min-height: 304px;
+    background: #0056b7 url(../img/login-forgot-box-bg.png) no-repeat center top;
+    background-size: 100% auto;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left,
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right {
+    float: left;
+    width: 50%;
+    min-height: 277px;
+    padding-bottom: 92px;
+    clear: none;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left h2,
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right h2 {
+    text-align: left;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left a.black-button,
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right a.black-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-left {
+    background: transparent url(../img/ribbon-down-bg.png) right top repeat-y;
+    padding-right: 30px;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right {
+    padding-left: 40px;
+    padding-right: 30px;
+  }
+  #membership-renewal #login-forgot-box #login-forgot-box-inner #login-forgot-box-right a.black-button {
+    left: 40px;
+  }
+  #membership-renewal #nologin-box {
+    margin: 0;
+  }
+  #membership-renewal #nologin-box #nologin-box-inner {
+    min-height: 324px;
+  }
+  #membership-renewal #nologin-box #nologin-box-inner h2 {
+    margin: 0;
+  }
+  #membership-renewal #nologin-box #nologin-box-inner p {
+    position: absolute;
+    left: 28px;
+    bottom: 30px;
+  }
+  #membership-renewal #membership-renewal-form h3 {
+    float: left;
+  }
+  #membership-renewal #membership-renewal-form h4 {
+    float: right;
+    margin: 0 0 0 20%;
+  }
+
+  /*membership-renewal ends*/
   /*footer*/
   #footer ul {
     background: none;
@@ -732,6 +840,8 @@ button {
   }
 
   /*account-login ends*/
+  /*membership-renewal*/
+  /*membership-renewal ends*/
   /*footer*/
   #footer ul {
     float: left;
