@@ -46,47 +46,196 @@
       </div>
     </header><!--/#header-->
 
-    <div id="membership-renewal" class="main-content container-fluid">
+
+
+    <div id="organization-membership" class="main-content container-fluid">
       <div class="row">
         <div class="col-xs-12">
           <header>
-            <h1>Membership Renewal</h1>
+            <h1>Organization Membership Application</h1>
             <div class="blue-border"></div>
           </header>
         </div>
       </div>
+
       <!--upper boxes-->
       <div class="row"> 
-        <div id="login-forgot-box" class="col-xs-12 col-md-8">
-          <div id="login-forgot-box-inner">
-            <div id="login-forgot-box-left">
-              <h2><span>I have a login name and password</span> and would like to renew.</h2>
-              <a class="black-button" href="#">Log In&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-            </div>
-            <div id="login-forgot-box-right">
-              <h2><span>I do not know my login or password</span> and would like to renew.</h2>
-              <a class="black-button" href="#">Retrieve&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
-            </div>
-          </div>
+        <div id="organization-membership-intro" class="col-xs-12 col-md-9">
+          <h2>Avalanche Canada Member</h2>
+          <p class="upper">Thank you for becoming an Avalanche Canada member. Your membership demonstrates a commitment to public avalanche safety programs in Canada, and communicates to our stakeholders that public avalanche safety services are valued.</p>
+          <p><strong>Your yearly membership is $200 plus applicable tax.</strong></p>
         </div> 
-        <div id="nologin-box" class="col-xs-12 col-md-4">
-          <div id="nologin-box-inner">
-            <h2><span>Oh shucks!</span> I still can’t login</h2>
-            <p>Let’s save you the hassle. Use this form below to renew your membership.</p>
+        <div id="join-now" class="col-xs-12 col-md-3">
+          <div id="join-now-inner">
+            <h2>Become an individual member. <span>It’s only $40</span></h2>
+            <a href="/">Join Now&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
           </div>
         </div>
       </div>
       <!--upper boxes ends-->
-      <div id="membership-renewal-form">
+      
+      <div id="organization-membership-form">
         <form>
+
           <div class="row">
             <div class="col-xs-12">
               <header>
-                <h3>Login Information</h3>
+                <h3>Organization Information</h3>
                 <h4 class="required">* Required Fields</h4>
               </header>
             </div>
           </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-md-10">
+              <div class="form-group">
+                <label for="company-name">Company Name&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="company-name" placeholder="Company Name">
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="first-name">First Name&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="first-name" placeholder="First Name">
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="last-name">Last Name&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Title">
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" class="form-control" id="department" placeholder="Department">
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-md-10">
+              <div class="form-group">
+                <label for="address">Address&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="address" placeholder="Address">
+              </div>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="city">City&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="city" placeholder="City">
+              </div>  
+            </div>
+            <div class="col-xs-12 col-md-3">
+              <div class="form-group">
+                <label for="prov-state-select">Prov/State&nbsp;<span class="required">*</span></label>
+                <select class="form-control" id="prov-state-select">
+                  <option>select</option>
+                  <option>BC</option>
+                  <option>AB</option>
+                  <option>NB</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+              <div class="form-group">
+                <label for="postal-code">Postal Code&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="postal-code" placeholder="">
+              </div>  
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="phone">Phone&nbsp;<span class="required">*</span></label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone">
+              </div>  
+            </div>
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="fax">Fax</span></label>
+                <input type="text" class="form-control" id="fax" placeholder="Fax">
+              </div>  
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="email">Email&nbsp;<span class="required">*</span></label>
+                <input type="email" class="form-control" id="email" placeholder="">
+              </div>  
+            </div>
+            <div class="col-xs-12 col-md-5">
+              <div class="form-group">
+                <label for="website">Website</span></label>
+                <input type="url" class="form-control" id="url" placeholder="Fax">
+              </div>  
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <hr />
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>Login Information</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-10">
+              <p class="sub-intro">To manage your account, please create a login name and password. You will be able to easily view donation history and made changes to your account information.</p>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2">
+              <!--nothing here-->&nbsp;
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-xs-12 col-md-5">
               <div class="form-group">
@@ -118,178 +267,13 @@
               <!--nothing here-->&nbsp;
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <h3>Personal Information</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="first-name">First Name&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="first-name" placeholder="First Name">
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="last-name">Last Name&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="last-name" placeholder="Last Name">
-              </div>
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="gender">Gender&nbsp;<span class="required">*</span></label>
-                <select class="form-control" id="gender">
-                  <option>select</option>
-                  <option>male</option>
-                  <option>female</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group" id="birthdate-selects">
-                <label for="birthdate-mm">Birthdate&nbsp;<span class="required">*</span></label>
-                <select class="form-control" id="birthdate-mm">
-                  <option>MM</option>
-                  <option>1</option>
-                  <option>2</option>
-                </select>
-                <select class="form-control" id="birthdate-dd">
-                  <option>DD</option>
-                  <option>1</option>
-                  <option>2</option>
-                </select>
-                <select class="form-control" id="birthdate-yy">
-                  <option>YY</option>
-                  <option>1</option>
-                  <option>2</option>
-                </select>
-              </div>
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-10">
-              <div class="form-group">
-                <label for="address">Address&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="address" placeholder="Address">
-              </div>  
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="city">City&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="city" placeholder="City">
-              </div>  
-            </div>
-            <div class="col-xs-12 col-md-3">
-              <div class="form-group">
-                <label for="prov-state-select">Province&nbsp;<span class="required">*</span></label>
-                <select class="form-control" id="prov-state-select">
-                  <option>select</option>
-                  <option>BC</option>
-                  <option>AB</option>
-                  <option>NB</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-2">
-              <div class="form-group">
-                <label for="postal-code">Postal Code&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="postal-code" placeholder="">
-              </div>  
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="home-phone">Home Phone&nbsp;<span class="required">*</span></label>
-                <input type="text" class="form-control" id="home-phone" placeholder="Home Phone">
-              </div>  
-            </div>
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="fax">Fax</span></label>
-                <input type="text" class="form-control" id="fax" placeholder="Fax">
-              </div>  
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="email">Email&nbsp;<span class="required">*</span></label>
-                <input type="email" class="form-control" id="email" placeholder="">
-              </div>  
-            </div>
-            <div class="col-xs-12 col-md-5">
-              <div class="form-group">
-                <label for="website">Website</span></label>
-                <input type="url" class="form-control" id="url" placeholder="Fax">
-              </div>  
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <hr />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <h3>Annual Membership Type<span class="required">*</span></h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-10">
-              <div class="form-group">
-                <div class="radio radio-inline">
-                  <input type="radio" name="radio-renewal-type" id="radio-renewal-type-1" value="option1">
-                  <label for="radio-renewal-type-1">
-                    INDIVIDUAL RENEWAL
-                  </label>
-                </div>
-                <div class="radio radio-inline">
-                  <input type="radio" name="radio-renewal-type" id="radio-renewal-type-2" value="option2">
-                  <label for="radio-renewal-type-2">
-                    ORGANIZATION RENEWAL
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="hidden-xs hidden-sm col-md-2">
-              <!--nothing here-->&nbsp;
-            </div>
-          </div>
+
           <div class="row">
             <div class="col-xs-12 col-md-10">
               <div class="form-group" id="renew-checkbox">
                 <div class="checkbox">
                   <input id="account-renew-checkbox" type="checkbox">
-                  <label for="account-renew-checkbox"><span>YES!</span> PLease automatically renew</label>
+                  <label for="account-renew-checkbox"><span>YES!</span> PLease automatically renew my organization’s membership.</label>
                 </div>
               </div>
             </div>
@@ -297,6 +281,8 @@
               <!--nothing here-->&nbsp;
             </div>
           </div>
+
+
           <div class="row">
             <div class="col-xs-12">
               <hr />
@@ -310,9 +296,12 @@
               <!--nothing here-->&nbsp;
             </div>
           </div>
+
+
+
         </form>
-      </div><!--/#membership-renewal-form-->
-    </div><!--membership-renewal-->
+      </div><!--/#organization-membership-form-->
+    </div><!--/#organization-membership-->
 
     <footer id="footer" role="contentinfo">
       <div class="container-fluid">

@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Oct. 12, 2014
+ * Apr. 10, 20154
 */
 
 /* =Import Files for Mixin Usage
@@ -12,6 +12,11 @@
 
 /* =Desktop Layout and Styles
 ----------------------------------------------------------------------------------*/
+
+//classes
+.blue-button {
+  margin-top:36px;
+}
 
 /*main content global classes*/
 .main-content {
@@ -38,9 +43,74 @@
 
 /*membership-renewal*/
 #membership-renewal {
-
+  #nologin-box {
+    #nologin-box-inner {
+      min-height:324px;
+    }
+  }
+  #membership-renewal-form {
+    header {
+      h3 {
+        @include font-size(2.6, 3.0);
+      }
+      h4 {
+        @include font-size(1.6, 2.8);
+      }
+    }
+    h3 {
+      @include font-size(2.6, 3.0);
+    }
+  }
 }
 /*membership-renewal ends*/
+
+
+/*organization-membership*/
+#organization-membership {
+  #organization-membership-intro {
+    h2 {
+      @include font-size(2.6, 3.0);
+      margin:0 0 28px 0;
+    } 
+    p {
+      @include font-size(2.0, 2.4);
+      &.upper {
+        margin-bottom:28px;
+        padding-right:60px;
+      }
+      strong {
+        @include font-size(2.0, 2.4);
+      }
+    }
+  }
+
+  #join-now-inner { 
+    margin-top:0;
+    min-height:238px;
+    background-size:auto 100%;
+    text-align:left;
+    h2 {
+      text-align:left;
+      margin-bottom:30px;
+    }
+    a {text-align:left;}
+  }
+
+  #organization-membership-form {
+    header {
+      h3 {
+        @include font-size(2.6, 3.0);
+      }
+      h4 {
+        @include font-size(1.6, 2.8);
+      }
+    }
+    h3 {
+      @include font-size(2.6, 3.0);
+    }
+  }
+}
+/*organization-membership ends*/
 
 
 /*footer*/

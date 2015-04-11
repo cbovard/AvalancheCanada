@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * March 11, 2015
+ * Apr. 6, 2015
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -14,7 +14,7 @@
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
 
-//buttons
+//custom class and extends - http://www.sitepoint.com/sass-extend-nobody-told-you/
 .black-button {
 	font-family:$font-family-google;
 	background-color:#121212;
@@ -67,7 +67,6 @@
 		padding-left:8px;
 	}
 }
-
 .blue-border {
 	height:8px;
 	width:50px;
@@ -76,22 +75,18 @@
 	bottom:0;
 	left:0;
 }
-
-
 .div {border:1px solid red;}
 .dark-ribbon {
 	width:100%;
 	height:8px;
 	background:transparent url(../img/ribbon-greydark-bg.png) repeat-x center center;
 }
-
 .grey-bg {
 	background-color:#eeeff1;
 	padding:20px;
 	min-height:1px;
 	@include clearfix();
 }
-
 hr {
 	border-width:2px 0 0;
 	border-color:#ebebeb;
@@ -99,10 +94,26 @@ hr {
 .required {
 	color:#d82631;
 }
-//end of custom classes
 
-
-
+.black-checkbox-box {
+	background-color:#000;
+	padding:18px 16px;
+	min-height:1px;
+	margin-top:20px;
+	@include clearfix(); 
+	label {
+		color:#fff;
+		@include font-size(1.6, 3.0);
+		font-family:$font-family-google;	
+		text-transform:uppercase;
+		padding-left:0;
+		span {
+			color:#ffd306;
+		}
+	}
+	#account-renew-checkbox {display:none;}
+}
+//end of custom classes and extends
 
 
 /*http://getbootstrap.com/components/#navbar-fixed-top*/
@@ -159,6 +170,9 @@ body {padding-top:75px;}
 					color:#121212;
 				}
 				&:hover {color:#0056b7;}
+				.fa {
+					@include font-size(3.0, 1.9);
+				}
 			}
 			.nav-red-bg {
 				background-color:#d82631;
@@ -185,8 +199,6 @@ body {padding-top:75px;}
 }
 /*navigation ends*/
 
-
-
 /*main content global classes*/
 .main-content {
 	min-height:100px;
@@ -201,11 +213,10 @@ body {padding-top:75px;}
 		padding:10px 0 32px 0;
 		margin:20px 0 30px 0;
 		h1 {
-			//@include font-size(3.6, 3.8);
-			@include font-size(5.2, 5.0);
+			@include font-size(3.6, 3.8);
 			font-family:$font-family-google;
 			font-weight:bold;
-			margin:0 0 0 0;
+			margin:0;
 		}
 	}
 }
@@ -247,8 +258,6 @@ button {
   width:100%;
 }
 /*form globals ends*/
-
-
 
 /*account-login*/
 #account-login {
@@ -303,7 +312,6 @@ button {
 		height:58px;
 		border-radius:50%;
 	}
-
 	#social-signup-wrapper {
 		min-height:144px;
 		@include clearfix();
@@ -344,8 +352,6 @@ button {
 	}
 }
 /*account-login ends*/
-
-
 
 /*membership-renewal*/
 #membership-renewal {
@@ -395,7 +401,6 @@ button {
 	  	position:relative;
 	  	padding-bottom:30px;
 	  	padding:25px 20px 30px 28px;
-
 			h2 {
 				@include font-size(2.6, 3.0);
 				font-weight:bold;
@@ -414,8 +419,6 @@ button {
 			}
 		}
   }
-
-
   #membership-renewal-form {
   	header {
   		min-height:1px;
@@ -424,7 +427,6 @@ button {
   		padding-top:46px;
   		padding-bottom:0;
   		h3 {
-  			//@include font-size(2.6, 3.0);
   			@include font-size(2.2, 2.6);
   			font-weight:bold;
   			margin:0;
@@ -433,17 +435,15 @@ button {
   			font-family:$font-family-google;
   			font-weight:bold;
   			@include font-size(1.2, 2.6);
-  			//@include font-size(1.6, 2.8);
   			text-transform:uppercase;
   		}
   	}
 		h3 {
-			//@include font-size(2.6, 3.0);
 			@include font-size(2.2, 2.6);
 			font-weight:bold;
-			margin:26px 0 34px 0;
+			//margin:26px 0 34px 0;
+			margin:16px 0 18px 0;
 		}
-
   	#birthdate-selects {
   		min-height:1px;
   		@include clearfix(); 
@@ -462,27 +462,121 @@ button {
   	}
 
   	#renew-checkbox {
-  		background-color:#000;
-  		padding:18px 16px;
-			min-height:1px;
-			margin-top:20px;
-			@include clearfix(); 
-  		label {
-  			color:#fff;
-				@include font-size(1.6, 3.0);
-				font-family:$font-family-google;	
-				text-transform:uppercase;
-				padding-left:0;
-				span {
-					color:#ffd306;
-				}
-  		}
-  		#account-renew-checkbox {display:none;}
+  		@extend .black-checkbox-box;
+  		margin-bottom:0;
   	}
   }
 }
-
 /*membership-renewal ends*/
+
+
+
+/*organization-membership*/
+#organization-membership {
+	#organization-membership-intro {
+		min-height:1px;
+		@include clearfix(); 	
+		h2 {
+			@include font-size(2.4, 2.8);
+			font-weight:bold;
+			color:#242424;
+			margin:0 0 20px 0;
+		}	
+		p {
+			@include font-size(1.8, 2.2);
+			color:#5b5b5b;
+			margin:0;
+			&.upper {
+				margin-bottom:20px;
+			}
+			strong {
+				color:#000;
+				@include font-size(1.8, 2.2);
+			}
+		}
+	}
+  #join-now-inner {
+  	margin-top:20px;
+		min-height:1px;
+		@include clearfix(); 
+		background-color:#0056b7;
+		padding:25px 20px 22px 28px;
+		text-align:center;
+		h2 {
+			@include font-size(2.6, 3.0);
+			font-weight:bold;
+			color:#fff;
+			margin:0 0 20px 0;
+			text-align:center;
+			span {
+				color:#ffd306;
+			}
+		}
+		a {
+			font-family:$font-family-google;
+			color:#fff;
+			@include font-size(1.6, 1.6);
+			font-weight:bold;
+			text-transform:uppercase;
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+				color:#fff;
+			} 
+			&:hover {
+				text-decoration:none;
+				color:#fff;
+			}
+			.fa-angle-right {
+				@include font-size(2.0, 2.0);
+				font-weight:bold;
+			}
+		}
+  }
+
+  #organization-membership-form {
+  	header {
+  		min-height:1px;
+  		@include clearfix(); 
+  		background:transparent url("../img/ribbon-bg.png") repeat-x center top;
+  		padding-top:46px;
+  		padding-bottom:0;
+  		h3 {
+  			@include font-size(2.2, 2.6);
+  			font-weight:bold;
+  			margin:0;
+  		}
+  		h4 {
+  			font-family:$font-family-google;
+  			font-weight:bold;
+  			@include font-size(1.2, 2.6);
+  			text-transform:uppercase;
+  		}
+  	}
+		h3 {
+			@include font-size(2.2, 2.6);
+			font-weight:bold;
+			//margin:26px 0 34px 0;
+			margin:16px 0 18px 0;
+		} 
+		.sub-intro {margin-bottom:16px;}
+
+  	#renew-checkbox {
+  		@extend .black-checkbox-box;
+  		margin-bottom:0;
+  	} 	
+  }
+
+
+}
+/*organization-membership ends*/
+
+
+
+
+
 
 
 

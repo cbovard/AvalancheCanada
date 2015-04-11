@@ -1,6 +1,6 @@
 /* CAC Membership Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Mar. 2, 2015
+ * Apr. 10, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -8,7 +8,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * March 11, 2015
+ * Apr. 6, 2015
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -115,6 +115,36 @@ hr {
   color: #d82631;
 }
 
+.black-checkbox-box, #membership-renewal #membership-renewal-form #renew-checkbox, #organization-membership #organization-membership-form #renew-checkbox {
+  background-color: #000;
+  padding: 18px 16px;
+  min-height: 1px;
+  margin-top: 20px;
+}
+.black-checkbox-box:before, #membership-renewal #membership-renewal-form #renew-checkbox:before, #organization-membership #organization-membership-form #renew-checkbox:before, .black-checkbox-box:after, #membership-renewal #membership-renewal-form #renew-checkbox:after, #organization-membership #organization-membership-form #renew-checkbox:after {
+  content: " ";
+  display: table;
+}
+.black-checkbox-box:after, #membership-renewal #membership-renewal-form #renew-checkbox:after, #organization-membership #organization-membership-form #renew-checkbox:after {
+  clear: both;
+}
+.black-checkbox-box label, #membership-renewal #membership-renewal-form #renew-checkbox label, #organization-membership #organization-membership-form #renew-checkbox label {
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-transform: uppercase;
+  padding-left: 0;
+}
+.black-checkbox-box label span, #membership-renewal #membership-renewal-form #renew-checkbox label span, #organization-membership #organization-membership-form #renew-checkbox label span {
+  color: #ffd306;
+}
+.black-checkbox-box #account-renew-checkbox, #membership-renewal #membership-renewal-form #renew-checkbox #account-renew-checkbox, #organization-membership #organization-membership-form #renew-checkbox #account-renew-checkbox {
+  display: none;
+}
+
 /*http://getbootstrap.com/components/#navbar-fixed-top*/
 body {
   padding-top: 75px;
@@ -187,6 +217,12 @@ body {
 #navigation .navbar-nav li a:hover {
   color: #0056b7;
 }
+#navigation .navbar-nav li a .fa {
+  font-size: 30px;
+  line-height: 19px;
+  font-size: 3rem;
+  line-height: 1.9rem;
+}
 #navigation .navbar-nav li .nav-red-bg {
   background-color: #d82631;
   color: #fff;
@@ -231,13 +267,13 @@ body {
   clear: both;
 }
 .main-content header h1 {
-  font-size: 52px;
-  line-height: 50px;
-  font-size: 5.2rem;
-  line-height: 5rem;
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
-  margin: 0 0 0 0;
+  margin: 0;
 }
 
 /*main content global classes ends*/
@@ -555,7 +591,7 @@ button {
   font-size: 2.2rem;
   line-height: 2.6rem;
   font-weight: bold;
-  margin: 26px 0 34px 0;
+  margin: 16px 0 18px 0;
 }
 #membership-renewal #membership-renewal-form #birthdate-selects {
   min-height: 1px;
@@ -580,36 +616,146 @@ button {
   margin-right: 4.5%;
 }
 #membership-renewal #membership-renewal-form #renew-checkbox {
-  background-color: #000;
-  padding: 18px 16px;
-  min-height: 1px;
-  margin-top: 20px;
-}
-#membership-renewal #membership-renewal-form #renew-checkbox:before, #membership-renewal #membership-renewal-form #renew-checkbox:after {
-  content: " ";
-  display: table;
-}
-#membership-renewal #membership-renewal-form #renew-checkbox:after {
-  clear: both;
-}
-#membership-renewal #membership-renewal-form #renew-checkbox label {
-  color: #fff;
-  font-size: 16px;
-  line-height: 30px;
-  font-size: 1.6rem;
-  line-height: 3rem;
-  font-family: "Montserrat", Arial, sans-serif;
-  text-transform: uppercase;
-  padding-left: 0;
-}
-#membership-renewal #membership-renewal-form #renew-checkbox label span {
-  color: #ffd306;
-}
-#membership-renewal #membership-renewal-form #renew-checkbox #account-renew-checkbox {
-  display: none;
+  margin-bottom: 0;
 }
 
 /*membership-renewal ends*/
+/*organization-membership*/
+#organization-membership #organization-membership-intro {
+  min-height: 1px;
+}
+#organization-membership #organization-membership-intro:before, #organization-membership #organization-membership-intro:after {
+  content: " ";
+  display: table;
+}
+#organization-membership #organization-membership-intro:after {
+  clear: both;
+}
+#organization-membership #organization-membership-intro h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: bold;
+  color: #242424;
+  margin: 0 0 20px 0;
+}
+#organization-membership #organization-membership-intro p {
+  font-size: 18px;
+  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+  margin: 0;
+}
+#organization-membership #organization-membership-intro p.upper {
+  margin-bottom: 20px;
+}
+#organization-membership #organization-membership-intro p strong {
+  color: #000;
+  font-size: 18px;
+  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+#organization-membership #join-now-inner {
+  margin-top: 20px;
+  min-height: 1px;
+  background-color: #0056b7;
+  padding: 25px 20px 22px 28px;
+  text-align: center;
+}
+#organization-membership #join-now-inner:before, #organization-membership #join-now-inner:after {
+  content: " ";
+  display: table;
+}
+#organization-membership #join-now-inner:after {
+  clear: both;
+}
+#organization-membership #join-now-inner h2 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+#organization-membership #join-now-inner h2 span {
+  color: #ffd306;
+}
+#organization-membership #join-now-inner a {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#organization-membership #join-now-inner a:visited, #organization-membership #join-now-inner a:hover, #organization-membership #join-now-inner a:active, #organization-membership #join-now-inner a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+#organization-membership #join-now-inner a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+#organization-membership #join-now-inner a .fa-angle-right {
+  font-size: 20px;
+  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+#organization-membership #organization-membership-form header {
+  min-height: 1px;
+  background: transparent url("../img/ribbon-bg.png") repeat-x center top;
+  padding-top: 46px;
+  padding-bottom: 0;
+}
+#organization-membership #organization-membership-form header:before, #organization-membership #organization-membership-form header:after {
+  content: " ";
+  display: table;
+}
+#organization-membership #organization-membership-form header:after {
+  clear: both;
+}
+#organization-membership #organization-membership-form header h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+#organization-membership #organization-membership-form header h4 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 26px;
+  font-size: 1.2rem;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+}
+#organization-membership #organization-membership-form h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  margin: 16px 0 18px 0;
+}
+#organization-membership #organization-membership-form .sub-intro {
+  margin-bottom: 16px;
+}
+#organization-membership #organization-membership-form #renew-checkbox {
+  margin-bottom: 0;
+}
+
+/*organization-membership ends*/
 /*footer*/
 #footer {
   min-height: 76px;
@@ -670,12 +816,16 @@ button {
 @media screen and (min-width: 600px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * March 5, 2015
+   * Apr. 6, 2015
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
   /* =Tablet Layout and Styles
   ----------------------------------------------------------------------------------*/
+  .blue-button {
+    margin-top: 30px;
+  }
+
   /*navigation*/
   #navigation .navbar-nav li a {
     font-size: 13px;
@@ -693,6 +843,12 @@ button {
   /*main content global classes*/
   .main-content {
     padding-bottom: 100px;
+  }
+  .main-content header h1 {
+    font-size: 52px;
+    line-height: 50px;
+    font-size: 5.2rem;
+    line-height: 5rem;
   }
 
   /*main content global classes ends*/
@@ -764,7 +920,7 @@ button {
     margin: 0;
   }
   #membership-renewal #nologin-box #nologin-box-inner {
-    min-height: 324px;
+    min-height: 140px;
   }
   #membership-renewal #nologin-box #nologin-box-inner h2 {
     margin: 0;
@@ -781,8 +937,29 @@ button {
     float: right;
     margin: 0 0 0 20%;
   }
+  #membership-renewal #membership-renewal-form #renew-checkbox {
+    margin-bottom: 22px;
+  }
 
   /*membership-renewal ends*/
+  /*organization-membership*/
+  #organization-membership #join-now-inner {
+    min-height: 140px;
+    background: #0056b7 url(../img/login-forgot-box-bg.png) no-repeat center center;
+    background-size: 100% auto;
+  }
+  #organization-membership #organization-membership-form h3 {
+    float: left;
+  }
+  #organization-membership #organization-membership-form h4 {
+    float: right;
+    margin: 0 0 0 20%;
+  }
+  #organization-membership #organization-membership-form #renew-checkbox {
+    margin-bottom: 22px;
+  }
+
+  /*organization-membership ends*/
   /*footer*/
   #footer ul {
     background: none;
@@ -812,12 +989,16 @@ button {
 @media screen and (min-width: 1025px) {
   /* CAC Custom styles
    * Author: Chris Bovard - www.chrisbovard.com
-   * Oct. 12, 2014
+   * Apr. 10, 20154
   */
   /* =Import Files for Mixin Usage
   ----------------------------------------------------------------------------------*/
   /* =Desktop Layout and Styles
   ----------------------------------------------------------------------------------*/
+  .blue-button {
+    margin-top: 36px;
+  }
+
   /*main content global classes*/
   .main-content {
     padding-bottom: 120px;
@@ -841,7 +1022,86 @@ button {
 
   /*account-login ends*/
   /*membership-renewal*/
+  #membership-renewal #nologin-box #nologin-box-inner {
+    min-height: 324px;
+  }
+  #membership-renewal #membership-renewal-form header h3 {
+    font-size: 26px;
+    line-height: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+  #membership-renewal #membership-renewal-form header h4 {
+    font-size: 16px;
+    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+  #membership-renewal #membership-renewal-form h3 {
+    font-size: 26px;
+    line-height: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
   /*membership-renewal ends*/
+  /*organization-membership*/
+  #organization-membership #organization-membership-intro h2 {
+    font-size: 26px;
+    line-height: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin: 0 0 28px 0;
+  }
+  #organization-membership #organization-membership-intro p {
+    font-size: 20px;
+    line-height: 24px;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  #organization-membership #organization-membership-intro p.upper {
+    margin-bottom: 28px;
+    padding-right: 60px;
+  }
+  #organization-membership #organization-membership-intro p strong {
+    font-size: 20px;
+    line-height: 24px;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  #organization-membership #join-now-inner {
+    margin-top: 0;
+    min-height: 238px;
+    background-size: auto 100%;
+    text-align: left;
+  }
+  #organization-membership #join-now-inner h2 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  #organization-membership #join-now-inner a {
+    text-align: left;
+  }
+  #organization-membership #organization-membership-form header h3 {
+    font-size: 26px;
+    line-height: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+  #organization-membership #organization-membership-form header h4 {
+    font-size: 16px;
+    line-height: 28px;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+  #organization-membership #organization-membership-form h3 {
+    font-size: 26px;
+    line-height: 30px;
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  /*organization-membership ends*/
   /*footer*/
   #footer ul {
     float: left;
