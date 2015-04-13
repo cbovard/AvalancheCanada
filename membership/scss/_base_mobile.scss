@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 6, 2015
+ * Apr. 12, 2015
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -9,7 +9,6 @@
 @import "custom_cac_variables"; 
 //bootstrap mixins
 @import "bootstrap/mixins";
-
 
 /* =Base Mobile Layout and Styles
 ----------------------------------------------------------------------------------*/
@@ -94,7 +93,6 @@ hr {
 .required {
 	color:#d82631;
 }
-
 .black-checkbox-box {
 	background-color:#000;
 	padding:18px 16px;
@@ -470,10 +468,11 @@ button {
 /*membership-renewal ends*/
 
 
-
-/*organization-membership*/
-#organization-membership {
-	#organization-membership-intro {
+/*organization-membership && membership-appilcation*/
+#organization-membership,
+#membership-application {
+	#organization-membership-intro,
+	#membership-application-intro {
 		min-height:1px;
 		@include clearfix(); 	
 		h2 {
@@ -535,8 +534,8 @@ button {
 			}
 		}
   }
-
-  #organization-membership-form {
+  #organization-membership-form,
+  #membership-application-form {
   	header {
   		min-height:1px;
   		@include clearfix(); 
@@ -568,10 +567,8 @@ button {
   		margin-bottom:0;
   	} 	
   }
-
-
 }
-/*organization-membership ends*/
+/*organization-membership && membership-appilcation ends*/
 
 
 
