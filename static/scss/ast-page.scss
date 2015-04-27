@@ -1,0 +1,269 @@
+/* CAC Custom AST Page styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Apr. 24, 2015
+*/
+
+/* =Import Files for Mixin Usage
+----------------------------------------------------------------------------------*/
+//the variable file is the one that will be modified by the themer - chris bovard
+@import "custom_cac_variables"; 
+//boostrap mixins
+@import "bootstrap/mixins";
+
+
+/* =Styles for News - Blog - Events Pages
+----------------------------------------------------------------------------------*/
+
+#header {
+	//border-bottom:1px solid #ececec;
+}
+
+
+
+
+//Mobile
+
+
+#ast-search-bar {
+	margin-top:75px;
+	width:100%;
+	//min-height:125px;
+	//desktop-height
+	min-height:466px;
+	@include clearfix();
+
+  background:#377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center bottom;  
+  background-size:100% auto;	
+
+
+
+	#ast-search-nav {
+		width:100%;
+		height:72px;
+		border-top:6px solid #1e59a9;
+		background-color:#000;
+		ul {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		li {
+			padding:0;
+			margin:0;
+			list-style:none;
+			float:left;
+			> a {
+				display:block;
+				height:66px;
+				padding:22px 20px 10px 20px;
+				color:#fff;
+				position:relative;
+				@include font-size(1.6, 2.2);
+				font-family:$font-family-google;
+				font-weight:bold;
+				text-transform:uppercase;
+				text-decoration:none;
+				background-color:transparent;
+				&:visited,
+				&:hover,
+				&:active,
+				&:focus {
+					background-color:transparent;
+				} 
+				&:hover,
+				&.active {
+					background-color:#377cd9;
+					.arrow-down {display:block;}
+				}
+				.arrow-down {
+					position:absolute;
+					top:0px;
+					width:0; 
+					height:0; 
+					border-left:10px solid transparent;
+					border-right:10px solid transparent;
+					border-top:10px solid #1e59a9;
+					display:none;
+				}
+			}
+		}
+		#nav-courses .arrow-down {left:49px;}
+		#nav-providers .arrow-down {left:57px;}
+	}
+	#ast-search-filters {
+  	height:400px;	
+	 	h1 {
+			//@include font-size(3.6, 3.8);
+			@include font-size(5.0, 5.2);
+			font-family:$font-family-google;
+			font-weight:bold;
+			text-align:left;
+			margin:80px 0 30px 0;
+		}
+		.dropdown-filters {
+			.dropdown-filters-inner {
+				position:relative;
+			}
+			button {
+				border:none;
+				background-color:#eeeff1;
+				@include font-size(1.6, 2.8);
+				color:#808080;
+				height:60px;
+				width:100%;
+				padding:0 14px;
+				text-align:left;
+				.fa {
+					color:#0056b7;
+					float:right;
+					@include font-size(1.6, 3.0);
+				}
+				.fa-chevron-up {display:none;}
+				.fa-chevron-down {display:inline-block;}
+			}
+			&.open {
+				.fa-chevron-up {display:inline-block;}
+				.fa-chevron-down {display:none;}
+			}
+			.dropdown-menu {
+				top:60px;
+				margin:0;
+				padding:8px 0;
+				border-radius:0;
+				border:none;
+				box-shadow:none;
+				width:100%;		
+				background-color:#1e59a9;
+				@include font-size(1.6, 2.8);
+				li {
+					@include font-size(1.6, 2.8);
+					color:#fff;
+
+					a {
+						@include font-size(1.6, 4.8);
+						color:#fff;
+						padding:0 14px;
+						&:visited,
+						&:hover,
+						&:active,
+						&:focus {
+							color:#fff;
+							text-decoration:none;
+						} 
+						&:hover {
+							text-decoration:none;
+							background-color:transparent;
+						}
+					}
+
+				}
+			}
+		}
+		#location-filter {
+			.input-group {
+				background-color:#eeeff1;
+				width:100%;
+				height:60px;
+				padding:0 14px;
+			}
+			.form-control {
+				padding:0;
+				float:left;
+				width:94%;
+				height:60px;
+				background-color:transparent;
+				border:none;
+				@include font-size(1.6, 2.8);
+				color:#808080;
+				text-align:left;
+				box-shadow:none;
+
+			}
+			#location-addon {
+				float:left;
+				width:6%;
+				@include font-size(1.6, 3.0);
+				.fa {
+					color:#0056b7;
+					@include font-size(2.0, 6.0);
+					float:right;
+				}
+			}
+		}
+		#submit-filter {
+			button {
+		    clear:both;
+		    display:block;
+		    padding:0 24px;
+		    height:60px;
+		    border:none;				
+			}
+		}
+	}
+}
+
+
+
+#top-link {
+	width:58px;
+	height:38px;
+	padding:4px 0 0 0;
+	position:absolute;
+	z-index:1020;
+	top:90px;
+	right:0;
+	background-color:#000;
+	text-transform:uppercase;
+	color:#fff;
+	@include font-size(1.1, 1.1);
+	text-align:center;
+	font-weight:bold;
+	.fa {
+		color:#fff;
+		@include font-size(1.6, 1.6);
+	}
+}
+
+#ast-page-content {
+	min-height:200px;
+	@include clearfix();	
+	margin-top:55px;
+	position:relative;
+}
+
+#header-inner {
+	h2 {
+		@include font-size(3.6, 3.8);
+		font-family:$font-family-google;
+		font-weight:bold;
+		float:left;
+		margin:0;
+	}
+	@include clearfix();	
+	background:transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+	position:relative;
+	padding:0 0 34px 0;
+}
+
+
+
+
+//end of mobile styles
+
+
+//Tablet Styles 
+@media screen and (min-width: $screen-tablet) {
+	#header-inner {
+		//padding:34px 0 36px;
+		h2 {
+			@include font-size(5.0, 5.2);
+			//margin:48px 0 0 0;
+		}
+	} 
+}
+//end of tablet styles
+
+//Desktop Styles
+@media screen and (min-width: $screen-desktop) {
+
+}

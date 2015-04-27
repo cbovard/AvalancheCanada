@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 12, 2015
+ * Apr. 15, 2015
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -561,7 +561,6 @@ button {
 			margin:16px 0 18px 0;
 		} 
 		.sub-intro {margin-bottom:16px;}
-
   	#renew-checkbox {
   		@extend .black-checkbox-box;
   		margin-bottom:0;
@@ -569,6 +568,71 @@ button {
   }
 }
 /*organization-membership && membership-appilcation ends*/
+
+
+/*payment*/
+#payment {
+	#payment-intro {
+		min-height:1px;
+		@include clearfix(); 	
+		h2 {
+			@include font-size(2.4, 2.8);
+			font-weight:bold;
+			color:#242424;
+			margin:0 0 20px 0;
+		}	
+		p {
+			@include font-size(1.8, 2.2);
+			color:#5b5b5b;
+			margin:0;
+			&.upper {
+				margin-bottom:20px;
+			}
+			strong {
+				color:#000;
+				@include font-size(1.8, 2.2);
+			}
+		}
+	}
+  #payment-form {
+  	header {
+  		min-height:1px;
+  		@include clearfix(); 
+  		background:transparent url("../img/ribbon-bg.png") repeat-x center top;
+  		padding-top:46px;
+  		padding-bottom:0;
+  		h3 {
+  			@include font-size(2.2, 2.6);
+  			font-weight:bold;
+  			margin:0;
+  		}
+  		h4 {
+  			font-family:$font-family-google;
+  			font-weight:bold;
+  			@include font-size(1.2, 2.6);
+  			text-transform:uppercase;
+  		}
+  	}
+		h3 {
+			@include font-size(2.2, 2.6);
+			font-weight:bold;
+			margin:16px 0 18px 0;
+		} 
+		#expiration-date {
+			label {
+				display:block;
+			}
+			select {
+				float:left;
+				width:48%;
+			}
+			#expiration-mm {
+				margin-right:4%;
+			}
+		}
+  }
+}
+/*payment ends*/
 
 
 

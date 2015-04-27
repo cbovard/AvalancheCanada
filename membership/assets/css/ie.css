@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 12, 2015
+ * Apr. 15, 2015
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -836,6 +836,94 @@ button {
 }
 
 /*organization-membership && membership-appilcation ends*/
+/*payment*/
+#payment #payment-intro {
+  min-height: 1px;
+}
+#payment #payment-intro:before, #payment #payment-intro:after {
+  content: " ";
+  display: table;
+}
+#payment #payment-intro:after {
+  clear: both;
+}
+#payment #payment-intro h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: bold;
+  color: #242424;
+  margin: 0 0 20px 0;
+}
+#payment #payment-intro p {
+  font-size: 18px;
+  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #5b5b5b;
+  margin: 0;
+}
+#payment #payment-intro p.upper {
+  margin-bottom: 20px;
+}
+#payment #payment-intro p strong {
+  color: #000;
+  font-size: 18px;
+  line-height: 22px;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+#payment #payment-form header {
+  min-height: 1px;
+  background: transparent url("../img/ribbon-bg.png") repeat-x center top;
+  padding-top: 46px;
+  padding-bottom: 0;
+}
+#payment #payment-form header:before, #payment #payment-form header:after {
+  content: " ";
+  display: table;
+}
+#payment #payment-form header:after {
+  clear: both;
+}
+#payment #payment-form header h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+#payment #payment-form header h4 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 26px;
+  font-size: 1.2rem;
+  line-height: 2.6rem;
+  text-transform: uppercase;
+}
+#payment #payment-form h3 {
+  font-size: 22px;
+  line-height: 26px;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  font-weight: bold;
+  margin: 16px 0 18px 0;
+}
+#payment #payment-form #expiration-date label {
+  display: block;
+}
+#payment #payment-form #expiration-date select {
+  float: left;
+  width: 48%;
+}
+#payment #payment-form #expiration-date #expiration-mm {
+  margin-right: 4%;
+}
+
+/*payment ends*/
 /*footer*/
 #footer {
   min-height: 76px;
@@ -1049,6 +1137,19 @@ button {
 }
 
 /*organization-membership && membership-appilcation ends*/
+/*payment*/
+#payment #payment-form h3 {
+  float: left;
+}
+#payment #payment-form h4 {
+  float: right;
+  margin: 0 0 0 20%;
+}
+#payment #payment-form #renew-checkbox {
+  margin-bottom: 22px;
+}
+
+/*payment ends*/
 /*footer*/
 #footer ul {
   background: none;
@@ -1205,6 +1306,50 @@ button {
 }
 
 /*organization-membership && membership-appilcation ends*/
+/*payment*/
+#payment #payment-intro h2 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  margin: 0 0 28px 0;
+}
+#payment #payment-intro p {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+#payment #payment-intro p.upper {
+  margin-bottom: 28px;
+  padding-right: 60px;
+}
+#payment #payment-intro p strong {
+  font-size: 20px;
+  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+#payment #payment-form header h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+#payment #payment-form header h4 {
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+#payment #payment-form h3 {
+  font-size: 26px;
+  line-height: 30px;
+  font-size: 2.6rem;
+  line-height: 3rem;
+}
+
+/*payment ends*/
 /*footer*/
 #footer ul {
   float: left;

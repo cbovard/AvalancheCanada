@@ -110,6 +110,40 @@
 }
 /*organization-membership && membership-appilcation ends*/
 
+/*payment*/
+#payment {
+  #payment-intro {
+    h2 {
+      @include font-size(2.6, 3.0);
+      margin:0 0 28px 0;
+    } 
+    p {
+      @include font-size(2.0, 2.4);
+      &.upper {
+        margin-bottom:28px;
+        padding-right:60px;
+      }
+      strong {
+        @include font-size(2.0, 2.4);
+      }
+    }
+  }
+  #payment-form{
+    header {
+      h3 {
+        @include font-size(2.6, 3.0);
+      }
+      h4 {
+        @include font-size(1.6, 2.8);
+      }
+    }
+    h3 {
+      @include font-size(2.6, 3.0);
+    }
+  }
+}
+/*payment ends*/
+
 /*footer*/
 #footer {
   ul {

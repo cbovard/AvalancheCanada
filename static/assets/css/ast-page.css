@@ -1,0 +1,281 @@
+/* CAC Custom AST Page styles
+ * Author: Chris Bovard - www.chrisbovard.com
+ * Apr. 24, 2015
+*/
+/* =Import Files for Mixin Usage
+----------------------------------------------------------------------------------*/
+/* =Styles for News - Blog - Events Pages
+----------------------------------------------------------------------------------*/
+#ast-search-bar {
+  margin-top: 75px;
+  width: 100%;
+  min-height: 466px;
+  background: #377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center bottom;
+  background-size: 100% auto;
+}
+#ast-search-bar:before, #ast-search-bar:after {
+  content: " ";
+  display: table;
+}
+#ast-search-bar:after {
+  clear: both;
+}
+#ast-search-bar #ast-search-nav {
+  width: 100%;
+  height: 72px;
+  border-top: 6px solid #1e59a9;
+  background-color: #000;
+}
+#ast-search-bar #ast-search-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#ast-search-bar #ast-search-nav li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  float: left;
+}
+#ast-search-bar #ast-search-nav li > a {
+  display: block;
+  height: 66px;
+  padding: 22px 20px 10px 20px;
+  color: #fff;
+  position: relative;
+  font-size: 16px;
+  line-height: 22px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+}
+#ast-search-bar #ast-search-nav li > a:visited, #ast-search-bar #ast-search-nav li > a:hover, #ast-search-bar #ast-search-nav li > a:active, #ast-search-bar #ast-search-nav li > a:focus {
+  background-color: transparent;
+}
+#ast-search-bar #ast-search-nav li > a:hover, #ast-search-bar #ast-search-nav li > a.active {
+  background-color: #377cd9;
+}
+#ast-search-bar #ast-search-nav li > a:hover .arrow-down, #ast-search-bar #ast-search-nav li > a.active .arrow-down {
+  display: block;
+}
+#ast-search-bar #ast-search-nav li > a .arrow-down {
+  position: absolute;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #1e59a9;
+  display: none;
+}
+#ast-search-bar #ast-search-nav #nav-courses .arrow-down {
+  left: 49px;
+}
+#ast-search-bar #ast-search-nav #nav-providers .arrow-down {
+  left: 57px;
+}
+#ast-search-bar #ast-search-filters {
+  height: 400px;
+}
+#ast-search-bar #ast-search-filters h1 {
+  font-size: 50px;
+  line-height: 52px;
+  font-size: 5rem;
+  line-height: 5.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin: 80px 0 30px 0;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-filters-inner {
+  position: relative;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters button {
+  border: none;
+  background-color: #eeeff1;
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #808080;
+  height: 60px;
+  width: 100%;
+  padding: 0 14px;
+  text-align: left;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters button .fa {
+  color: #0056b7;
+  float: right;
+  font-size: 16px;
+  line-height: 30px;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters button .fa-chevron-up {
+  display: none;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters button .fa-chevron-down {
+  display: inline-block;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters.open .fa-chevron-up {
+  display: inline-block;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters.open .fa-chevron-down {
+  display: none;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu {
+  top: 60px;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  background-color: #1e59a9;
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li {
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #fff;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a {
+  font-size: 16px;
+  line-height: 48px;
+  font-size: 1.6rem;
+  line-height: 4.8rem;
+  color: #fff;
+  padding: 0 14px;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a:visited, #ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a:hover, #ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a:active, #ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+#ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu li a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+#ast-search-bar #ast-search-filters #location-filter .input-group {
+  background-color: #eeeff1;
+  width: 100%;
+  height: 60px;
+  padding: 0 14px;
+}
+#ast-search-bar #ast-search-filters #location-filter .form-control {
+  padding: 0;
+  float: left;
+  width: 94%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #808080;
+  text-align: left;
+  box-shadow: none;
+}
+#ast-search-bar #ast-search-filters #location-filter #location-addon {
+  float: left;
+  width: 6%;
+  font-size: 16px;
+  line-height: 30px;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+#ast-search-bar #ast-search-filters #location-filter #location-addon .fa {
+  color: #0056b7;
+  font-size: 20px;
+  line-height: 60px;
+  font-size: 2rem;
+  line-height: 6rem;
+  float: right;
+}
+#ast-search-bar #ast-search-filters #submit-filter button {
+  clear: both;
+  display: block;
+  padding: 0 24px;
+  height: 60px;
+  border: none;
+}
+
+#top-link {
+  width: 58px;
+  height: 38px;
+  padding: 4px 0 0 0;
+  position: absolute;
+  z-index: 1020;
+  top: 90px;
+  right: 0;
+  background-color: #000;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11px;
+  line-height: 11px;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+#top-link .fa {
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+#ast-page-content {
+  min-height: 200px;
+  margin-top: 55px;
+  position: relative;
+}
+#ast-page-content:before, #ast-page-content:after {
+  content: " ";
+  display: table;
+}
+#ast-page-content:after {
+  clear: both;
+}
+
+#header-inner {
+  background: transparent url(../img/ribbon-bg.png) center bottom repeat-x;
+  position: relative;
+  padding: 0 0 34px 0;
+}
+#header-inner h2 {
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  float: left;
+  margin: 0;
+}
+#header-inner:before, #header-inner:after {
+  content: " ";
+  display: table;
+}
+#header-inner:after {
+  clear: both;
+}
+
+@media screen and (min-width: 600px) {
+  #header-inner h2 {
+    font-size: 50px;
+    line-height: 52px;
+    font-size: 5rem;
+    line-height: 5.2rem;
+  }
+}
