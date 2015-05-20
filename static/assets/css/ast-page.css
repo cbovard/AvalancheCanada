@@ -10,7 +10,6 @@
   margin-top: 75px;
   width: 100%;
   min-height: 125px;
-  background-size: auto 100%;
 }
 #ast-search-bar:before, #ast-search-bar:after {
   content: " ";
@@ -21,9 +20,11 @@
 }
 #ast-search-bar.ast-providers {
   background: #377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center center;
+  background-size: 100% 100%;
 }
 #ast-search-bar.ast-courses {
-  background: #377cd9 url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;
+  background: #ccc url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;
+  background-size: 100% 100%;
 }
 #ast-search-bar #ast-search-nav {
   width: 100%;

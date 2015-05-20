@@ -21,9 +21,15 @@
 	width:100%;
 	min-height:125px;
 	@include clearfix();
-  background-size:auto 100%;	
-  &.ast-providers {background:#377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center center;}
-  &.ast-courses {background:#377cd9 url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;}
+  //background-size:auto 100%;	
+  &.ast-providers {
+  	background:#377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center center;
+  	background-size:100% 100%;
+  }
+  &.ast-courses {
+  	background:#ccc url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;
+  	background-size:100% 100%;
+  }
   
 	#ast-search-nav {
 		width:100%;
@@ -213,7 +219,6 @@
 	position:relative;
 	padding:0 0 34px 0;
 }
-
 #ast-table {
 	thead {
 		tr {
