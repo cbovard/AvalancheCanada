@@ -213,41 +213,7 @@
 	position:relative;
 	padding:0 0 34px 0;
 }
-/*.filters {
-	.filters-inner {
-		width:100%;
-		a {
-			padding-bottom:24px;
-			padding-top:22px;
-			padding-left:16px;
-			font-family:$font-family-google;
-			font-weight:bold;   
-			text-transform:uppercase;  
-			@include font-size(1.6, 2.8);
-			color:#b5b5b5;	
-			display:block;	
-			float:left;
-			width:100%;	
-			min-height:1px;
-			@include clearfix();
-			border-left:2px solid #eeeff1;
-			border-right:2px solid #eeeff1;
-			border-bottom:2px solid #eeeff1;
-			&:visited,
-			&:hover,
-			&:active,
-			&:focus {
-				color:#b5b5b5;
-				text-decoration:none;
-			} 
-			&:hover {
-				text-decoration:none;
-			}
-		}
-	}
-}
-#providers-filters,
-#courses-filters {margin-bottom:40px;}*/
+
 #ast-table {
 	thead {
 		tr {
