@@ -115,68 +115,6 @@
   </head>
 
   <body>
-    <!--multilevel menu - http://multi-level-push-menu.make.rs/ -->
-    <div id="menu">
-        <nav>
-            <h2><i class="fa fa-times"></i><a id="multinav-home" href="/static"><i class="fa fa-home"></i></a></h2>
-            <ul>
-                <li>
-                    <a href="#">Avalanche Information</a>
-                    <h2>Avalanche Information</h2>
-                    <ul>
-                        <li>
-                            <a href="#">Forecasts</a>
-                            <h2>Forecasts</h2>
-                            <ul>
-                                <li>
-                                    <a href="#">Banff Yoho &amp; Kootenay National Park</a>
-                                </li>
-                                <li>
-                                    <a href="#">Cariboos</a>
-                                </li>
-                                <li>
-                                    <a href="#">Chic-Chocs, CAHG</a>
-                                </li>
-                                <li>
-                                    <a href="#">Glacier National Park</a>
-                                </li>
-                                <li>
-                                    <a href="#">Jasper National Park</a>
-                                </li>
-                                <li>
-                                    <a href="#">Kananaskis Country, Alberta Parks</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Data</a>
-                        </li>
-                        <li>
-                            <a href="#">Forecast Archive</a>
-                        </li>
-                        <li>
-                            <a href="#">Forecaster's Blog</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Learn</a>
-                </li>
-                <li>
-                    <a href="#">Community</a>
-                </li>
-                <li>
-                    <a href="#">News &amp; Events</a>
-                </li>
-                <li>
-                    <a href="#">Store</a>
-                </li>
-                <li id="multilevel-donate">
-                    <a href="#">Donate</a>
-                </li>
-            </ul>
-        </nav>
-    </div><!--/#multilevel menu-->
     <!--page wrap-->
     <div id="page-wrap">
       <header id="header" class="navbar-fixed-top" role="banner">
@@ -466,20 +404,19 @@
         </div>
       </header><!--/#header-->
 
-      <div id="ast-search-bar">
+      <div id="ast-search-bar" class="ast-providers">
         <div id="ast-search-nav">
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
                 <ul>
                   <li id="nav-courses"><a href="#">Courses<span class="arrow-down"></span></a></li>
-                  <li id="nav-providers"><a href="#">Providers<span class="arrow-down"></span></a></li>
+                  <li id="nav-providers"><a class="active" href="#">Providers<span class="arrow-down"></span></a></li>
                 </ul>
               </div>
             </div>
           </div>          
-        </div>
-
+        </div><!--/#ast-search-nav-->
         <div id="ast-search-filters">
           <div class="container">
             <div class="row">
@@ -487,12 +424,7 @@
                 <h1>Find a provider</h1>
               </div>
             </div>
-
             <div class="row">
-
-              <!--<div id="provider-filters" class="col-xs-12 ">-->
-                <!--<div class="dropdown">-->
-
               <!--filter-courses-->
               <div class="col-xs-12 col-md-3 dropdown-filters" id="filter-courses-dropdown">
                 <div class="dropdown-filters-inner">
@@ -509,7 +441,6 @@
                 </div>
               </div>
               <!--filter-courses ends-->
-
               <!--filter-specialties-->
               <div class="col-xs-12 col-md-3 dropdown-filters" id="filter-specialties-dropdown">
                 <div class="dropdown-filters-inner">
@@ -526,11 +457,6 @@
                 </div>
               </div>
               <!--filter-specialties ends-->
-
-                <!--</div>-->
-              <!--</div>--><!--/#filters-->
-
-
               <div id="location-filter" class="col-xs-12 col-md-3">
                 <div class="input-group">
                   <input type="text" class="form-control" aria-describedby="location-addon" placeholder="Location">
@@ -543,14 +469,9 @@
             </div>
           </div>
         </div><!--/#ast-search-filters-->
-      </div>
+      </div><!--/#ast-search-bar-->
 
       <div id="ast-page-content" class="container">
-        <div id="top-link" class="visible-xs-block">
-          <i class="fa fa-chevron-up"></i><br />
-          Top
-        </div>
-
         <div class="row">
           <header class="col-xs-12">
             <div id="header-inner">
@@ -560,43 +481,112 @@
           </header>
         </div>
 
-
         <div class="row">
-          <div class="table-responsive col-xs-12">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Provider</th>
-                  <th>Location</th>
-                  <th>Courses</th>
-                  <th>Specialties</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Trigger Point Training</td>
-                  <td>Revelstoke, BC</td>
-                  <td><a href="#">AST 1, 2 Companion Rescue</a></td>
-                  <td>Ski, Youth <a class="plus" href=""><i class="fa fa-plus"></i></a><a class="minus" href=""><i class="fa fa-minus"></i></a></td>
-                </tr>
-                <tr id="provider-1" class="hide">
-                  <td colspan="2">
-                    <strong>Telephone</strong>&nbsp;&nbsp;&nbsp;&nbsp;000 000 0000<br />
-                    <strong>Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:test@example.com">test@example.com</a><br />
-                    <strong>Website</strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kickinghorseresort.com">test@example.com</a>
-                  </td>
-                  <td colspan="2">
-                    <strong>Location</strong>&nbsp;&nbsp;&nbsp;&nbsp;000 street, City, Province, <br />
-                    <strong>Contact</strong>&nbsp;&nbsp;&nbsp;&nbsp;Contact Name here
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="col-xs-12">
+            <div class="table-responsive">
+              <table id="ast-table" class="table">
+                <thead>
+                  <tr>
+                    <th>Provider</th>
+                    <th>Location</th>
+                    <th>Courses</th>
+                    <th colspan="2">Specialties</th>
+                  </tr>
+                  <tr class="space">
+                    <th colspan="5">&nbsp;</th>
+                  </tr>
+                  <tr class="sponsors-head">
+                    <th colspan="5">Our Sponsors</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="sponsors">
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus" href=""><i class="fa fa-plus"></i></a><a class="hide minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <tr class="sponsors">
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus" href=""><i class="fa fa-plus"></i></a><a class="hide minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <tr class="sponsors ">
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus hide" href=""><i class="fa fa-plus"></i></a><a class="minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <!--more info cell here-->
+                  <tr class="more-info sponsor-last">
+                    <td colspan="2">
+                      <strong>Telephone</strong>&nbsp;&nbsp;&nbsp;&nbsp;000 000 0000<br />
+                      <strong>Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:test@example.com">test@example.com</a><br />
+                      <strong>Website</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kickinghorseresort.com">test@example.com</a>
+                    </td>
+                    <td colspan="3">
+                      <strong>Location</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;000 street, City, Province, <br />
+                      <strong>Contact</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Name here
+                    </td>
+                  </tr>
+                  <!--more info cell here ends-->
+                  <!--sponsor cells ends-->
+                  <tr>
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus hide" href=""><i class="fa fa-plus"></i></a><a class="minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <!--more info cell here-->
+                  <tr class="more-info">
+                    <td colspan="2">
+                      <strong>Telephone</strong>&nbsp;&nbsp;&nbsp;&nbsp;000 000 0000<br />
+                      <strong>Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:test@example.com">test@example.com</a><br />
+                      <strong>Website</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kickinghorseresort.com">test@example.com</a>
+                    </td>
+                    <td colspan="3">
+                      <strong>Location</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;000 street, City, Province, <br />
+                      <strong>Contact</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Name here
+                    </td>
+                  </tr>
+                  <!--more info cell here ends-->
+                  <tr>
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus" href=""><i class="fa fa-plus"></i></a><a class="hide minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>Trigger Point Training</td>
+                    <td>Revelstoke, BC</td>
+                    <td><a href="#">AST 1, 2 Companion Rescue</a></td>
+                    <td>Ski, Youth</td>
+                    <td><a class="plus" href=""><i class="fa fa-plus"></i></a><a class="hide minus" href=""><i class="fa fa-minus"></i></a></td>
+                  </tr>
+                  <!--more info cell here-->
+                  <tr class="more-info">
+                    <td colspan="2">
+                      <strong>Telephone</strong>&nbsp;&nbsp;&nbsp;&nbsp;000 000 0000<br />
+                      <strong>Email</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:test@example.com">test@example.com</a><br />
+                      <strong>Website</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.kickinghorseresort.com">test@example.com</a>
+                    </td>
+                    <td colspan="3">
+                      <strong>Location</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;000 street, City, Province, <br />
+                      <strong>Contact</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Name here
+                    </td>
+                  </tr>
+                  <!--more info cell here ends-->
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-
-
-
       </div><!--/#ast-page-content-->
 
       <footer id="footer" role="contentinfo">

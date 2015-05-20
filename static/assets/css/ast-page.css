@@ -1,17 +1,16 @@
 /* CAC Custom AST Page styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 24, 2015
+ * May 19, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
-/* =Styles for News - Blog - Events Pages
+/* =Styles AST Providers and Courses Pages
 ----------------------------------------------------------------------------------*/
 #ast-search-bar {
   margin-top: 75px;
   width: 100%;
-  min-height: 466px;
-  background: #377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center bottom;
-  background-size: 100% auto;
+  min-height: 125px;
+  background-size: auto 100%;
 }
 #ast-search-bar:before, #ast-search-bar:after {
   content: " ";
@@ -19,6 +18,12 @@
 }
 #ast-search-bar:after {
   clear: both;
+}
+#ast-search-bar.ast-providers {
+  background: #377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center center;
+}
+#ast-search-bar.ast-courses {
+  background: #377cd9 url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;
 }
 #ast-search-bar #ast-search-nav {
   width: 100%;
@@ -79,17 +84,17 @@
   left: 57px;
 }
 #ast-search-bar #ast-search-filters {
-  height: 400px;
+  height: 398px;
 }
 #ast-search-bar #ast-search-filters h1 {
-  font-size: 50px;
-  line-height: 52px;
-  font-size: 5rem;
-  line-height: 5.2rem;
+  font-size: 36px;
+  line-height: 38px;
+  font-size: 3.6rem;
+  line-height: 3.8rem;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
   text-align: left;
-  margin: 80px 0 30px 0;
+  margin: 18px 0 20px 0;
 }
 #ast-search-bar #ast-search-filters .dropdown-filters .dropdown-filters-inner {
   position: relative;
@@ -103,9 +108,10 @@
   line-height: 2.8rem;
   color: #808080;
   height: 60px;
-  width: 100%;
+  width: 80%;
   padding: 0 14px;
   text-align: left;
+  margin-bottom: 10px;
 }
 #ast-search-bar #ast-search-filters .dropdown-filters button .fa {
   color: #0056b7;
@@ -166,9 +172,10 @@
 }
 #ast-search-bar #ast-search-filters #location-filter .input-group {
   background-color: #eeeff1;
-  width: 100%;
+  width: 80%;
   height: 60px;
   padding: 0 14px;
+  margin-bottom: 10px;
 }
 #ast-search-bar #ast-search-filters #location-filter .form-control {
   padding: 0;
@@ -209,35 +216,10 @@
   border: none;
 }
 
-#top-link {
-  width: 58px;
-  height: 38px;
-  padding: 4px 0 0 0;
-  position: absolute;
-  z-index: 1020;
-  top: 90px;
-  right: 0;
-  background-color: #000;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 11px;
-  line-height: 11px;
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-  text-align: center;
-  font-weight: bold;
-}
-#top-link .fa {
-  color: #fff;
-  font-size: 16px;
-  line-height: 16px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-}
-
 #ast-page-content {
   min-height: 200px;
-  margin-top: 55px;
+  margin-top: 5px;
+  margin-bottom: 60px;
   position: relative;
 }
 #ast-page-content:before, #ast-page-content:after {
@@ -246,6 +228,10 @@
 }
 #ast-page-content:after {
   clear: both;
+}
+#ast-page-content .table-responsive {
+  padding-bottom: 20px;
+  border: none;
 }
 
 #header-inner {
@@ -261,7 +247,7 @@
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
   float: left;
-  margin: 0;
+  margin: 18px 0 0 0;
 }
 #header-inner:before, #header-inner:after {
   content: " ";
@@ -271,11 +257,187 @@
   clear: both;
 }
 
+/*.filters {
+	.filters-inner {
+		width:100%;
+		a {
+			padding-bottom:24px;
+			padding-top:22px;
+			padding-left:16px;
+			font-family:$font-family-google;
+			font-weight:bold;   
+			text-transform:uppercase;  
+			@include font-size(1.6, 2.8);
+			color:#b5b5b5;	
+			display:block;	
+			float:left;
+			width:100%;	
+			min-height:1px;
+			@include clearfix();
+			border-left:2px solid #eeeff1;
+			border-right:2px solid #eeeff1;
+			border-bottom:2px solid #eeeff1;
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				color:#b5b5b5;
+				text-decoration:none;
+			} 
+			&:hover {
+				text-decoration:none;
+			}
+		}
+	}
+}
+#providers-filters,
+#courses-filters {margin-bottom:40px;}*/
+#ast-table thead tr th {
+  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-left: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 28px;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #b5b5b5;
+  border-left: 2px solid #eeeff1;
+  border-right: 2px solid #eeeff1;
+  border-bottom: 2px solid #eeeff1;
+}
+#ast-table thead tr.space th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+}
+#ast-table thead tr.sponsors-head {
+  background-color: #000;
+}
+#ast-table thead tr.sponsors-head th {
+  color: #fff;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  border: none;
+  padding: 10px;
+}
+#ast-table tbody tr td {
+  border-top: none;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  padding: 16px 10px 16px 10px;
+}
+#ast-table tbody tr.sponsors {
+  background: transparent url(../img/ribbon-bg.png) repeat;
+}
+#ast-table tbody tr.sponsors td {
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+#ast-table tbody tr.sponsor-last td {
+  border-bottom: 5px solid #000;
+}
+
+.table {
+  margin: 0;
+}
+.table tbody tr td {
+  border-top: none;
+  border-bottom: 2px solid #eeeff1;
+  font-size: 15px;
+  line-height: 22px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  padding: 16px 10px 16px 10px;
+}
+.table tbody tr.more-info {
+  background-color: #eeeff1;
+}
+.table tbody tr.more-info td {
+  font-weight: normal !important;
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.table tbody tr.more-info td strong {
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.table tbody tr.more-info td a {
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.table tbody tr.more-info td a:visited, .table tbody tr.more-info td a:hover, .table tbody tr.more-info td a:active, .table tbody tr.more-info td a:focus {
+  color: #5b5b5b;
+  text-decoration: none;
+}
+.table tbody tr.more-info td a:hover {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 600px) {
+  #ast-search-bar #ast-search-filters h1 {
+    font-size: 50px;
+    line-height: 52px;
+    font-size: 5rem;
+    line-height: 5.2rem;
+    margin: 40px 0 20px 0;
+  }
+
   #header-inner h2 {
     font-size: 50px;
     line-height: 52px;
     font-size: 5rem;
     line-height: 5.2rem;
+    margin: 28px 0 0 0;
+  }
+
+  .filters .filters-inner a {
+    width: 50%;
+    border-left: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #ast-search-bar {
+    min-height: 466px;
+  }
+
+  #ast-search-bar #ast-search-filters h1 {
+    margin: 80px 0 30px 0;
+  }
+
+  #header-inner h2 {
+    margin: 48px 0 0 0;
+  }
+
+  #ast-search-bar #ast-search-filters .dropdown-filters button,
+  #ast-search-bar #ast-search-filters #location-filter .input-group {
+    width: 100%;
+    margin: 0;
+  }
+
+  .filters .filters-inner a {
+    width: 25%;
+  }
+  .filters .filters-inner a.last {
+    border-right: none;
   }
 }
