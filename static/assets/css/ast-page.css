@@ -1,6 +1,6 @@
 /* CAC Custom AST Page styles
  * Author: Chris Bovard - www.chrisbovard.com
- * May 19, 2015
+ * May 20, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -20,11 +20,11 @@
 }
 #ast-search-bar.ast-providers {
   background: #377cd9 url(../img/ast-search-bar-providers-bg.jpg) no-repeat center center;
-  background-size: 100% 100%;
+  background-size: auto 100%;
 }
 #ast-search-bar.ast-courses {
   background: #ccc url(../img/ast-search-bar-courses-bg.jpg) no-repeat center center;
-  background-size: 100% 100%;
+  background-size: auto 100%;
 }
 #ast-search-bar #ast-search-nav {
   width: 100%;
@@ -141,7 +141,7 @@
   border-radius: 0;
   border: none;
   box-shadow: none;
-  width: 100%;
+  width: 80%;
   background-color: #1e59a9;
   font-size: 16px;
   line-height: 28px;
@@ -382,6 +382,13 @@
   }
 }
 @media screen and (min-width: 1025px) {
+  #ast-search-bar.ast-providers {
+    background-size: 100% auto;
+  }
+  #ast-search-bar.ast-courses {
+    background-size: 100% auto;
+  }
+
   #ast-search-bar {
     min-height: 466px;
   }
@@ -398,6 +405,10 @@
   #ast-search-bar #ast-search-filters #location-filter .input-group {
     width: 100%;
     margin: 0;
+  }
+
+  #ast-search-bar #ast-search-filters .dropdown-filters .dropdown-menu {
+    width: 100%;
   }
 
   .filters .filters-inner a {
