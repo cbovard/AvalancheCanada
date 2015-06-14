@@ -1,6 +1,6 @@
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 15, 2015
+ * June 13, 2015
 */
 
 /* =Import Files for Mixin Usage - ETC
@@ -47,6 +47,7 @@
 	font-weight:bold;
 	text-transform:uppercase;
 	border:none;
+	margin-bottom:20px;
 	&:visited,
 	&:hover,
 	&:active,
@@ -60,7 +61,7 @@
 	&:focus {
 		background-color:#4299fc;
 	}
-	.fa-angle-right {
+	.fa {
 		@include font-size(2.0, 2.0);
 		font-weight:bold;
 		padding-left:8px;
@@ -557,7 +558,6 @@ button {
 		h3 {
 			@include font-size(2.2, 2.6);
 			font-weight:bold;
-			//margin:26px 0 34px 0;
 			margin:16px 0 18px 0;
 		} 
 		.sub-intro {margin-bottom:16px;}
@@ -619,6 +619,8 @@ button {
 			margin:16px 0 18px 0;
 		} 
 		#expiration-date {
+			min-height:1px;
+			@include clearfix(); 
 			label {
 				display:block;
 			}
@@ -630,7 +632,47 @@ button {
 				margin-right:4%;
 			}
 		}
+		#cvv-link {
+			color:#5b5b5b;
+			@include font-size(1.5, 2.8);
+			margin-left:10px;
+			text-transform:capitalize;
+			font-weight:normal;
+			&:visited,
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration:none;
+				color:#5b5b5b;
+			} 
+			&:hover {
+				text-decoration:underline;
+			}
+		}
   }
+}
+
+#cvv-modal {
+	.modal-dialog  {
+		width:272px;
+	}
+	.modal-body {
+		position:relative;
+	}
+	button {
+		position:absolute;
+		top:15px;
+		right:15px;
+		width:40px;
+		height:40px;
+		background-color:#000;
+		border:0;
+		@include font-size(2.2, 0.0);
+		.fa {
+			color:#fff;
+			@include font-size(2.2, 0.0);
+		}
+	}
 }
 /*payment ends*/
 

@@ -117,7 +117,7 @@
 
             <div class="col-xs-12 col-md-2">
               <div class="form-group">
-                <label for="cvv">CVV&nbsp;<span class="required">*</span><a href="#" data-toggle="modal" data-target="#basicModal">What's This?</a></label>
+                <label for="cvv">CVV&nbsp;<span class="required">*</span><a id="cvv-link" href="#" data-toggle="modal" data-target="#cvv-modal">What's This?</a></label>
                 <input type="text" class="form-control" id="cvv" placeholder="">
               </div>
             </div>
@@ -125,8 +125,6 @@
               <!--nothing here-->&nbsp;
             </div>
           </div>
-
-
           <div class="row">
             <div class="col-xs-12 col-md-5">
               <div class="form-group">
@@ -156,8 +154,6 @@
               <!--nothing here-->&nbsp;
             </div>
           </div>
-
-
           <div class="row">
             <div class="col-xs-12">
               <hr />
@@ -165,9 +161,12 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-md-2">
+              <button type="submit" class="blue-button"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prev</button>
+            </div>
+            <div class="col-xs-12 col-md-2">
               <button type="submit" class="blue-button">Submit&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
             </div>
-            <div class="hidden-xs hidden-sm col-md-10">
+            <div class="hidden-xs hidden-sm col-md-8">
               <!--nothing here-->&nbsp;
             </div>
           </div>
@@ -176,23 +175,18 @@
     </div><!--/#organization-membership-->
 
 
-<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    <div class="modal fade" id="cvv-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                    <img src="assets/img/cvv-popup.jpg" class="img-responsive" />
+                </div>
             </div>
-            <div class="modal-body">
-                <h3>Modal Body</h3>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
         </div>
-    </div>
-  </div>
-</div>
+      </div>
+    </div><!--/#cvv-modal-->
+
 
     <footer id="footer" role="contentinfo">
       <div class="container-fluid">

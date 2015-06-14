@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------------*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 15, 2015
+ * June 13, 2015
 */
 /* =Import Files for Mixin Usage - ETC
 ----------------------------------------------------------------------------------*/
@@ -49,6 +49,7 @@
   font-weight: bold;
   text-transform: uppercase;
   border: none;
+  margin-bottom: 20px;
 }
 .blue-button:visited, .blue-button:hover, .blue-button:active, .blue-button:focus {
   text-decoration: none;
@@ -60,7 +61,7 @@
 .blue-button:focus {
   background-color: #4299fc;
 }
-.blue-button .fa-angle-right {
+.blue-button .fa {
   font-size: 20px;
   line-height: 20px;
   font-size: 2rem;
@@ -912,6 +913,16 @@ button {
   font-weight: bold;
   margin: 16px 0 18px 0;
 }
+#payment #payment-form #expiration-date {
+  min-height: 1px;
+}
+#payment #payment-form #expiration-date:before, #payment #payment-form #expiration-date:after {
+  content: " ";
+  display: table;
+}
+#payment #payment-form #expiration-date:after {
+  clear: both;
+}
 #payment #payment-form #expiration-date label {
   display: block;
 }
@@ -921,6 +932,50 @@ button {
 }
 #payment #payment-form #expiration-date #expiration-mm {
   margin-right: 4%;
+}
+#payment #payment-form #cvv-link {
+  color: #5b5b5b;
+  font-size: 15px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+#payment #payment-form #cvv-link:visited, #payment #payment-form #cvv-link:hover, #payment #payment-form #cvv-link:active, #payment #payment-form #cvv-link:focus {
+  text-decoration: none;
+  color: #5b5b5b;
+}
+#payment #payment-form #cvv-link:hover {
+  text-decoration: underline;
+}
+
+#cvv-modal .modal-dialog {
+  width: 272px;
+}
+#cvv-modal .modal-body {
+  position: relative;
+}
+#cvv-modal button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border: 0;
+  font-size: 22px;
+  line-height: 0px;
+  font-size: 2.2rem;
+  line-height: 0rem;
+}
+#cvv-modal button .fa {
+  color: #fff;
+  font-size: 22px;
+  line-height: 0px;
+  font-size: 2.2rem;
+  line-height: 0rem;
 }
 
 /*payment ends*/
@@ -983,7 +1038,7 @@ button {
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 12, 2015
+ * June 13, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -1177,7 +1232,7 @@ button {
 /*footer ends*/
 /* CAC Custom styles
  * Author: Chris Bovard - www.chrisbovard.com
- * Apr. 12, 20154
+ * June 13, 2015
 */
 /* =Import Files for Mixin Usage
 ----------------------------------------------------------------------------------*/
@@ -1185,6 +1240,7 @@ button {
 ----------------------------------------------------------------------------------*/
 .blue-button {
   margin-top: 36px;
+  margin-bottom: 0;
 }
 
 /*main content global classes*/
